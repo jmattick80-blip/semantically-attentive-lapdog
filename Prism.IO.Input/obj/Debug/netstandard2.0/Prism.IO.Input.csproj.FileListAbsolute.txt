@@ -1,0 +1,13 @@
+C:\Users\jmatt\RiderProjects\Prism\Prism.IO.Input\bin\Debug\netstandard2.0\Prism.IO.Input.deps.json
+C:\Users\jmatt\RiderProjects\Prism\Prism.IO.Input\bin\Debug\netstandard2.0\Prism.IO.Input.dll
+C:\Users\jmatt\RiderProjects\Prism\Prism.IO.Input\bin\Debug\netstandard2.0\Prism.IO.Input.pdb
+C:\Users\jmatt\RiderProjects\Prism\Prism.IO.Input\bin\Debug\netstandard2.0\Prism.Shared.Contracts.dll
+C:\Users\jmatt\RiderProjects\Prism\Prism.IO.Input\bin\Debug\netstandard2.0\Prism.Shared.Contracts.pdb
+C:\Users\jmatt\RiderProjects\Prism\Prism.IO.Input\obj\Debug\netstandard2.0\Prism.IO.Input.csproj.AssemblyReference.cache
+C:\Users\jmatt\RiderProjects\Prism\Prism.IO.Input\obj\Debug\netstandard2.0\Prism.IO.Input.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jmatt\RiderProjects\Prism\Prism.IO.Input\obj\Debug\netstandard2.0\Prism.IO.Input.AssemblyInfoInputs.cache
+C:\Users\jmatt\RiderProjects\Prism\Prism.IO.Input\obj\Debug\netstandard2.0\Prism.IO.Input.AssemblyInfo.cs
+C:\Users\jmatt\RiderProjects\Prism\Prism.IO.Input\obj\Debug\netstandard2.0\Prism.IO.Input.csproj.CoreCompileInputs.cache
+C:\Users\jmatt\RiderProjects\Prism\Prism.IO.Input\obj\Debug\netstandard2.0\Prism.IO.Input.csproj.CopyComplete
+C:\Users\jmatt\RiderProjects\Prism\Prism.IO.Input\obj\Debug\netstandard2.0\Prism.IO.Input.dll
+C:\Users\jmatt\RiderProjects\Prism\Prism.IO.Input\obj\Debug\netstandard2.0\Prism.IO.Input.pdb

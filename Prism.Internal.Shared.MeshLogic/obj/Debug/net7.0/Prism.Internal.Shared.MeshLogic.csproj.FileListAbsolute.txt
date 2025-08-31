@@ -1,0 +1,15 @@
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Shared.MeshLogic\bin\Debug\net7.0\Prism.Internal.Shared.MeshLogic.deps.json
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Shared.MeshLogic\bin\Debug\net7.0\Prism.Internal.Shared.MeshLogic.dll
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Shared.MeshLogic\bin\Debug\net7.0\Prism.Internal.Shared.MeshLogic.pdb
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Shared.MeshLogic\bin\Debug\net7.0\Prism.Shared.Contracts.dll
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Shared.MeshLogic\bin\Debug\net7.0\Prism.Shared.Contracts.pdb
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Shared.MeshLogic\obj\Debug\net7.0\Prism.Internal.Shared.MeshLogic.csproj.AssemblyReference.cache
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Shared.MeshLogic\obj\Debug\net7.0\Prism.Internal.Shared.MeshLogic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Shared.MeshLogic\obj\Debug\net7.0\Prism.Internal.Shared.MeshLogic.AssemblyInfoInputs.cache
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Shared.MeshLogic\obj\Debug\net7.0\Prism.Internal.Shared.MeshLogic.AssemblyInfo.cs
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Shared.MeshLogic\obj\Debug\net7.0\Prism.Internal.Shared.MeshLogic.csproj.CoreCompileInputs.cache
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Shared.MeshLogic\obj\Debug\net7.0\Prism.Internal.Shared.MeshLogic.csproj.CopyComplete
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Shared.MeshLogic\obj\Debug\net7.0\Prism.Internal.Shared.MeshLogic.dll
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Shared.MeshLogic\obj\Debug\net7.0\refint\Prism.Internal.Shared.MeshLogic.dll
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Shared.MeshLogic\obj\Debug\net7.0\Prism.Internal.Shared.MeshLogic.pdb
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Shared.MeshLogic\obj\Debug\net7.0\ref\Prism.Internal.Shared.MeshLogic.dll

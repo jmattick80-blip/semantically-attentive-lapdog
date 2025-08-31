@@ -1,0 +1,10 @@
+C:\Users\jmatt\RiderProjects\GalleryDrivers\GalleryDrivers\bin\Debug\netstandard2.0\GalleryDrivers.deps.json
+C:\Users\jmatt\RiderProjects\GalleryDrivers\GalleryDrivers\bin\Debug\netstandard2.0\GalleryDrivers.dll
+C:\Users\jmatt\RiderProjects\GalleryDrivers\GalleryDrivers\bin\Debug\netstandard2.0\GalleryDrivers.pdb
+C:\Users\jmatt\RiderProjects\GalleryDrivers\GalleryDrivers\obj\Debug\netstandard2.0\GalleryDrivers.csproj.AssemblyReference.cache
+C:\Users\jmatt\RiderProjects\GalleryDrivers\GalleryDrivers\obj\Debug\netstandard2.0\GalleryDrivers.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jmatt\RiderProjects\GalleryDrivers\GalleryDrivers\obj\Debug\netstandard2.0\GalleryDrivers.AssemblyInfoInputs.cache
+C:\Users\jmatt\RiderProjects\GalleryDrivers\GalleryDrivers\obj\Debug\netstandard2.0\GalleryDrivers.AssemblyInfo.cs
+C:\Users\jmatt\RiderProjects\GalleryDrivers\GalleryDrivers\obj\Debug\netstandard2.0\GalleryDrivers.csproj.CoreCompileInputs.cache
+C:\Users\jmatt\RiderProjects\GalleryDrivers\GalleryDrivers\obj\Debug\netstandard2.0\GalleryDrivers.dll
+C:\Users\jmatt\RiderProjects\GalleryDrivers\GalleryDrivers\obj\Debug\netstandard2.0\GalleryDrivers.pdb

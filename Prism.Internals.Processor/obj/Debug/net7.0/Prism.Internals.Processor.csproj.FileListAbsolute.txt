@@ -1,0 +1,12 @@
+C:\Users\jmatt\RiderProjects\GalleryDrivers\Prism.Internals.Processor\bin\Debug\net7.0\Prism.Internals.Processor.deps.json
+C:\Users\jmatt\RiderProjects\GalleryDrivers\Prism.Internals.Processor\bin\Debug\net7.0\Prism.Internals.Processor.dll
+C:\Users\jmatt\RiderProjects\GalleryDrivers\Prism.Internals.Processor\bin\Debug\net7.0\Prism.Internals.Processor.pdb
+C:\Users\jmatt\RiderProjects\GalleryDrivers\Prism.Internals.Processor\obj\Debug\net7.0\Prism.Internals.Processor.csproj.AssemblyReference.cache
+C:\Users\jmatt\RiderProjects\GalleryDrivers\Prism.Internals.Processor\obj\Debug\net7.0\Prism.Internals.Processor.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jmatt\RiderProjects\GalleryDrivers\Prism.Internals.Processor\obj\Debug\net7.0\Prism.Internals.Processor.AssemblyInfoInputs.cache
+C:\Users\jmatt\RiderProjects\GalleryDrivers\Prism.Internals.Processor\obj\Debug\net7.0\Prism.Internals.Processor.AssemblyInfo.cs
+C:\Users\jmatt\RiderProjects\GalleryDrivers\Prism.Internals.Processor\obj\Debug\net7.0\Prism.Internals.Processor.csproj.CoreCompileInputs.cache
+C:\Users\jmatt\RiderProjects\GalleryDrivers\Prism.Internals.Processor\obj\Debug\net7.0\Prism.Internals.Processor.dll
+C:\Users\jmatt\RiderProjects\GalleryDrivers\Prism.Internals.Processor\obj\Debug\net7.0\refint\Prism.Internals.Processor.dll
+C:\Users\jmatt\RiderProjects\GalleryDrivers\Prism.Internals.Processor\obj\Debug\net7.0\Prism.Internals.Processor.pdb
+C:\Users\jmatt\RiderProjects\GalleryDrivers\Prism.Internals.Processor\obj\Debug\net7.0\ref\Prism.Internals.Processor.dll

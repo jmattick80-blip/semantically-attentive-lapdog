@@ -1,0 +1,4 @@
+repository "PrismOS@TethraSolutions@cloud"
+  path "/"
+    br "/main"
+    co "/main"

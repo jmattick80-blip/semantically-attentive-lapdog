@@ -1,0 +1,15 @@
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internals.Globals\bin\Debug\net7.0\Prism.Internals.Globals.deps.json
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internals.Globals\bin\Debug\net7.0\Prism.Internals.Globals.dll
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internals.Globals\bin\Debug\net7.0\Prism.Internals.Globals.pdb
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internals.Globals\bin\Debug\net7.0\Prism.Shared.Contracts.dll
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internals.Globals\bin\Debug\net7.0\Prism.Shared.Contracts.pdb
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internals.Globals\obj\Debug\net7.0\Prism.Internals.Globals.csproj.AssemblyReference.cache
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internals.Globals\obj\Debug\net7.0\Prism.Internals.Globals.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internals.Globals\obj\Debug\net7.0\Prism.Internals.Globals.AssemblyInfoInputs.cache
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internals.Globals\obj\Debug\net7.0\Prism.Internals.Globals.AssemblyInfo.cs
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internals.Globals\obj\Debug\net7.0\Prism.Internals.Globals.csproj.CoreCompileInputs.cache
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internals.Globals\obj\Debug\net7.0\Prism.Internals.Globals.csproj.CopyComplete
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internals.Globals\obj\Debug\net7.0\Prism.Internals.Globals.dll
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internals.Globals\obj\Debug\net7.0\refint\Prism.Internals.Globals.dll
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internals.Globals\obj\Debug\net7.0\Prism.Internals.Globals.pdb
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internals.Globals\obj\Debug\net7.0\ref\Prism.Internals.Globals.dll
