@@ -13,11 +13,11 @@ namespace Prism.Internal.Shared.MeshLogic.Transformers
             _transformers = transformers.ToList();
         }
 
-        public ISessionEntity ApplyAll(ISessionEntity entity, Dictionary<string, object> payload)
+        public SessionEntity  ApplyAll(SessionEntity  entity, Dictionary<string, object> payload)
         {
             foreach (var transformer in _transformers)
             {
-                var transformed = transformer.Transform(entity, payload) as ISessionEntity;
+                var transformed = transformer.Transform(entity, payload) as SessionEntity ;
                 if (transformed != null)
                 {
                     entity = transformed;

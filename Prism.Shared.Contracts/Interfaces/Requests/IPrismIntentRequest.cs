@@ -8,8 +8,8 @@ namespace Prism.Shared.Contracts.Interfaces.Requests
     {
         Guid RequestId { get; }                         // Hashed fingerprint of the request
         string Slug { get; }                            // Readable identifier (e.g. "exhibit-applydelta-moodshift")
-        ISemanticIntent Intent { get; }                 // Who + What
-        ISessionEntity TargetEntity { get; }            // Entity being acted on
+        SemanticIntent Intent { get; }                 // Who + What
+        SessionEntity TargetEntity { get; }            // Entity being acted on
         string Verb { get; }                            // Action to perform (e.g. "ApplyDelta", "Commit", "Preview")
         Dictionary<string, object> Payload { get; }     // Optional parameters (e.g. mood deltas, layout edits)
         SessionContext Session { get; }                 // Session scope, contributor ID, phase, etc.

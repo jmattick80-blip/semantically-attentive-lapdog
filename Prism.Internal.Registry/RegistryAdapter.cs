@@ -1,8 +1,7 @@
-using Prism.Internal.Shared.MeshLogic;
 using Prism.Internal.Shared.MeshLogic.Routing;
 using Prism.Internal.Shared.MeshLogic.Transformers;
 using Prism.Shared.Contracts;
-using Prism.Shared.Contracts.Interfaces;
+
 using Prism.Shared.Contracts.Interfaces.Requests;
 using Prism.Shared.Contracts.Interfaces.Sessions;
 using Prism.Shared.Contracts.Logic;
@@ -11,14 +10,14 @@ namespace Prism.Internal.Registry
 {
     public static class RegistryAdapter
     {
-        private static readonly Dictionary<string, ISessionEntity> SessionEntityStore = new();
+        private static readonly Dictionary<string, SessionEntity> SessionEntityStore = new();
 
         public static IPrismIntentResult UpdateEntityState(IPrismIntentRequest request)
         {
             var entityId = request.TargetEntity.EntityId;
             var sessionId = request.Session.SessionId;
-            var isDraft = request.TargetEntity is SessionEntityState state && state.IsDraft;
-
+            var isDraft = request.TargetEntity.IsDraft;
+            
             var current = GetEntityState(entityId, sessionId, isDraft);
             if (current == null)
             {
@@ -81,7 +80,7 @@ namespace Prism.Internal.Registry
             };
         }
 
-        public static void SaveEntityState(ISessionEntity entity, bool isDraft = true)
+        public static void SaveEntityState(SessionEntity  entity, bool isDraft = true)
         {
             var key = $"{entity.SessionId}:{entity.EntityId}:{(isDraft ? "draft" : "committed")}";
             SessionEntityStore[key] = entity;
@@ -89,7 +88,7 @@ namespace Prism.Internal.Registry
             Console.WriteLine($"[RegistryAdapter] Saved entity '{entity.EntityId}' in session '{entity.SessionId}' as {(isDraft ? "draft" : "committed")}.");
         }
 
-        public static ISessionEntity? GetEntityState(string entityId, string sessionId, bool isDraft = true)
+        public static SessionEntity? GetEntityState(string entityId, string sessionId, bool isDraft = true)
         {
             var key = $"{sessionId}:{entityId}:{(isDraft ? "draft" : "committed")}";
 
