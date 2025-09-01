@@ -1,7 +1,6 @@
-using Prism.Shared.Contracts;
 using Prism.Intent.Identity.Fingerprint;
 
-namespace Prism.Intent.Identity.Response
+namespace Prism.Shared.Contracts.Tone
 {
     public interface IToneModulator
     {

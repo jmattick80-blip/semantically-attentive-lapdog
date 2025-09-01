@@ -1,5 +1,5 @@
 using Prism.Intent.Identity.Fingerprint;
-using Prism.Intent.Identity.Trace;
+using Prism.Shared.Contracts.Fingerprint;
 
 namespace Prism.Intent.Interpretation.Memory
 {

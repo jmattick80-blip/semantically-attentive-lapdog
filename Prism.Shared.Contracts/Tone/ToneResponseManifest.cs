@@ -1,13 +1,14 @@
 using System.Collections.Generic;
 
-namespace Prism.Intent.Interpretation.Config
+namespace Prism.Shared.Contracts.Tone
 {
     /// <summary>
     /// Stores designer-authored tone responses for contributors and NPC emitters.
     /// </summary>
     public class ToneResponseManifest
     {
-        private readonly Dictionary<string, Dictionary<string, string>> _responses = new();
+        private readonly Dictionary<string, Dictionary<string, string>> _responses =
+            new Dictionary<string, Dictionary<string, string>>();
 
         /// <summary>
         /// Registers a tone response for a given role and tone.

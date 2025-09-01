@@ -1,6 +1,6 @@
-using Prism.Intent.Identity.Trace;
+using System.Collections.Generic;
 
-namespace Prism.Intent.Interpretation.Models
+namespace Prism.Shared.Contracts.Fingerprint
 {
     /// <summary>
     /// Represents a grouped set of trace entries that form an emotional arc or contributor journey.
@@ -10,7 +10,7 @@ namespace Prism.Intent.Interpretation.Models
         /// <summary>
         /// The trace entries that belong to this emotional cluster.
         /// </summary>
-        public List<TraceEntry> Entries { get; set; } = new();
+        public List<TraceEntry> Entries { get; set; } = new List<TraceEntry>();
 
         /// <summary>
         /// A summary of tone types present across the cluster.

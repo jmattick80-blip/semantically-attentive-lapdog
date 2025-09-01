@@ -1,4 +1,7 @@
-namespace Prism.Intent.Identity.Trace
+using System;
+using System.Collections.Generic;
+
+namespace Prism.Shared.Contracts.Fingerprint
 {
     public class TraceEntry
     {
@@ -9,8 +12,9 @@ namespace Prism.Intent.Identity.Trace
         public string Tone { get; set; }
         public string Phase { get; set; }
         public string Response { get; set; }
-        public List<string> Tags { get; set; } = new();
+        public List<string> Tags { get; set; } = new List<string>();
         public string Feedback { get; set; }
+        public string Fingerprint { get; set; }
     }
 
     #region TraceEntry Summary (August 31, 2025)

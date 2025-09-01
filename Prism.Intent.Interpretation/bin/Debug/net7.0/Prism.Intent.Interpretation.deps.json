@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "Prism.Intent.Interpretation/1.0.0": {
+        "dependencies": {
+          "Prism.Shared.Contracts": "1.0.0"
+        },
+        "runtime": {
+          "Prism.Intent.Interpretation.dll": {}
+        }
+      },
+      "Prism.Shared.Contracts/1.0.0": {
+        "runtime": {
+          "Prism.Shared.Contracts.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Prism.Intent.Interpretation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Prism.Shared.Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

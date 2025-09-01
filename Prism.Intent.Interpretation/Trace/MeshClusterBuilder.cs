@@ -2,8 +2,7 @@ using Prism.Intent.Identity.Fingerprint;
 using Prism.Intent.Interpretation.Memory;
 using System.Collections.Generic;
 using System.Linq;
-using Prism.Intent.Identity.Trace;
-using Prism.Intent.Interpretation.Models;
+using Prism.Shared.Contracts.Fingerprint;
 
 namespace Prism.Intent.Interpretation.Trace
 {

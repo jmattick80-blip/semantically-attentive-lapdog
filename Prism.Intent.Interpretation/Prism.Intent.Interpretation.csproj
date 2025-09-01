@@ -7,8 +7,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Prism.Intent.Identity\Prism.Intent.Identity.csproj" />
       <ProjectReference Include="..\Prism.Shared.Contracts\Prism.Shared.Contracts.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Models\" />
     </ItemGroup>
 
 </Project>

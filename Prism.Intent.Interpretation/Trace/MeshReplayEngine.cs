@@ -1,5 +1,5 @@
 using Prism.Shared.Contracts;
-using Prism.Intent.Interpretation.Models;
+using Prism.Shared.Contracts.Fingerprint;
 
 namespace Prism.Intent.Interpretation.Trace
 {
