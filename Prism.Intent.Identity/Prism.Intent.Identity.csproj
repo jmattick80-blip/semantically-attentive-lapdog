@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\GalleryDrivers\Prism.Internals.Processor\Prism.Internals.Processor.csproj" />
+      <ProjectReference Include="..\Prism.Shared.Contracts\Prism.Shared.Contracts.csproj" />
+    </ItemGroup>
+
+</Project>
