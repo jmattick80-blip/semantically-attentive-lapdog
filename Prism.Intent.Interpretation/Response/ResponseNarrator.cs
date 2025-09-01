@@ -1,6 +1,7 @@
 using Prism.Intent.Identity.Fingerprint;
 using Prism.Intent.Interpretation.Config;
 using Prism.Shared.Contracts;
+using Prism.Shared.Contracts.Tone;
 
 namespace Prism.Intent.Interpretation.Response
 {

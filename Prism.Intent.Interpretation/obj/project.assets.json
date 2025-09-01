@@ -2,92 +2,6 @@
   "version": 3,
   "targets": {
     "net7.0": {
-      "Prism.Intent.Identity/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "dependencies": {
-          "Prism.Internals.Processor": "1.0.0",
-          "Prism.Shared.Contracts": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Prism.Intent.Identity.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Prism.Intent.Identity.dll": {}
-        }
-      },
-      "Prism.Internal.Mesh/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "dependencies": {
-          "Prism.Internal.Shared.MeshLogic": "1.0.0",
-          "Prism.Internals.Globals": "1.0.0",
-          "Prism.Shared.Contracts": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Prism.Internal.Mesh.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Prism.Internal.Mesh.dll": {}
-        }
-      },
-      "Prism.Internal.Registry/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "dependencies": {
-          "Prism.Internal.Shared.MeshLogic": "1.0.0",
-          "Prism.Internals.Globals": "1.0.0",
-          "Prism.Shared.Contracts": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Prism.Internal.Registry.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Prism.Internal.Registry.dll": {}
-        }
-      },
-      "Prism.Internal.Shared.MeshLogic/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "dependencies": {
-          "Prism.Shared.Contracts": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Prism.Internal.Shared.MeshLogic.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Prism.Internal.Shared.MeshLogic.dll": {}
-        }
-      },
-      "Prism.Internals.Globals/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "dependencies": {
-          "Prism.Shared.Contracts": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Prism.Internals.Globals.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Prism.Internals.Globals.dll": {}
-        }
-      },
-      "Prism.Internals.Processor/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "dependencies": {
-          "Prism.Internal.Mesh": "1.0.0",
-          "Prism.Internal.Registry": "1.0.0",
-          "Prism.Internals.Globals": "1.0.0",
-          "Prism.Shared.Contracts": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Prism.Internals.Processor.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Prism.Internals.Processor.dll": {}
-        }
-      },
       "Prism.Shared.Contracts/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -101,36 +15,6 @@
     }
   },
   "libraries": {
-    "Prism.Intent.Identity/1.0.0": {
-      "type": "project",
-      "path": "../Prism.Intent.Identity/Prism.Intent.Identity.csproj",
-      "msbuildProject": "../Prism.Intent.Identity/Prism.Intent.Identity.csproj"
-    },
-    "Prism.Internal.Mesh/1.0.0": {
-      "type": "project",
-      "path": "../Prism.Internal.Mesh/Prism.Internal.Mesh.csproj",
-      "msbuildProject": "../Prism.Internal.Mesh/Prism.Internal.Mesh.csproj"
-    },
-    "Prism.Internal.Registry/1.0.0": {
-      "type": "project",
-      "path": "../Prism.Internal.Registry/Prism.Internal.Registry.csproj",
-      "msbuildProject": "../Prism.Internal.Registry/Prism.Internal.Registry.csproj"
-    },
-    "Prism.Internal.Shared.MeshLogic/1.0.0": {
-      "type": "project",
-      "path": "../Prism.Internal.Shared.MeshLogic/Prism.Internal.Shared.MeshLogic.csproj",
-      "msbuildProject": "../Prism.Internal.Shared.MeshLogic/Prism.Internal.Shared.MeshLogic.csproj"
-    },
-    "Prism.Internals.Globals/1.0.0": {
-      "type": "project",
-      "path": "../Prism.Internals.Globals/Prism.Internals.Globals.csproj",
-      "msbuildProject": "../Prism.Internals.Globals/Prism.Internals.Globals.csproj"
-    },
-    "Prism.Internals.Processor/1.0.0": {
-      "type": "project",
-      "path": "../../GalleryDrivers/Prism.Internals.Processor/Prism.Internals.Processor.csproj",
-      "msbuildProject": "../../GalleryDrivers/Prism.Internals.Processor/Prism.Internals.Processor.csproj"
-    },
     "Prism.Shared.Contracts/1.0.0": {
       "type": "project",
       "path": "../Prism.Shared.Contracts/Prism.Shared.Contracts.csproj",
@@ -139,7 +23,6 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "Prism.Intent.Identity >= 1.0.0",
       "Prism.Shared.Contracts >= 1.0.0"
     ]
   },
@@ -168,9 +51,6 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\jmatt\\RiderProjects\\Prism\\Prism.Intent.Identity\\Prism.Intent.Identity.csproj": {
-              "projectPath": "C:\\Users\\jmatt\\RiderProjects\\Prism\\Prism.Intent.Identity\\Prism.Intent.Identity.csproj"
-            },
             "C:\\Users\\jmatt\\RiderProjects\\Prism\\Prism.Shared.Contracts\\Prism.Shared.Contracts.csproj": {
               "projectPath": "C:\\Users\\jmatt\\RiderProjects\\Prism\\Prism.Shared.Contracts\\Prism.Shared.Contracts.csproj"
             }
