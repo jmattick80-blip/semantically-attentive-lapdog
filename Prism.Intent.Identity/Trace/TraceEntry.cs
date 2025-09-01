@@ -10,6 +10,7 @@ namespace Prism.Intent.Identity.Trace
         public string Phase { get; set; }
         public string Response { get; set; }
         public List<string> Tags { get; set; } = new();
+        public string Feedback { get; set; }
     }
 
     #region TraceEntry Summary (August 31, 2025)

@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prism.Internal.Shared.MeshL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prism.Intent.Identity", "Prism.Intent.Identity\Prism.Intent.Identity.csproj", "{3F9A34E2-4156-428E-80DC-377549AA44D0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prism.Intent.Interpretation", "Prism.Intent.Interpretation\Prism.Intent.Interpretation.csproj", "{53794D00-795E-4414-8AB0-3027538800F2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -60,5 +62,9 @@ Global
 		{3F9A34E2-4156-428E-80DC-377549AA44D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F9A34E2-4156-428E-80DC-377549AA44D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F9A34E2-4156-428E-80DC-377549AA44D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53794D00-795E-4414-8AB0-3027538800F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53794D00-795E-4414-8AB0-3027538800F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53794D00-795E-4414-8AB0-3027538800F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53794D00-795E-4414-8AB0-3027538800F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
