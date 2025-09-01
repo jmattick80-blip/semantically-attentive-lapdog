@@ -1,9 +1,10 @@
 using System;
 using System.Collections.Generic;
+using Prism.Shared.Contracts.Interfaces.Sessions;
 
 namespace Prism.Shared.Contracts
 {
-    public class SessionContext
+    public class SessionContext : ISessionContext
     {
         public string SessionId { get; set; } = string.Empty;
         public string GalleryId { get; set; } = string.Empty;
@@ -24,6 +25,11 @@ namespace Prism.Shared.Contracts
             public DateTime Timestamp { get; set; }
             public List<string> CommittedEntities { get; set; }
             public Dictionary<string, object> MetadataSnapshot { get; set; }
+        }
+
+        public string ToSummary()
+        {
+            return $"Session '{SessionId}' by contributor '{ContributorId}' in phase '{CuratorPhase}'";
         }
     }
 }
