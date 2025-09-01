@@ -1,10 +1,11 @@
 using Prism.Internal.Shared.MeshLogic.Interfaces;
+using Prism.Shared.Contracts.Enums;
 
 namespace Prism.Internal.Shared.MeshLogic.Transformers
 {
     public static class TransformerRegistry
     {
-        public static List<IEntityTransformer> ResolveBaseTransformers(string entityType, string curatorRole)
+        public static List<IEntityTransformer> ResolveBaseTransformers(PrismSelectorTypes.EntityType entityType, string curatorRole)
         {
             var transformers = new List<IEntityTransformer>();
 
@@ -16,14 +17,14 @@ namespace Prism.Internal.Shared.MeshLogic.Transformers
                 transformers.Add(new TraitTransformer());
 
             // Overlays may be optional unless in annotation phase
-            if (entityType == "Exhibit" || curatorRole == "Annotator")
+            if (entityType == PrismSelectorTypes.EntityType.Exhibit || curatorRole == "Annotator")
                 transformers.Add(new OverlayTransformer());
 
             return transformers;
         }
 
         // Legacy fallback if phase is not used
-        public static List<IEntityTransformer> ResolveTransformers(string entityType, string curatorRole)
+        public static List<IEntityTransformer> ResolveTransformers(PrismSelectorTypes.EntityType entityType, string curatorRole)
         {
             return ResolveBaseTransformers(entityType, curatorRole);
         }

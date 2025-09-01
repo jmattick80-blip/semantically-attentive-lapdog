@@ -1,11 +1,15 @@
 using Prism.Internal.Shared.MeshLogic.Interfaces;
 using Prism.Internal.Shared.MeshLogic.Transformers;
+using Prism.Shared.Contracts.Enums;
 
 namespace Prism.Internal.Shared.MeshLogic.Routing
 {
     public static class CuratorPhaseRouter
     {
-        public static List<IEntityTransformer> Route(string entityType, string curatorRole, string phase)
+        public static List<IEntityTransformer> Route(
+            PrismSelectorTypes.EntityType entityType,
+            string curatorRole,
+            string phase)
         {
             var baseTransformers = TransformerRegistry.ResolveBaseTransformers(entityType, curatorRole);
 
@@ -15,10 +19,17 @@ namespace Prism.Internal.Shared.MeshLogic.Routing
                 "Annotation" => new List<IEntityTransformer> { new TraitTransformer() },
                 "Archival" => new List<IEntityTransformer> { new MoodTransformer(), new TraitTransformer() },
                 "LivePlay" => new List<IEntityTransformer> { new MoodTransformer(), new OverlayTransformer() },
-                _ => new()
+                _ => new List<IEntityTransformer>()
             };
 
             return baseTransformers.Concat(phaseSpecific).ToList();
         }
     }
+
+    #region CuratorPhaseRouter Summary 2025.09.01
+    // ✅ Summary: CuratorPhaseRouter now uses enum-based entity type routing and phase-specific transformer logic.
+    // It combines base transformers with phase-aware overlays and trait scaffolding to support narratable consequence.
+    // This router enables prefab-safe mutation, curator-sensitive flows, and emotional mesh activation across phases.
+    // JM ✦ Prism Architect ✦ 2025-09-01
+    #endregion
 }

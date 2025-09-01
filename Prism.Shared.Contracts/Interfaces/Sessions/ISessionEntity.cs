@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Prism.Shared.Contracts.Enums;
 
 namespace Prism.Shared.Contracts.Interfaces.Sessions
 {
@@ -10,7 +11,8 @@ namespace Prism.Shared.Contracts.Interfaces.Sessions
         DateTime Timestamp { get; }
 
         // Optional hooks
-        string EntityType { get; } // e.g. "Exhibit", "NPC", "Zone"
+        PrismSelectorTypes.EntityType EntityType { get; set; }
+
         Dictionary<string, object> Metadata { get; }
         
         // Emotional mesh vector

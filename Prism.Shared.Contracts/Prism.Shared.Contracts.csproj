@@ -6,6 +6,7 @@
 
     <ItemGroup>
       <Folder Include="Interfaces\Startup\" />
+      <Folder Include="MoodProfiles\Templates\" />
     </ItemGroup>
 
 </Project>
