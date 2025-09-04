@@ -15,6 +15,14 @@
           "Prism.Intent.Identity.dll": {}
         }
       },
+      "LiteDB/5.0.11": {
+        "runtime": {
+          "lib/netstandard2.0/LiteDB.dll": {
+            "assemblyVersion": "5.0.11.0",
+            "fileVersion": "5.0.11.0"
+          }
+        }
+      },
       "Prism.Internal.Mesh/1.0.0": {
         "dependencies": {
           "Prism.Internal.Shared.MeshLogic": "1.0.0",
@@ -22,7 +30,10 @@
           "Prism.Shared.Contracts": "1.0.0"
         },
         "runtime": {
-          "Prism.Internal.Mesh.dll": {}
+          "Prism.Internal.Mesh.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Prism.Internal.Registry/1.0.0": {
@@ -32,7 +43,10 @@
           "Prism.Shared.Contracts": "1.0.0"
         },
         "runtime": {
-          "Prism.Internal.Registry.dll": {}
+          "Prism.Internal.Registry.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Prism.Internal.Shared.MeshLogic/1.0.0": {
@@ -40,7 +54,23 @@
           "Prism.Shared.Contracts": "1.0.0"
         },
         "runtime": {
-          "Prism.Internal.Shared.MeshLogic.dll": {}
+          "Prism.Internal.Shared.MeshLogic.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Prism.Internals.DataManager/1.0.0": {
+        "dependencies": {
+          "LiteDB": "5.0.11",
+          "Prism.Internals.Orchestration": "1.0.0",
+          "Prism.Shared.Contracts": "1.0.0"
+        },
+        "runtime": {
+          "Prism.Internals.DataManager.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Prism.Internals.Globals/1.0.0": {
@@ -48,23 +78,45 @@
           "Prism.Shared.Contracts": "1.0.0"
         },
         "runtime": {
-          "Prism.Internals.Globals.dll": {}
+          "Prism.Internals.Globals.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Prism.Internals.Orchestration/1.0.0": {
+        "dependencies": {
+          "Prism.Shared.Contracts": "1.0.0"
+        },
+        "runtime": {
+          "Prism.Internals.Orchestration.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Prism.Internals.Processor/1.0.0": {
         "dependencies": {
           "Prism.Internal.Mesh": "1.0.0",
           "Prism.Internal.Registry": "1.0.0",
+          "Prism.Internals.DataManager": "1.0.0",
           "Prism.Internals.Globals": "1.0.0",
+          "Prism.Internals.Orchestration": "1.0.0",
           "Prism.Shared.Contracts": "1.0.0"
         },
         "runtime": {
-          "Prism.Internals.Processor.dll": {}
+          "Prism.Internals.Processor.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Prism.Shared.Contracts/1.0.0": {
         "runtime": {
-          "Prism.Shared.Contracts.dll": {}
+          "Prism.Shared.Contracts.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
@@ -74,6 +126,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "LiteDB/5.0.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6cL4bOmVCUB0gIK+6qIr68HeqjjHZicPDGQjvJ87mIOvkFsEsJWkIps3yoKNeLpHhJQur++yoQ9Q8gxsdos0xQ==",
+      "path": "litedb/5.0.11",
+      "hashPath": "litedb.5.0.11.nupkg.sha512"
     },
     "Prism.Internal.Mesh/1.0.0": {
       "type": "project",
@@ -90,7 +149,17 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Prism.Internals.DataManager/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "Prism.Internals.Globals/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Prism.Internals.Orchestration/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

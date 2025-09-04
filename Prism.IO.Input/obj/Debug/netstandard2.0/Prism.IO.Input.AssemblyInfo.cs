@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Prism.IO.Input")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+47278b7cbc3c1503d911d2f5a69226b4d546d336")]
 [assembly: System.Reflection.AssemblyProductAttribute("Prism.IO.Input")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Prism.IO.Input")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

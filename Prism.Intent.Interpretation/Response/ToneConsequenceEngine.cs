@@ -1,7 +1,6 @@
 using Prism.Intent.Identity.Fingerprint;
 using Prism.Intent.Interpretation.Config;
 using Prism.Shared.Contracts;
-using System.Collections.Generic;
 
 namespace Prism.Intent.Interpretation.Response
 {
@@ -24,7 +23,7 @@ namespace Prism.Intent.Interpretation.Response
         {
             var modulated = original.Clone();
 
-            if (toneHistory == null || toneHistory.Count == 0)
+            if (toneHistory.Count == 0)
                 return modulated;
 
             var recentTone = toneHistory[^1];

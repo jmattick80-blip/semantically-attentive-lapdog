@@ -21,7 +21,10 @@
           "Prism.Shared.Contracts": "1.0.0"
         },
         "runtime": {
-          "Prism.Internal.Shared.MeshLogic.dll": {}
+          "Prism.Internal.Shared.MeshLogic.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Prism.Internals.Globals/1.0.0": {
@@ -29,12 +32,18 @@
           "Prism.Shared.Contracts": "1.0.0"
         },
         "runtime": {
-          "Prism.Internals.Globals.dll": {}
+          "Prism.Internals.Globals.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Prism.Shared.Contracts/1.0.0": {
         "runtime": {
-          "Prism.Shared.Contracts.dll": {}
+          "Prism.Shared.Contracts.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

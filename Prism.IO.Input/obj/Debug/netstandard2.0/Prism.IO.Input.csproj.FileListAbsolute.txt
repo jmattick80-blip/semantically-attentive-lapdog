@@ -8,6 +8,7 @@ C:\Users\jmatt\RiderProjects\Prism\Prism.IO.Input\obj\Debug\netstandard2.0\Prism
 C:\Users\jmatt\RiderProjects\Prism\Prism.IO.Input\obj\Debug\netstandard2.0\Prism.IO.Input.AssemblyInfoInputs.cache
 C:\Users\jmatt\RiderProjects\Prism\Prism.IO.Input\obj\Debug\netstandard2.0\Prism.IO.Input.AssemblyInfo.cs
 C:\Users\jmatt\RiderProjects\Prism\Prism.IO.Input\obj\Debug\netstandard2.0\Prism.IO.Input.csproj.CoreCompileInputs.cache
-C:\Users\jmatt\RiderProjects\Prism\Prism.IO.Input\obj\Debug\netstandard2.0\Prism.IO.Input.csproj.CopyComplete
 C:\Users\jmatt\RiderProjects\Prism\Prism.IO.Input\obj\Debug\netstandard2.0\Prism.IO.Input.dll
 C:\Users\jmatt\RiderProjects\Prism\Prism.IO.Input\obj\Debug\netstandard2.0\Prism.IO.Input.pdb
+C:\Users\jmatt\RiderProjects\Prism\Prism.IO.Input\obj\Debug\netstandard2.0\Prism.IO.Input.sourcelink.json
+C:\Users\jmatt\RiderProjects\Prism\Prism.IO.Input\obj\Debug\netstandard2.0\Prism.IO.8B47F8B3.Up2Date

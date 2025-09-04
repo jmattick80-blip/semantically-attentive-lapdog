@@ -12,8 +12,9 @@ C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Mesh\obj\Debug\net7.0\Prism.In
 C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Mesh\obj\Debug\net7.0\Prism.Internal.Mesh.AssemblyInfoInputs.cache
 C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Mesh\obj\Debug\net7.0\Prism.Internal.Mesh.AssemblyInfo.cs
 C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Mesh\obj\Debug\net7.0\Prism.Internal.Mesh.csproj.CoreCompileInputs.cache
-C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Mesh\obj\Debug\net7.0\Prism.Internal.Mesh.csproj.CopyComplete
 C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Mesh\obj\Debug\net7.0\Prism.Internal.Mesh.dll
 C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Mesh\obj\Debug\net7.0\refint\Prism.Internal.Mesh.dll
 C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Mesh\obj\Debug\net7.0\Prism.Internal.Mesh.pdb
 C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Mesh\obj\Debug\net7.0\ref\Prism.Internal.Mesh.dll
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Mesh\obj\Debug\net7.0\Prism.Internal.Mesh.sourcelink.json
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Mesh\obj\Debug\net7.0\Prism.In.F573DC56.Up2Date

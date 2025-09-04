@@ -18,8 +18,13 @@ C:\Users\jmatt\RiderProjects\Prism\Prism.Intent.Identity\bin\Debug\net7.0\Prism.
 C:\Users\jmatt\RiderProjects\Prism\Prism.Intent.Identity\bin\Debug\net7.0\Prism.Internal.Registry.pdb
 C:\Users\jmatt\RiderProjects\Prism\Prism.Intent.Identity\bin\Debug\net7.0\Prism.Internal.Shared.MeshLogic.pdb
 C:\Users\jmatt\RiderProjects\Prism\Prism.Intent.Identity\bin\Debug\net7.0\Prism.Internals.Globals.pdb
-C:\Users\jmatt\RiderProjects\Prism\Prism.Intent.Identity\obj\Debug\net7.0\Prism.Intent.Identity.csproj.CopyComplete
 C:\Users\jmatt\RiderProjects\Prism\Prism.Intent.Identity\obj\Debug\net7.0\Prism.Intent.Identity.dll
 C:\Users\jmatt\RiderProjects\Prism\Prism.Intent.Identity\obj\Debug\net7.0\refint\Prism.Intent.Identity.dll
 C:\Users\jmatt\RiderProjects\Prism\Prism.Intent.Identity\obj\Debug\net7.0\Prism.Intent.Identity.pdb
 C:\Users\jmatt\RiderProjects\Prism\Prism.Intent.Identity\obj\Debug\net7.0\ref\Prism.Intent.Identity.dll
+C:\Users\jmatt\RiderProjects\Prism\Prism.Intent.Identity\bin\Debug\net7.0\Prism.Internals.DataManager.dll
+C:\Users\jmatt\RiderProjects\Prism\Prism.Intent.Identity\bin\Debug\net7.0\Prism.Internals.Orchestration.dll
+C:\Users\jmatt\RiderProjects\Prism\Prism.Intent.Identity\bin\Debug\net7.0\Prism.Internals.DataManager.pdb
+C:\Users\jmatt\RiderProjects\Prism\Prism.Intent.Identity\bin\Debug\net7.0\Prism.Internals.Orchestration.pdb
+C:\Users\jmatt\RiderProjects\Prism\Prism.Intent.Identity\obj\Debug\net7.0\Prism.Intent.Identity.sourcelink.json
+C:\Users\jmatt\RiderProjects\Prism\Prism.Intent.Identity\obj\Debug\net7.0\Prism.In.CA7B3AB2.Up2Date

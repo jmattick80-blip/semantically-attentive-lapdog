@@ -1,0 +1,9 @@
+{
+  "Manager": "ProfileManager",
+  "Adapters": [
+    {
+      "Type": "UnityMeshAdapter",
+      "Source": "Scriptables/MeshProfiles"
+    }
+  ]
+}

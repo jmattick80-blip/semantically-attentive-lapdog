@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net7.0": {
+      "LiteDB/5.0.11": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/LiteDB.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/LiteDB.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Prism.Internal.Mesh/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -45,6 +58,21 @@
           "bin/placeholder/Prism.Internal.Shared.MeshLogic.dll": {}
         }
       },
+      "Prism.Internals.DataManager/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "LiteDB": "5.0.11",
+          "Prism.Internals.Orchestration": "1.0.0",
+          "Prism.Shared.Contracts": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Prism.Internals.DataManager.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Prism.Internals.DataManager.dll": {}
+        }
+      },
       "Prism.Internals.Globals/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -58,13 +86,28 @@
           "bin/placeholder/Prism.Internals.Globals.dll": {}
         }
       },
+      "Prism.Internals.Orchestration/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Prism.Shared.Contracts": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Prism.Internals.Orchestration.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Prism.Internals.Orchestration.dll": {}
+        }
+      },
       "Prism.Internals.Processor/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "Prism.Internal.Mesh": "1.0.0",
           "Prism.Internal.Registry": "1.0.0",
+          "Prism.Internals.DataManager": "1.0.0",
           "Prism.Internals.Globals": "1.0.0",
+          "Prism.Internals.Orchestration": "1.0.0",
           "Prism.Shared.Contracts": "1.0.0"
         },
         "compile": {
@@ -87,6 +130,26 @@
     }
   },
   "libraries": {
+    "LiteDB/5.0.11": {
+      "sha512": "6cL4bOmVCUB0gIK+6qIr68HeqjjHZicPDGQjvJ87mIOvkFsEsJWkIps3yoKNeLpHhJQur++yoQ9Q8gxsdos0xQ==",
+      "type": "package",
+      "path": "litedb/5.0.11",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "AppVeyorSettings.json",
+        "LICENSE",
+        "icon_64x64.png",
+        "lib/net45/LiteDB.dll",
+        "lib/net45/LiteDB.xml",
+        "lib/netstandard1.3/LiteDB.dll",
+        "lib/netstandard1.3/LiteDB.xml",
+        "lib/netstandard2.0/LiteDB.dll",
+        "lib/netstandard2.0/LiteDB.xml",
+        "litedb.5.0.11.nupkg.sha512",
+        "litedb.nuspec"
+      ]
+    },
     "Prism.Internal.Mesh/1.0.0": {
       "type": "project",
       "path": "../Prism.Internal.Mesh/Prism.Internal.Mesh.csproj",
@@ -102,10 +165,20 @@
       "path": "../Prism.Internal.Shared.MeshLogic/Prism.Internal.Shared.MeshLogic.csproj",
       "msbuildProject": "../Prism.Internal.Shared.MeshLogic/Prism.Internal.Shared.MeshLogic.csproj"
     },
+    "Prism.Internals.DataManager/1.0.0": {
+      "type": "project",
+      "path": "../Prism.Internals.DataManager/Prism.Internals.DataManager.csproj",
+      "msbuildProject": "../Prism.Internals.DataManager/Prism.Internals.DataManager.csproj"
+    },
     "Prism.Internals.Globals/1.0.0": {
       "type": "project",
       "path": "../Prism.Internals.Globals/Prism.Internals.Globals.csproj",
       "msbuildProject": "../Prism.Internals.Globals/Prism.Internals.Globals.csproj"
+    },
+    "Prism.Internals.Orchestration/1.0.0": {
+      "type": "project",
+      "path": "../Prism.Internals.Orchestration/Prism.Internals.Orchestration.csproj",
+      "msbuildProject": "../Prism.Internals.Orchestration/Prism.Internals.Orchestration.csproj"
     },
     "Prism.Internals.Processor/1.0.0": {
       "type": "project",
@@ -162,6 +235,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -178,12 +256,26 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[7.0.20, 7.0.20]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[7.0.20, 7.0.20]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[7.0.20, 7.0.20]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\jmatt\\.dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\jmatt\\.dotnet\\sdk\\8.0.413\\RuntimeIdentifierGraph.json"
       }
     }
   }

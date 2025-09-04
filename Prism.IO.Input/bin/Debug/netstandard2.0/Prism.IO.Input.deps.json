@@ -24,7 +24,10 @@
       },
       "Prism.Shared.Contracts/1.0.0": {
         "runtime": {
-          "Prism.Shared.Contracts.dll": {}
+          "Prism.Shared.Contracts.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

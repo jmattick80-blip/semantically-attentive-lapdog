@@ -8,8 +8,9 @@ C:\Users\jmatt\RiderProjects\Prism\Prism.Intent.Interpretation\obj\Debug\net7.0\
 C:\Users\jmatt\RiderProjects\Prism\Prism.Intent.Interpretation\obj\Debug\net7.0\Prism.Intent.Interpretation.AssemblyInfoInputs.cache
 C:\Users\jmatt\RiderProjects\Prism\Prism.Intent.Interpretation\obj\Debug\net7.0\Prism.Intent.Interpretation.AssemblyInfo.cs
 C:\Users\jmatt\RiderProjects\Prism\Prism.Intent.Interpretation\obj\Debug\net7.0\Prism.Intent.Interpretation.csproj.CoreCompileInputs.cache
-C:\Users\jmatt\RiderProjects\Prism\Prism.Intent.Interpretation\obj\Debug\net7.0\Prism.Intent.Interpretation.csproj.CopyComplete
 C:\Users\jmatt\RiderProjects\Prism\Prism.Intent.Interpretation\obj\Debug\net7.0\Prism.Intent.Interpretation.dll
 C:\Users\jmatt\RiderProjects\Prism\Prism.Intent.Interpretation\obj\Debug\net7.0\refint\Prism.Intent.Interpretation.dll
 C:\Users\jmatt\RiderProjects\Prism\Prism.Intent.Interpretation\obj\Debug\net7.0\Prism.Intent.Interpretation.pdb
 C:\Users\jmatt\RiderProjects\Prism\Prism.Intent.Interpretation\obj\Debug\net7.0\ref\Prism.Intent.Interpretation.dll
+C:\Users\jmatt\RiderProjects\Prism\Prism.Intent.Interpretation\obj\Debug\net7.0\Prism.Intent.Interpretation.sourcelink.json
+C:\Users\jmatt\RiderProjects\Prism\Prism.Intent.Interpretation\obj\Debug\net7.0\Prism.In.FD42A3F4.Up2Date

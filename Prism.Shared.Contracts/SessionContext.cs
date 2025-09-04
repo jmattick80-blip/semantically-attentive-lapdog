@@ -17,7 +17,8 @@ namespace Prism.Shared.Contracts
         public string ContributorId { get; set; } = string.Empty;
         public string Phase { get; set; } = string.Empty; // Optional: alias for CuratorPhase if needed
         public Dictionary<string, string> TraitTriggerMap { get; set; } = new  Dictionary<string, string>();
-        
+        public MeshProfile MeshProfile { get; set; }
+
         public class CuratorLogEntry
         {
             public string ContributorId { get; set; }

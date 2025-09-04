@@ -8,3 +8,4 @@ C:\Users\jmatt\RiderProjects\Prism\Prism.Shared.Contracts\obj\Debug\netstandard2
 C:\Users\jmatt\RiderProjects\Prism\Prism.Shared.Contracts\obj\Debug\netstandard2.0\Prism.Shared.Contracts.csproj.CoreCompileInputs.cache
 C:\Users\jmatt\RiderProjects\Prism\Prism.Shared.Contracts\obj\Debug\netstandard2.0\Prism.Shared.Contracts.dll
 C:\Users\jmatt\RiderProjects\Prism\Prism.Shared.Contracts\obj\Debug\netstandard2.0\Prism.Shared.Contracts.pdb
+C:\Users\jmatt\RiderProjects\Prism\Prism.Shared.Contracts\obj\Debug\netstandard2.0\Prism.Shared.Contracts.sourcelink.json

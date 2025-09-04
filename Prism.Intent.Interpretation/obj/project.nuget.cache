@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "1GJO7c3hjYs=",
+  "dgSpecHash": "ye9dPAaHcNk=",
   "success": true,
   "projectFilePath": "C:\\Users\\jmatt\\RiderProjects\\Prism\\Prism.Intent.Interpretation\\Prism.Intent.Interpretation.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\jmatt\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.20\\microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\jmatt\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.20\\microsoft.windowsdesktop.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\jmatt\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.20\\microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512"
+  ],
   "logs": []
 }

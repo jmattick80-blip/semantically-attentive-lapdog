@@ -32,8 +32,14 @@
               "C:\\Users\\jmatt\\RiderProjects\\Prism\\Prism.Internal.Registry\\Prism.Internal.Registry.csproj": {
                 "projectPath": "C:\\Users\\jmatt\\RiderProjects\\Prism\\Prism.Internal.Registry\\Prism.Internal.Registry.csproj"
               },
+              "C:\\Users\\jmatt\\RiderProjects\\Prism\\Prism.Internals.DataManager\\Prism.Internals.DataManager.csproj": {
+                "projectPath": "C:\\Users\\jmatt\\RiderProjects\\Prism\\Prism.Internals.DataManager\\Prism.Internals.DataManager.csproj"
+              },
               "C:\\Users\\jmatt\\RiderProjects\\Prism\\Prism.Internals.Globals\\Prism.Internals.Globals.csproj": {
                 "projectPath": "C:\\Users\\jmatt\\RiderProjects\\Prism\\Prism.Internals.Globals\\Prism.Internals.Globals.csproj"
+              },
+              "C:\\Users\\jmatt\\RiderProjects\\Prism\\Prism.Internals.Orchestration\\Prism.Internals.Orchestration.csproj": {
+                "projectPath": "C:\\Users\\jmatt\\RiderProjects\\Prism\\Prism.Internals.Orchestration\\Prism.Internals.Orchestration.csproj"
               },
               "C:\\Users\\jmatt\\RiderProjects\\Prism\\Prism.Shared.Contracts\\Prism.Shared.Contracts.csproj": {
                 "projectPath": "C:\\Users\\jmatt\\RiderProjects\\Prism\\Prism.Shared.Contracts\\Prism.Shared.Contracts.csproj"
@@ -45,6 +51,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -61,12 +72,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\jmatt\\.dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\jmatt\\.dotnet\\sdk\\8.0.413\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -105,6 +130,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -121,12 +151,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\jmatt\\.dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\jmatt\\.dotnet\\sdk\\8.0.413\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -168,6 +212,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -184,12 +233,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\jmatt\\.dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\jmatt\\.dotnet\\sdk\\8.0.413\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -231,6 +294,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -247,12 +315,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\jmatt\\.dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\jmatt\\.dotnet\\sdk\\8.0.413\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -288,6 +370,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -304,12 +391,111 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\jmatt\\.dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\jmatt\\.dotnet\\sdk\\8.0.413\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\jmatt\\RiderProjects\\Prism\\Prism.Internals.DataManager\\Prism.Internals.DataManager.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\jmatt\\RiderProjects\\Prism\\Prism.Internals.DataManager\\Prism.Internals.DataManager.csproj",
+        "projectName": "Prism.Internals.DataManager",
+        "projectPath": "C:\\Users\\jmatt\\RiderProjects\\Prism\\Prism.Internals.DataManager\\Prism.Internals.DataManager.csproj",
+        "packagesPath": "C:\\Users\\jmatt\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jmatt\\RiderProjects\\Prism\\Prism.Internals.DataManager\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\jmatt\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\jmatt\\RiderProjects\\Prism\\Prism.Internals.Orchestration\\Prism.Internals.Orchestration.csproj": {
+                "projectPath": "C:\\Users\\jmatt\\RiderProjects\\Prism\\Prism.Internals.Orchestration\\Prism.Internals.Orchestration.csproj"
+              },
+              "C:\\Users\\jmatt\\RiderProjects\\Prism\\Prism.Shared.Contracts\\Prism.Shared.Contracts.csproj": {
+                "projectPath": "C:\\Users\\jmatt\\RiderProjects\\Prism\\Prism.Shared.Contracts\\Prism.Shared.Contracts.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "LiteDB": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Users\\jmatt\\.dotnet\\sdk\\8.0.413\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -345,6 +531,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -361,12 +552,102 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\jmatt\\.dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\jmatt\\.dotnet\\sdk\\8.0.413\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\jmatt\\RiderProjects\\Prism\\Prism.Internals.Orchestration\\Prism.Internals.Orchestration.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\jmatt\\RiderProjects\\Prism\\Prism.Internals.Orchestration\\Prism.Internals.Orchestration.csproj",
+        "projectName": "Prism.Internals.Orchestration",
+        "projectPath": "C:\\Users\\jmatt\\RiderProjects\\Prism\\Prism.Internals.Orchestration\\Prism.Internals.Orchestration.csproj",
+        "packagesPath": "C:\\Users\\jmatt\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jmatt\\RiderProjects\\Prism\\Prism.Internals.Orchestration\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\jmatt\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\jmatt\\RiderProjects\\Prism\\Prism.Shared.Contracts\\Prism.Shared.Contracts.csproj": {
+                "projectPath": "C:\\Users\\jmatt\\RiderProjects\\Prism\\Prism.Shared.Contracts\\Prism.Shared.Contracts.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Users\\jmatt\\.dotnet\\sdk\\8.0.413\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -398,6 +679,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -422,7 +708,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Users\\jmatt\\.dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\jmatt\\.dotnet\\sdk\\8.0.413\\RuntimeIdentifierGraph.json"
         }
       }
     }

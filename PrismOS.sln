@@ -20,6 +20,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prism.Intent.Identity", "Pr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prism.Intent.Interpretation", "Prism.Intent.Interpretation\Prism.Intent.Interpretation.csproj", "{53794D00-795E-4414-8AB0-3027538800F2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prism.Internals.DataManager", "Prism.Internals.DataManager\Prism.Internals.DataManager.csproj", "{8D2454A4-8F27-4F73-9E42-9AABB611ECC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prism.Internals.Orchestration", "Prism.Internals.Orchestration\Prism.Internals.Orchestration.csproj", "{16C025C7-677B-436D-BCE6-67DD21D4BAF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prism.Unity.Bridge", "Prism.Unity.Bridge\Prism.Unity.Bridge.csproj", "{4628E879-AABC-437C-AD4A-A257F09380F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -66,5 +72,17 @@ Global
 		{53794D00-795E-4414-8AB0-3027538800F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53794D00-795E-4414-8AB0-3027538800F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53794D00-795E-4414-8AB0-3027538800F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D2454A4-8F27-4F73-9E42-9AABB611ECC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D2454A4-8F27-4F73-9E42-9AABB611ECC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D2454A4-8F27-4F73-9E42-9AABB611ECC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D2454A4-8F27-4F73-9E42-9AABB611ECC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16C025C7-677B-436D-BCE6-67DD21D4BAF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16C025C7-677B-436D-BCE6-67DD21D4BAF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16C025C7-677B-436D-BCE6-67DD21D4BAF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16C025C7-677B-436D-BCE6-67DD21D4BAF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4628E879-AABC-437C-AD4A-A257F09380F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4628E879-AABC-437C-AD4A-A257F09380F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4628E879-AABC-437C-AD4A-A257F09380F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4628E879-AABC-437C-AD4A-A257F09380F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

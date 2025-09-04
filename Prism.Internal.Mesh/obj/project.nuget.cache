@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "f8l/9Wdj32g=",
+  "dgSpecHash": "wp4/6FX1xOY=",
   "success": true,
   "projectFilePath": "C:\\Users\\jmatt\\RiderProjects\\Prism\\Prism.Internal.Mesh\\Prism.Internal.Mesh.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\jmatt\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.20\\microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\jmatt\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.20\\microsoft.windowsdesktop.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\jmatt\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.20\\microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512"
+  ],
   "logs": []
 }
