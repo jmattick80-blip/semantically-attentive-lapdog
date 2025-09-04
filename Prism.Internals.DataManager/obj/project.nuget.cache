@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "dgSpecHash": "DkxhchM9HRo=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\jmatt\\RiderProjects\\Prism\\Prism.Internals.DataManager\\Prism.Internals.DataManager.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jmatt\\.nuget\\packages\\litedb\\5.0.11\\litedb.5.0.11.nupkg.sha512",
+    "C:\\Users\\jmatt\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.20\\microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\jmatt\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.20\\microsoft.windowsdesktop.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\jmatt\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.20\\microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1904",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'LiteDB' 5.0.11 has a known critical severity vulnerability, https://github.com/advisories/GHSA-3x49-g6rc-c284",
+      "libraryId": "LiteDB",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
+}

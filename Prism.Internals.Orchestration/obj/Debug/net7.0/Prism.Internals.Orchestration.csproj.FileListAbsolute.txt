@@ -1,0 +1,16 @@
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internals.Orchestration\bin\Debug\net7.0\Prism.Internals.Orchestration.deps.json
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internals.Orchestration\bin\Debug\net7.0\Prism.Internals.Orchestration.dll
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internals.Orchestration\bin\Debug\net7.0\Prism.Internals.Orchestration.pdb
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internals.Orchestration\bin\Debug\net7.0\Prism.Shared.Contracts.dll
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internals.Orchestration\bin\Debug\net7.0\Prism.Shared.Contracts.pdb
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internals.Orchestration\obj\Debug\net7.0\Prism.Internals.Orchestration.csproj.AssemblyReference.cache
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internals.Orchestration\obj\Debug\net7.0\Prism.Internals.Orchestration.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internals.Orchestration\obj\Debug\net7.0\Prism.Internals.Orchestration.AssemblyInfoInputs.cache
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internals.Orchestration\obj\Debug\net7.0\Prism.Internals.Orchestration.AssemblyInfo.cs
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internals.Orchestration\obj\Debug\net7.0\Prism.Internals.Orchestration.csproj.CoreCompileInputs.cache
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internals.Orchestration\obj\Debug\net7.0\Prism.Internals.Orchestration.sourcelink.json
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internals.Orchestration\obj\Debug\net7.0\Prism.In.407CF13B.Up2Date
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internals.Orchestration\obj\Debug\net7.0\Prism.Internals.Orchestration.dll
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internals.Orchestration\obj\Debug\net7.0\refint\Prism.Internals.Orchestration.dll
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internals.Orchestration\obj\Debug\net7.0\Prism.Internals.Orchestration.pdb
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internals.Orchestration\obj\Debug\net7.0\ref\Prism.Internals.Orchestration.dll
