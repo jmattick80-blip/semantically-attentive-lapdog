@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using Prism.Shared.Contracts.Enums;
+using Prism.Shared.Contracts.Interfaces.Traits;
+using Prism.Shared.Contracts.Traits;
 
 namespace Prism.Shared.Contracts.Interfaces.Sessions
 {
@@ -14,5 +16,7 @@ namespace Prism.Shared.Contracts.Interfaces.Sessions
         public Dictionary<string, object> Metadata { get; set; } = new  Dictionary<string, object>();
         public Dictionary<string, float> MoodVector { get; set; } = new   Dictionary<string, float>();
         public bool IsDraft { get; set; } = true;
+
+        public List<PrismTrait> Traits { get; set; } = new();
     }
 }

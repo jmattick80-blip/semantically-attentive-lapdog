@@ -1,6 +1,6 @@
-using GalleryDrivers.Prism.Shared.Enums;
-using GalleryDrivers.Prism.Shared.Interfaces.Envelopes;
 using Prism.Intent.Identity.Fingerprint;
+using Prism.Shared.Contracts.Enums;
+using Prism.Shared.Contracts.Interfaces.Envelopes;
 
 namespace Prism.Intent.Identity.Envelopes
 {

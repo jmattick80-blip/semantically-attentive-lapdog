@@ -2,77 +2,109 @@ namespace Prism.Shared.Contracts.Enums
 {
     public static class PrismSelectorTypes
     {
+        /// <summary>
+        /// Defines the semantic role of an entity within Prism’s simulation mesh.
+        /// Each type carries emotional consequence, contributor context, or routing behavior.
+        /// </summary>
         public enum EntityType
         {
-            GallerySeed,
-            MeshSnapshot,
-            CuratorNote,
-            ContributorFingerprint,
-            Unknown,
-            Exhibit
+            GallerySeed,             // Foundational prefab for gallery simulations
+            MeshSnapshot,            // Frozen emotional mesh state for auditing or replay
+            CuratorNote,             // Contributor-authored emotional annotation
+            ContributorFingerprint,  // Semantic imprint of contributor tone and trait history
+            Unknown,                 // Fallback type for ambiguous or unclassified entities
+            Exhibit,                 // Narratable unit within a gallery or simulation
+            Session                  // Scoped contributor context with traits, mood, and phase
         }
 
+        /// <summary>
+        /// Defines the origin or behavioral role of an emotional source.
+        /// Used to guide tone emission, overlay behavior, and contributor feedback.
+        /// </summary>
         public enum MoodSourceType
         {
-            Default,         // Standard emotional source—used when no specific type is defined
-            None,            // No emotional influence—used for neutral or silent sources
-            Ambient,         // Passive tone setter—background emotional influence
-            Interactive,     // Responds to contributor input—triggers overlays or narration
-            Reflective,      // Mirrors contributor state—used in feedback or memory recall
-            Transformative,  // Alters emotional mesh—used in phase shifts or tone pivots
-            Silent,          // Suppresses emotional output—can silence nearby sources
-            Unknown          // Fallback-safe default—used when no source type is defined
+            Default,         // Standard emotional source—no specialization
+            None,            // No emotional influence—neutral or silent
+            Ambient,         // Passive tone setter—background influence
+            Interactive,     // Responds to contributor input—triggers overlays
+            Reflective,      // Mirrors contributor state—used in feedback
+            Transformative,  // Alters emotional mesh—used in phase shifts
+            Silent,          // Suppresses emotional output—fallback-safe
+            Unknown          // Fallback-safe default—undefined source type
         }
 
+        /// <summary>
+        /// Defines how emotional tone is modulated within Prism’s simulation mesh.
+        /// MoodModifiers influence overlays, narration, and contributor experience across time, space, and behavior.
+        /// </summary>
         public enum MoodModifier
         {
-            // Temporal & Rhythmic
-            Pulsing,         // Emits rhythmic emotional signals—used for timed overlays or tone shifts
-            Rhythmic,        // Follows contributor pacing or mesh tempo—used for dynamic tone shaping
-            Fading,          // Gradual emotional transitions—used for smooth overlays or tone shifts
-            Drifting,        // Wandering emotional states—used for contemplative or surreal tones
-            Seasonal,        // Adapts tone based on time, phase, or environmental context
-            PhaseAware,      // Behaves differently across simulation phases—used in routing or overlays
+            // ─── Temporal & Rhythmic ──────────────────────────────────────────────
+            Pulsing,       // Emits rhythmic emotional signals
+            Rhythmic,      // Follows contributor pacing or mesh tempo
+            Fading,        // Gradual emotional transitions
+            Drifting,      // Wandering emotional states
+            Seasonal,      // Adapts tone based on time or phase
+            PhaseAware,    // Behaves differently across simulation phases
 
-            // Spatial & Influence
-            Expanding,       // Broadens emotional influence over time—used for immersive ambiance
-            Contracting,     // Narrows emotional focus—used for intimate or intense moments
-            Dampen,          // Suppresses emotional output—used to mute nearby sources or tone adapters
+            // ─── Spatial & Influence ──────────────────────────────────────────────
+            Expanding,     // Broadens emotional influence over time
+            Contracting,   // Narrows emotional focus
+            Dampen,        // Suppresses emotional output
 
-            // Expressive Tone
-            Vibrant,         // Bright, lively emotional expressions—used for joyful or exciting moments
-            Mellow,          // Soft, soothing emotional tones—used for calm or peaceful scenes
-            Intense,         // Strong, powerful emotional states—used for dramatic or climactic moments
-            Subtle,          // Light, understated emotional cues—used for nuanced or complex tones
-            Dashing,         // Quick, energetic emotional bursts—used for rapid reactions or highlights
+            // ─── Expressive Tone ─────────────────────────────────────────────────
+            Vibrant,       // Bright, lively emotional expressions
+            Mellow,        // Soft, soothing emotional tones
+            Intense,       // Strong, dramatic emotional states
+            Subtle,        // Light, nuanced emotional cues
+            Dashing,       // Quick, energetic emotional bursts
 
-            // Behavioral
-            ToneAdaptive,    // Responds to contributor mood or mesh state—used in reflective narration
-            Persistent,      // Maintains emotional state across sessions or interactions
-            Silent,          // Suppresses narration or tone emission—used for fallback-safe nodes
+            // ─── Behavioral ──────────────────────────────────────────────────────
+            ToneAdaptive,  // Responds to contributor mood or mesh state
+            Persistent,    // Maintains emotional state across sessions
+            Silent,        // Suppresses narration or tone emission
 
-            None,            // No modification—used for neutral or unaltered sources
-            Default          // Standard behavior—used when no specific modifier is defined
+            // ─── Defaults ────────────────────────────────────────────────────────
+            None,          // No modification—neutral source
+            Default        // Standard behavior—no specific modifier
         }
 
+        /// <summary>
+        /// Defines the strength or presence of emotional tone emitted by a source.
+        /// Used to guide overlay intensity, contributor feedback, and mesh modulation.
+        /// </summary>
         public enum MoodIntensity
         {
-            Default,         // Standard emotional intensity—used when no specific intensity is defined
-            None,            // No emotional presence—used for silent or neutral sources
-            Low,             // Gentle emotional presence—used for ambient or subtle tone
-            Medium,          // Balanced emotional output—default for most sources
-            High,            // Strong emotional presence—used for dramatic or immersive scenes
-            Custom           // User-defined intensity—used for runtime tuning or editor overrides
+            Default,   // Standard emotional intensity
+            None,      // No emotional presence
+            Low,       // Gentle emotional presence
+            Medium,    // Balanced emotional output
+            High,      // Strong emotional presence
+            Custom     // User-defined intensity for runtime tuning
         }
 
+        /// <summary>
+        /// Defines the duration or lifespan of an emotional tone or overlay.
+        /// Used to guide narration timing, phase transitions, and contributor experience.
+        /// </summary>
         public enum MoodDuration
         {
-            Default,         // Standard duration—used when no specific timing is defined
-            None,            // No duration—used for instantaneous or one-off emotional cues
-            Transient,       // Short-lived emotional states—used for momentary overlays or reactions
-            Sustained,       // Lasting emotional tones—used for phase-wide narration or ambiance
-            Persistent,      // Enduring emotional states—used for session-wide mood setting
-            Custom           // User-defined duration—used when specific timing is required
+            Default,     // Standard duration
+            None,        // No duration—instantaneous cue
+            Transient,   // Short-lived emotional state
+            Sustained,   // Lasting tone across a phase
+            Persistent,  // Enduring tone across a session
+            Custom       // User-defined duration
         }
     }
+    #region PrismSelectorTypes Summary
+    /// <summary>
+    /// PrismSelectorTypes defines prefab-safe enums for emotional routing, trait modulation,
+    /// and contributor classification across Prism OS.
+    /// These types are used in manifests, overlays, and session scaffolds to guide tone and consequence.
+    /// </summary>
+    /// LastModified: 2025-09-03
+    /// JM ✦ Prism Architect ✦ 2025-09-03
+    #endregion
+
 }
