@@ -28,3 +28,5 @@ C:\Users\jmatt\RiderProjects\Prism\Prism.Intent.Identity\bin\Debug\net7.0\Prism.
 C:\Users\jmatt\RiderProjects\Prism\Prism.Intent.Identity\bin\Debug\net7.0\Prism.Internals.Orchestration.pdb
 C:\Users\jmatt\RiderProjects\Prism\Prism.Intent.Identity\obj\Debug\net7.0\Prism.Intent.Identity.sourcelink.json
 C:\Users\jmatt\RiderProjects\Prism\Prism.Intent.Identity\obj\Debug\net7.0\Prism.In.CA7B3AB2.Up2Date
+C:\Users\jmatt\RiderProjects\Prism\Prism.Intent.Identity\bin\Debug\net7.0\MeshConfig\meshConfig.json
+C:\Users\jmatt\RiderProjects\Prism\Prism.Intent.Identity\bin\Debug\net7.0\Assets\meshProfiles.json

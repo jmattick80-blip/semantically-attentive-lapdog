@@ -25,7 +25,7 @@ public class ClusterPhase : RuntimePhaseBase, IRuntimePhase
 
     public override async Task<PrismResult> RunAsync()
     {
-        var manifest = new ClusterManifest("Prism.CoreCluster", "Prism.CoreCluster", "Handles contributor onboarding.")
+        /*var manifest = new ClusterManifest("Prism.CoreCluster", "Prism.CoreCluster", "Handles contributor onboarding.")
         {
             DefaultTraits = new List<ITrait> { TraitLibrary.Narratable, TraitLibrary.IntentBound },
             SignalBindings = new List<string> { nameof(IManifest) }
@@ -45,6 +45,7 @@ public class ClusterPhase : RuntimePhaseBase, IRuntimePhase
 
         SummaryLines.Add("🧩 CoreCluster registered.");
         SummaryLines.Add("🎯 OnboardingIntent attached to CoreCluster.");
+        */
 
         await Task.CompletedTask;
         return new PrismResult(NarrateSummary(), Session);

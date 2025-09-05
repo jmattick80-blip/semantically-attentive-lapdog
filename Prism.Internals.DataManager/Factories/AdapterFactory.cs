@@ -1,6 +1,8 @@
+using System.Text.Json;
 using Prism.Shared.Contracts.Config;
 using Prism.Shared.Contracts.Providers;
 using Prism.Internals.DataManager.Adapters;
+using Prism.Shared.Contracts;
 
 namespace Prism.Internals.DataManager.Factories;
 
@@ -28,6 +30,7 @@ public static class AdapterFactory
         {
             "JsonMeshAdapter" => new JsonMeshAdapter(config.Source),
             "SignalMeshAdapter" => new SignalMeshAdapter(config.Source),
+            "UnityMeshAdapter" => new UnityMeshAdapter(config.Source),
             _ => throw new NotSupportedException($"Unknown adapter type: {config.Type}")
         };
     }

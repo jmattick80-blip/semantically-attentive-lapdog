@@ -1,43 +1,69 @@
+using System.Reflection;
 using System.Text.Json;
 using Prism.Shared.Contracts;
 using Prism.Shared.Contracts.Providers;
 
-namespace Prism.Internals.DataManager.Adapters;
-
-public class JsonMeshAdapter : IMeshProfileProvider
+namespace Prism.Internals.DataManager.Adapters
 {
-    private readonly string _configSource;
-
-    public JsonMeshAdapter(string configSource)
+    public class JsonMeshAdapter : IMeshProfileProvider
     {
-        _configSource = configSource ?? throw new ArgumentNullException(nameof(configSource));
-    }
+        private readonly string _resolvedPath;
 
-    public async Task<IEnumerable<MeshProfile>> GetProfilesAsync()
-    {
-        if (!File.Exists(_configSource))
+        public JsonMeshAdapter(string configSource)
         {
-            Console.WriteLine($"⚠️ JsonMeshAdapter: Source file not found at {_configSource}");
-            return Enumerable.Empty<MeshProfile>();
+            if (string.IsNullOrWhiteSpace(configSource))
+                throw new ArgumentNullException(nameof(configSource));
+
+            var baseDir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)
+                         ?? throw new InvalidOperationException("Unable to resolve base directory.");
+
+            _resolvedPath = Path.Combine(baseDir, configSource);
+            Console.WriteLine($"📁 JsonMeshAdapter: Resolved profile path to {_resolvedPath}");
         }
 
-        try
+        public async Task<IEnumerable<MeshProfile>> GetProfilesAsync()
         {
-            var options = new JsonSerializerOptions
+            if (!File.Exists(_resolvedPath))
             {
-                PropertyNameCaseInsensitive = true
-            };
+                Console.WriteLine($"⚠️ JsonMeshAdapter: Source file not found at {_resolvedPath}");
+                return Enumerable.Empty<MeshProfile>();
+            }
 
-            var json = await File.ReadAllTextAsync(_configSource);
-            var profiles = JsonSerializer.Deserialize<List<MeshProfile>>(json, options);
+            try
+            {
+                var json = await File.ReadAllTextAsync(_resolvedPath);
+                var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+                var profiles = JsonSerializer.Deserialize<List<MeshProfile>>(json, options);
 
-            Console.WriteLine($"📄 JsonMeshAdapter: Loaded {profiles?.Count ?? 0} profiles from {_configSource}");
-            return profiles ?? Enumerable.Empty<MeshProfile>();
+                LogProfiles(profiles);
+                return profiles ?? Enumerable.Empty<MeshProfile>();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"❌ JsonMeshAdapter: Failed to parse {_resolvedPath}: {ex.Message}");
+                return Enumerable.Empty<MeshProfile>();
+            }
         }
-        catch (Exception ex)
+
+        private void LogProfiles(IEnumerable<MeshProfile>? profiles)
         {
-            Console.WriteLine($"❌ JsonMeshAdapter: Failed to parse {_configSource}: {ex.Message}");
-            return Enumerable.Empty<MeshProfile>();
+            var count = profiles?.Count() ?? 0;
+            Console.WriteLine($"📄 JsonMeshAdapter: Loaded {count} profiles.");
+
+            foreach (var profile in profiles ?? Enumerable.Empty<MeshProfile>())
+            {
+                var id = string.IsNullOrWhiteSpace(profile.ContributorId) ? "Unnamed" : profile.ContributorId;
+                Console.WriteLine($"🧬 Profile loaded: {id}");
+            }
         }
     }
+    #region Summary
+    // JsonMeshAdapter
+    // Resolves and hydrates bundles of MeshProfile objects from a single JSON file.
+    // Uses runtime path anchoring to ensure consistency across environments.
+    // Supports case-insensitive deserialization and narrates contributor presence.
+    // Ideal for onboarding contributors in bulk with emotional consequence intact.
+    //
+    // /// JM ✦ Prism Architect ✦ 2025-09-03
+    #endregion
 }

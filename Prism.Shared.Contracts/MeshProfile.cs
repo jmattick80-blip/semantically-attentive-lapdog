@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Prism.Shared.Contracts.Events;
+using Prism.Shared.Contracts.Interfaces.Traits;
 
 namespace Prism.Shared.Contracts;
 
@@ -23,4 +24,5 @@ public class MeshProfile
 
     // Optional: for contributor role or domain tagging
     public List<string>? Tags { get; set; }
+    public List<PrismTrait> Traits { get; set; }
 }

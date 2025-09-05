@@ -14,5 +14,14 @@
     <ProjectReference Include="..\Prism.Internals.Orchestration\Prism.Internals.Orchestration.csproj" />
     <ProjectReference Include="..\Prism.Shared.Contracts\Prism.Shared.Contracts.csproj" />
   </ItemGroup>
+  <ItemGroup>
+  <None Update="MeshConfig\meshConfig.json">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+  <None Update="Assets\meshProfiles.json">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+</ItemGroup>
+
 
 </Project>

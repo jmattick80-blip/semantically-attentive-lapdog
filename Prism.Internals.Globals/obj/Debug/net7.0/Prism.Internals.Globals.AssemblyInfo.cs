@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Prism.Internals.Globals")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f1d68d960040e091206214a0b4e3ba1766625406")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+08e509c53b7e57b425ae4c9e0b4fa7911f748685")]
 [assembly: System.Reflection.AssemblyProductAttribute("Prism.Internals.Globals")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Prism.Internals.Globals")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
