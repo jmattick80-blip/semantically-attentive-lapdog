@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Prism.Internal.Mesh")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+47278b7cbc3c1503d911d2f5a69226b4d546d336")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f1d68d960040e091206214a0b4e3ba1766625406")]
 [assembly: System.Reflection.AssemblyProductAttribute("Prism.Internal.Mesh")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Prism.Internal.Mesh")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
