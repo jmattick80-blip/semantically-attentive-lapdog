@@ -10,5 +10,146 @@
       ]
     }
   ],
-  "MeshLayers": []
+  "MeshLayers": [
+    {
+      "LayerId": "intent",
+      "ordBy": 1,
+      "DecayRate": 0.25,
+      "Thresholds": { "activation": 0.5 },
+      "DirectionalBias": "forward",
+      "ResistanceMap": { "observer": 0.2, "responder": 0.1 },
+      "EchoBindings": ["reinforce"]
+    },
+    {
+      "LayerId": "mood",
+      "ordBy": 2,
+      "DecayRate": 0.3,
+      "Thresholds": { "activation": 0.6 },
+      "ResistanceMap": { "tense": 0.4, "soft": 0.1 },
+      "DirectionalBias": "oscillate"
+    },
+    {
+      "LayerId": "tone",
+      "ordBy": 3,
+      "DecayRate": 0.2,
+      "Thresholds": { "activation": 0.5 },
+      "ResistanceMap": { "sharp": 0.6, "neutral": 0.2 },
+      "ToneBindings": {
+        "soften": "gesture.fade",
+        "amplify": "gesture.pulse"
+      }
+    },
+    {
+      "LayerId": "phase",
+      "ordBy": 4,
+      "DecayRate": 0.15,
+      "Thresholds": { "activation": 0.4 },
+      "DirectionalBias": "bidirectional",
+      "ResistanceMap": { "cooldown": 0.3, "onboarding": 0.1 },
+      "PhaseBindings": {
+        "onboarding": "initiateWelcomeSequence",
+        "cooldown": "fadeToneToNeutral"
+      }
+    },
+    {
+      "LayerId": "trait",
+      "ordBy": 5,
+      "DecayRate": 0.25,
+      "Thresholds": { "activation": 0.7 },
+      "ResistanceMap": { "pain": 0.5, "humor": 0.2 },
+      "TraitEchoMap": {
+        "trait.silence": { "decay": 0.1, "amplifyOn": ["grief-hall"] },
+        "trait.observe": { "decay": 0.05, "amplifyOn": ["awe-chamber"] }
+      }
+    },
+    {
+      "LayerId": "resonance",
+      "ordBy": 6,
+      "DecayRate": 0.35,
+      "Thresholds": { "activation": 0.75 },
+      "ResistanceMap": { "low-fit": 0.5 },
+      "DirectionalBias": "amplify",
+      "ResonanceBindings": {
+        "low-fit": "triggerFeedback",
+        "high-fit": "unlockNarrativeBranch"
+      }
+    },
+    {
+      "LayerId": "role",
+      "ordBy": 7,
+      "DecayRate": 0.2,
+      "Thresholds": { "activation": 0.5 },
+      "ResistanceMap": { "Architect": 0.1, "Curator": 0.2 },
+      "RoleEchoMap": {
+        "Architect": "mesh.expand",
+        "Curator": "mesh.reflect"
+      }
+    },
+    {
+      "LayerId": "cluster",
+      "ordBy": 8,
+      "DecayRate": 0.2,
+      "Thresholds": { "activation": 0.5 },
+      "NodeAffinity": "local",
+      "ResistanceMap": { "north-web": 0.2, "south-node": 0.3 },
+      "ClusterBindings": {
+        "north-web": "drift.align",
+        "south-node": "drift.diverge"
+      }
+    },
+    {
+      "LayerId": "gallery",
+      "ordBy": 9,
+      "DecayRate": 0.2,
+      "Thresholds": { "activation": 0.6 },
+      "OverlayBindings": {
+        "dim": "soften",
+        "sharp-border": "tense",
+        "blurred": "reflective"
+      },
+      "ResistanceMap": { "bright": 0.4, "dim": 0.1 },
+      "GalleryEchoMap": {
+        "dim": "tone.fade",
+        "bright": "tone.sharpen"
+      }
+    },
+    {
+      "LayerId": "exhibit",
+      "ordBy": 10,
+      "DecayRate": 0.2,
+      "Thresholds": { "activation": 0.6 },
+      "ExhibitBindings": {
+        "grief-hall": {
+          "moodBias": { "pain": 0.8, "focus": 0.3 },
+          "toneModulation": "soften",
+          "traitInjection": ["trait.silence", "trait.reflective"]
+        },
+        "awe-chamber": {
+          "moodBias": { "wonder": 0.9, "humor": 0.2 },
+          "toneModulation": "amplify",
+          "traitInjection": ["trait.expand", "trait.observe"]
+        }
+      },
+      "ResistanceMap": {
+        "humor": 0.7,
+        "tense": 0.2
+      },
+      "ExhibitEchoLog": {
+        "grief-hall": "echo.sink",
+        "awe-chamber": "echo.lift"
+      }
+    },
+    {
+      "LayerId": "history",
+      "ordBy": 11,
+      "DecayRate": 0.1,
+      "Thresholds": { "activation": 0.3 },
+      "EchoBehavior": "attenuate",
+      "ResistanceMap": { "fatigue": 0.6 },
+      "MemoryBindings": {
+        "fade": "tone.neutralize",
+        "retain": "resonance.reinforce"
+      }
+    }
+  ]
 }

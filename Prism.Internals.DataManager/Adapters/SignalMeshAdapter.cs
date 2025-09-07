@@ -38,4 +38,12 @@ public class SignalMeshAdapter : IMeshProfileProvider
             return Enumerable.Empty<MeshProfile>();
         }
     }
+    #region SignalMeshAdapter Summary (Sprint 5 – September 2025)
+    // SignalMeshAdapter hydrates MeshProfile objects from a remote signal endpoint.
+    // It supports multiplayer-safe onboarding, dynamic mesh hydration, and genre-specific consequence routing.
+    // Profiles are fetched via HttpClient, deserialized, and logged with contributor presence.
+    // This adapter enables Prism to respond to live mesh feeds and external emotional contexts,
+    // making it ideal for runtime simulation, contributor syncing, and prefab-safe consequence scaffolding.
+    // JM ✦ Prism Architect ✦ Sprint 5
+    #endregion
 }

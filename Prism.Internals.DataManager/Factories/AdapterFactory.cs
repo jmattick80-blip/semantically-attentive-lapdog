@@ -34,4 +34,13 @@ public static class AdapterFactory
             _ => throw new NotSupportedException($"Unknown adapter type: {config.Type}")
         };
     }
+    
+    #region AdapterFactory Summary (Sprint 5 – September 9, 2025)
+        // AdapterFactory orchestrates the creation of IMeshProfileProvider instances from configuration.
+        // It supports modular mesh hydration via JsonMeshAdapter, SignalMeshAdapter, and UnityMeshAdapter.
+        // Enables prefab-safe contributor onboarding from local files, remote endpoints, or Unity-compatible sources.
+        // This factory centralizes adapter instantiation for processors, registries, and mesh-aware systems.
+        // Ideal for dynamic mesh configuration, multiplayer consequence routing, and genre-safe simulation scaffolding.
+        // JM ✦ Prism Architect ✦ 2025-09-07
+    #endregion
 }

@@ -1,6 +1,4 @@
-using Prism.Shared.Contracts.Envelopes;
-
-namespace GalleryDrivers.Prism.Shared.Envelopes;
+namespace Prism.Shared.Contracts.Envelopes;
 
 public class SemanticIntentEnvelope : IntentEnvelope
 {

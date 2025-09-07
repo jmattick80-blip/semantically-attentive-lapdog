@@ -16,10 +16,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prism.Internal.Mesh", "Pris
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prism.Internal.Shared.MeshLogic", "Prism.Internal.Shared.MeshLogic\Prism.Internal.Shared.MeshLogic.csproj", "{418D70FC-B56C-448B-9C83-A5D4A86960B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prism.Intent.Identity", "Prism.Intent.Identity\Prism.Intent.Identity.csproj", "{3F9A34E2-4156-428E-80DC-377549AA44D0}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prism.Intent.Interpretation", "Prism.Intent.Interpretation\Prism.Intent.Interpretation.csproj", "{53794D00-795E-4414-8AB0-3027538800F2}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prism.Internals.DataManager", "Prism.Internals.DataManager\Prism.Internals.DataManager.csproj", "{8D2454A4-8F27-4F73-9E42-9AABB611ECC9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prism.Internals.Orchestration", "Prism.Internals.Orchestration\Prism.Internals.Orchestration.csproj", "{16C025C7-677B-436D-BCE6-67DD21D4BAF2}"
@@ -64,14 +60,6 @@ Global
 		{418D70FC-B56C-448B-9C83-A5D4A86960B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{418D70FC-B56C-448B-9C83-A5D4A86960B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{418D70FC-B56C-448B-9C83-A5D4A86960B4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3F9A34E2-4156-428E-80DC-377549AA44D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3F9A34E2-4156-428E-80DC-377549AA44D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3F9A34E2-4156-428E-80DC-377549AA44D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3F9A34E2-4156-428E-80DC-377549AA44D0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{53794D00-795E-4414-8AB0-3027538800F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{53794D00-795E-4414-8AB0-3027538800F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{53794D00-795E-4414-8AB0-3027538800F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{53794D00-795E-4414-8AB0-3027538800F2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8D2454A4-8F27-4F73-9E42-9AABB611ECC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8D2454A4-8F27-4F73-9E42-9AABB611ECC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D2454A4-8F27-4F73-9E42-9AABB611ECC9}.Release|Any CPU.ActiveCfg = Release|Any CPU

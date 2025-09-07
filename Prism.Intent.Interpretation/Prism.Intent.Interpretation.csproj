@@ -11,7 +11,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Models\" />
+      <Folder Include="Memory\" />
+      <Folder Include="Trace\" />
     </ItemGroup>
 
 </Project>

@@ -131,31 +131,21 @@ namespace Prism.Internal.Registry
                 Console.WriteLine($"[RegistryAdapter] Committed entity '{entity.EntityId}' in session '{sessionId}'.");
             }
 
-            var log = new SessionContext.CuratorLogEntry
+            var metadata = new SessionMetadata
             {
-                ContributorId = session.ContributorId,
-                Phase = session.Phase,
-                Timestamp = DateTime.UtcNow,
-                CommittedEntities = committedRefs,
-                MetadataSnapshot = flattenedMetadata
+                SessionId = session.SessionId,
+                CuratorId = session.ContributorId,
+                Phase = "committed",
+                DraftSnapshotId = $"draft-{sessionId}-{DateTime.UtcNow:yyyyMMddHHmmss}",
+                CommittedSnapshotId = $"commit-{sessionId}-{DateTime.UtcNow:yyyyMMddHHmmss}",
+                LastUpdated = DateTime.UtcNow
             };
 
-            // TODO: Persist log to SessionStore or attach to session metadata
+            // TODO: Persist metadata to session store or attach to session context
 
-            return new PrismIntentResult
-            {
-                Request = null,
-                Success = true,
-                ResultCode = "SessionCommitted",
-                Message = $"Session '{sessionId}' committed with {committedRefs.Count} entities.",
-                Slug = $"session-{sessionId}-commit",
-                Timestamp = DateTime.UtcNow,
-                Consequence = new()
-                {
-                    { "CommittedEntities", committedRefs },
-                    { "MetadataSnapshot", flattenedMetadata }
-                }
-            };
+            return PrismIntentResultFactory.CommitSuccess(
+                new PrismIntentRequest { Session = session }, metadata
+            );
         }
     }
 
