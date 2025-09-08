@@ -8,7 +8,6 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Prism.Internal.Shared.MeshLogic\Prism.Internal.Shared.MeshLogic.csproj" />
-      <ProjectReference Include="..\Prism.Internals.Globals\Prism.Internals.Globals.csproj" />
       <ProjectReference Include="..\Prism.Shared.Contracts\Prism.Shared.Contracts.csproj" />
     </ItemGroup>
 

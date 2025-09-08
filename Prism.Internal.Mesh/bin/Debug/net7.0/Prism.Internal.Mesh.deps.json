@@ -9,7 +9,6 @@
       "Prism.Internal.Mesh/1.0.0": {
         "dependencies": {
           "Prism.Internal.Shared.MeshLogic": "1.0.0",
-          "Prism.Internals.Globals": "1.0.0",
           "Prism.Shared.Contracts": "1.0.0"
         },
         "runtime": {
@@ -22,17 +21,6 @@
         },
         "runtime": {
           "Prism.Internal.Shared.MeshLogic.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "Prism.Internals.Globals/1.0.0": {
-        "dependencies": {
-          "Prism.Shared.Contracts": "1.0.0"
-        },
-        "runtime": {
-          "Prism.Internals.Globals.dll": {
             "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -55,11 +43,6 @@
       "sha512": ""
     },
     "Prism.Internal.Shared.MeshLogic/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Prism.Internals.Globals/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

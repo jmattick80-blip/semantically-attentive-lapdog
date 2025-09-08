@@ -9,7 +9,10 @@
 
 ## 🧠 Purpose
 
-This folder contains the complete audit archive for Prism OS. Each project has been narratively reviewed for emotional consequence, contributor safety, and architectural clarity. Dormant modules are flagged, active components are scoped, and future extensibility is preserved.
+This folder contains the complete audit archive for Prism OS. 
+Each project has been narratively reviewed for emotional consequences, 
+contributor safety, and architectural clarity. Dormant modules are flagged, 
+active components are scoped, and future extensibility is preserved.
 
 ---
 
@@ -38,9 +41,17 @@ Each project includes its own `README.md` inside this folder, documenting:
 
 ## 🧩 Emotional Consequence
 
-This audit preserves the emotional mesh of Prism OS. Contributors can trace every trait, token, and transformation. Dormant modules are scaffolded with intent, and every decision is narratable.
+This audit preserves the emotional mesh of Prism OS. 
+Contributors can trace every trait, token, and transformation. 
+Dormant modules are scaffolded with intent, and every decision is narratable.
 
 ---
+
+### Module Deprecation: Prism.Internals.Globals
+**Date**: 2025-09-08  
+**Reason**: Global state violates prefab safety, emotional traceability, and contributor clarity  
+**Action**: Removed from active Prism runtime. Replaced with injectable, narratable services  
+**Signed**: JM ✦ Prism Architect
 
 ## ✨ Final Notes
 

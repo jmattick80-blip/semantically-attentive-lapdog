@@ -1,0 +1,12 @@
+C:\Users\jmatt\RiderProjects\Prism\Audits\bin\Debug\net7.0\Audits.deps.json
+C:\Users\jmatt\RiderProjects\Prism\Audits\bin\Debug\net7.0\Audits.dll
+C:\Users\jmatt\RiderProjects\Prism\Audits\bin\Debug\net7.0\Audits.pdb
+C:\Users\jmatt\RiderProjects\Prism\Audits\obj\Debug\net7.0\Audits.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jmatt\RiderProjects\Prism\Audits\obj\Debug\net7.0\Audits.AssemblyInfoInputs.cache
+C:\Users\jmatt\RiderProjects\Prism\Audits\obj\Debug\net7.0\Audits.AssemblyInfo.cs
+C:\Users\jmatt\RiderProjects\Prism\Audits\obj\Debug\net7.0\Audits.csproj.CoreCompileInputs.cache
+C:\Users\jmatt\RiderProjects\Prism\Audits\obj\Debug\net7.0\Audits.sourcelink.json
+C:\Users\jmatt\RiderProjects\Prism\Audits\obj\Debug\net7.0\Audits.dll
+C:\Users\jmatt\RiderProjects\Prism\Audits\obj\Debug\net7.0\refint\Audits.dll
+C:\Users\jmatt\RiderProjects\Prism\Audits\obj\Debug\net7.0\Audits.pdb
+C:\Users\jmatt\RiderProjects\Prism\Audits\obj\Debug\net7.0\ref\Audits.dll

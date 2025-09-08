@@ -15,19 +15,6 @@
           "bin/placeholder/Prism.Internal.Shared.MeshLogic.dll": {}
         }
       },
-      "Prism.Internals.Globals/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "dependencies": {
-          "Prism.Shared.Contracts": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Prism.Internals.Globals.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Prism.Internals.Globals.dll": {}
-        }
-      },
       "Prism.Shared.Contracts/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -46,11 +33,6 @@
       "path": "../Prism.Internal.Shared.MeshLogic/Prism.Internal.Shared.MeshLogic.csproj",
       "msbuildProject": "../Prism.Internal.Shared.MeshLogic/Prism.Internal.Shared.MeshLogic.csproj"
     },
-    "Prism.Internals.Globals/1.0.0": {
-      "type": "project",
-      "path": "../Prism.Internals.Globals/Prism.Internals.Globals.csproj",
-      "msbuildProject": "../Prism.Internals.Globals/Prism.Internals.Globals.csproj"
-    },
     "Prism.Shared.Contracts/1.0.0": {
       "type": "project",
       "path": "../Prism.Shared.Contracts/Prism.Shared.Contracts.csproj",
@@ -60,7 +42,6 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "Prism.Internal.Shared.MeshLogic >= 1.0.0",
-      "Prism.Internals.Globals >= 1.0.0",
       "Prism.Shared.Contracts >= 1.0.0"
     ]
   },
@@ -91,9 +72,6 @@
           "projectReferences": {
             "C:\\Users\\jmatt\\RiderProjects\\Prism\\Prism.Internal.Shared.MeshLogic\\Prism.Internal.Shared.MeshLogic.csproj": {
               "projectPath": "C:\\Users\\jmatt\\RiderProjects\\Prism\\Prism.Internal.Shared.MeshLogic\\Prism.Internal.Shared.MeshLogic.csproj"
-            },
-            "C:\\Users\\jmatt\\RiderProjects\\Prism\\Prism.Internals.Globals\\Prism.Internals.Globals.csproj": {
-              "projectPath": "C:\\Users\\jmatt\\RiderProjects\\Prism\\Prism.Internals.Globals\\Prism.Internals.Globals.csproj"
             },
             "C:\\Users\\jmatt\\RiderProjects\\Prism\\Prism.Shared.Contracts\\Prism.Shared.Contracts.csproj": {
               "projectPath": "C:\\Users\\jmatt\\RiderProjects\\Prism\\Prism.Shared.Contracts\\Prism.Shared.Contracts.csproj"

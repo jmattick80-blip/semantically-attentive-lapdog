@@ -7,10 +7,8 @@ C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Registry\bin\Debug\net7.0\Pris
 C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Registry\bin\Debug\net7.0\Prism.Internal.Registry.dll
 C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Registry\bin\Debug\net7.0\Prism.Internal.Registry.pdb
 C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Registry\bin\Debug\net7.0\Prism.Internal.Shared.MeshLogic.dll
-C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Registry\bin\Debug\net7.0\Prism.Internals.Globals.dll
 C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Registry\bin\Debug\net7.0\Prism.Shared.Contracts.dll
 C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Registry\bin\Debug\net7.0\Prism.Internal.Shared.MeshLogic.pdb
-C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Registry\bin\Debug\net7.0\Prism.Internals.Globals.pdb
 C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Registry\bin\Debug\net7.0\Prism.Shared.Contracts.pdb
 C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Registry\obj\Debug\net7.0\Prism.Internal.Registry.dll
 C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Registry\obj\Debug\net7.0\refint\Prism.Internal.Registry.dll

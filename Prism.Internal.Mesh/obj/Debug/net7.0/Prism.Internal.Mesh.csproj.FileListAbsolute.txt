@@ -2,10 +2,8 @@ C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Mesh\bin\Debug\net7.0\Prism.In
 C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Mesh\bin\Debug\net7.0\Prism.Internal.Mesh.dll
 C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Mesh\bin\Debug\net7.0\Prism.Internal.Mesh.pdb
 C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Mesh\bin\Debug\net7.0\Prism.Internal.Shared.MeshLogic.dll
-C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Mesh\bin\Debug\net7.0\Prism.Internals.Globals.dll
 C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Mesh\bin\Debug\net7.0\Prism.Shared.Contracts.dll
 C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Mesh\bin\Debug\net7.0\Prism.Internal.Shared.MeshLogic.pdb
-C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Mesh\bin\Debug\net7.0\Prism.Internals.Globals.pdb
 C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Mesh\bin\Debug\net7.0\Prism.Shared.Contracts.pdb
 C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Mesh\obj\Debug\net7.0\Prism.Internal.Mesh.csproj.AssemblyReference.cache
 C:\Users\jmatt\RiderProjects\Prism\Prism.Internal.Mesh\obj\Debug\net7.0\Prism.Internal.Mesh.GeneratedMSBuildEditorConfig.editorconfig

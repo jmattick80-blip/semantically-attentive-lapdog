@@ -4,8 +4,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prism.Intent.Gateway", "..\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prism.Internals.Processor", "..\GalleryDrivers\Prism.Internals.Processor\Prism.Internals.Processor.csproj", "{27FC7579-4E91-4042-8026-B34FA38B2E6E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prism.Internals.Globals", "Prism.Internals.Globals\Prism.Internals.Globals.csproj", "{433FF350-6316-4933-9D82-7C6EC59D668C}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prism.IO.Input", "Prism.IO.Input\Prism.IO.Input.csproj", "{584D1EA6-E0A4-4485-9817-663E084065A6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prism.Shared.Contracts", "Prism.Shared.Contracts\Prism.Shared.Contracts.csproj", "{03ED5418-373B-4836-85F7-AE9FF39BF433}"
@@ -38,10 +36,6 @@ Global
 		{27FC7579-4E91-4042-8026-B34FA38B2E6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27FC7579-4E91-4042-8026-B34FA38B2E6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27FC7579-4E91-4042-8026-B34FA38B2E6E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{433FF350-6316-4933-9D82-7C6EC59D668C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{433FF350-6316-4933-9D82-7C6EC59D668C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{433FF350-6316-4933-9D82-7C6EC59D668C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{433FF350-6316-4933-9D82-7C6EC59D668C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{584D1EA6-E0A4-4485-9817-663E084065A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{584D1EA6-E0A4-4485-9817-663E084065A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{584D1EA6-E0A4-4485-9817-663E084065A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
