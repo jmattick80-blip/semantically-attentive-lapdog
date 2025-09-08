@@ -1,6 +1,6 @@
 using System;
-using GalleryDrivers.Prism.Shared.Interfaces.Manifests;
 using Prism.Shared.Contracts.Envelopes;
+using Prism.Shared.Contracts.Envelopes.Types;
 using Prism.Shared.Contracts.Interfaces.Manifests;
 
 namespace Prism.Shared.Contracts.Manifests.Hydrators

@@ -2,12 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using GalleryDrivers.Prism.Shared.Envelopes.Types;
 using Prism.Shared.Contracts.Envelopes;
 using Prism.Shared.Contracts.Envelopes.Types;
 using Prism.Shared.Contracts.Interfaces.Manifests;
 using Prism.Shared.Contracts.Interfaces.Sessions;
 using Prism.Shared.Contracts.Interfaces.Traits;
+using Prism.Shared.Contracts.Traits;
 
 namespace Prism.Shared.Contracts.Sessions.Session.Types
 {

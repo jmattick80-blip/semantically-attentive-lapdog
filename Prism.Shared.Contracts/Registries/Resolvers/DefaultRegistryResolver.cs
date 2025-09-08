@@ -1,7 +1,7 @@
 using System;
-using GalleryDrivers.Prism.Shared.Interfaces.Manifests;
 using Prism.Shared.Contracts.Enums;
 using Prism.Shared.Contracts.Envelopes;
+using Prism.Shared.Contracts.Envelopes.Types;
 using Prism.Shared.Contracts.Interfaces.Manifests;
 using Prism.Shared.Contracts.Interfaces.Registries;
 using Prism.Shared.Contracts.Manifests.Hydrators;
@@ -53,10 +53,10 @@ namespace Prism.Shared.Contracts.Registries.Resolvers
             }
             
             if (intent == SystemIntent.Emotional && manifestType == typeof(IEmotionallyReactiveManifest))
-                return new EmotionalManifestHydrator() as GalleryDrivers.Prism.Shared.Interfaces.Manifests.IManifestHydrator<TManifest>;
+                return new EmotionalManifestHydrator() as IManifestHydrator<TManifest>;
 
             if (intent == SystemIntent.Input && manifestType == typeof(IInputManifest))
-                return new InputManifestHydrator() as GalleryDrivers.Prism.Shared.Interfaces.Manifests.IManifestHydrator<TManifest>;
+                return new InputManifestHydrator() as IManifestHydrator<TManifest>;
 
             if (typeof(TManifest) == typeof(IManifest))
             {

@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
-using GalleryDrivers.Prism.Shared.Interfaces.Manifests;
 using GalleryDrivers.Prism.Shared.Manifests.Types;
 using Prism.Shared.Contracts.Data;
 using Prism.Shared.Contracts.Envelopes;
+using Prism.Shared.Contracts.Envelopes.Types;
 using Prism.Shared.Contracts.Interfaces.Manifests;
 using Prism.Shared.Contracts.Manifests.Types;
 

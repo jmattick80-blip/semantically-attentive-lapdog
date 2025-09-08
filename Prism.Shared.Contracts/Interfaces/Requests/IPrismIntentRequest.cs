@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Prism.Shared.Contracts.Interfaces.Sessions;
+using Prism.Shared.Contracts.Sessions;
 
 namespace Prism.Shared.Contracts.Interfaces.Requests
 {

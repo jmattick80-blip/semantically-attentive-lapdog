@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using Prism.Shared.Contracts.Agents;
-using Prism.Shared.Contracts.Sessions.Session.SessionDependencies;
+using Prism.Shared.Contracts.Interfaces.Sessions;
 
 namespace Prism.Shared.Contracts.Sessions.Session.Factories;
 

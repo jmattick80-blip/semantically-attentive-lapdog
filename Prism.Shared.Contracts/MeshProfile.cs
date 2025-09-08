@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Prism.Shared.Contracts.Events;
 using Prism.Shared.Contracts.Interfaces.Traits;
+using Prism.Shared.Contracts.Traits;
 
 namespace Prism.Shared.Contracts;
 

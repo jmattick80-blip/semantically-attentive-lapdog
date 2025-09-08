@@ -1,4 +1,5 @@
 using Prism.Shared.Contracts.Envelopes;
+using Prism.Shared.Contracts.Envelopes.Types;
 
 namespace Prism.Shared.Contracts.Interfaces.Sessions
 {

@@ -6,7 +6,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Interfaces\Startup\" />
       <Folder Include="Manifests\" />
       <Folder Include="MoodProfiles\Templates\" />
       <Folder Include="Runtime\" />

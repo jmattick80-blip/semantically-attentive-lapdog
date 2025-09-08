@@ -1,6 +1,6 @@
 using System;
-using GalleryDrivers.Prism.Shared.Interfaces.Clusters;
 using Prism.Shared.Contracts.Clusters.Base;
+using Prism.Shared.Contracts.Interfaces.Clusters;
 using Prism.Shared.Contracts.Interfaces.Manifests;
 
 namespace Prism.Shared.Contracts.Clusters.Factories

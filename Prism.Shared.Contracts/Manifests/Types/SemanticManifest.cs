@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using GalleryDrivers.Prism.Shared.Interfaces.Manifests;
 using Prism.Shared.Contracts.Interfaces.Manifests;
 
 namespace GalleryDrivers.Prism.Shared.Manifests.Types

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using Prism.Shared.Contracts.Envelopes.Types;
 
 namespace Prism.Shared.Contracts.Envelopes.Validators
 {

@@ -1,14 +1,14 @@
 using System;
 using System.Collections.Generic;
-using GalleryDrivers.Prism.Shared.Registries;
 using Prism.Shared.Contracts.Enums;
 using Prism.Shared.Contracts.Envelopes;
+using Prism.Shared.Contracts.Envelopes.Types;
 using Prism.Shared.Contracts.Interfaces.Manifests;
 using Prism.Shared.Contracts.Interfaces.Registries;
 using Prism.Shared.Contracts.Interfaces.Sessions;
 using Prism.Shared.Contracts.Manifests.Hydrators;
 using Prism.Shared.Contracts.Registries;
-using IHydratorContract = GalleryDrivers.Prism.Shared.Interfaces.Manifests.IManifestHydrator<Prism.Shared.Contracts.Interfaces.Manifests.IManifest>;
+using IHydratorContract = Prism.Shared.Contracts.Interfaces.Manifests.IManifestHydrator<Prism.Shared.Contracts.Interfaces.Manifests.IManifest>;
 
 
 namespace Prism.Shared.Contracts.Routers
@@ -58,14 +58,14 @@ namespace Prism.Shared.Contracts.Routers
             return registry;
         }
 
-        public GalleryDrivers.Prism.Shared.Interfaces.Manifests.IManifestHydrator<TManifest> ResolveHydrator<TManifest>(IntentEnvelope envelope)
+        public IManifestHydrator<TManifest> ResolveHydrator<TManifest>(IntentEnvelope envelope)
             where TManifest : IManifest
         {
             if (envelope == null)
                 throw new ArgumentNullException(nameof(envelope));
 
             if (_hydrators.TryGetValue(envelope.Intent, out var hydrator) &&
-                hydrator is GalleryDrivers.Prism.Shared.Interfaces.Manifests.IManifestHydrator<TManifest> typedHydrator)
+                hydrator is IManifestHydrator<TManifest> typedHydrator)
             {
                 Console.WriteLine($"🧬 Resolved hydrator for intent: {envelope.Intent}");
                 return typedHydrator;

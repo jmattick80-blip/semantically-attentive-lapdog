@@ -74,4 +74,33 @@ namespace Prism.Shared.Contracts.Clusters.Base
             Log($"🧬 Default traits activated: {string.Join(", ", _activeTraits.Select(t => t.TraitName))}");
         }
     }
+    // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// 🧠 Summary Region: Cluster
+//
+// Represents a narratable, trait-driven simulation cluster.
+// Handles manifest registration, session binding, trait orchestration,
+// and interface exposure for transformation routing.
+//
+// ┌─────────────────────────────────────────────────────────────────────────┐
+// │ Responsibilities                                                       │
+// ├─────────────────────────────────────────────────────────────────────────┤
+// │ • Register cluster from manifest and expose ClusterId                  │
+// │ • Activate and receive traits for simulation behavior                  │
+// │ • Bind cluster to session and log activation/deactivation              │
+// │ • Expose supported interfaces from child manifests                     │
+// └─────────────────────────────────────────────────────────────────────────┘
+//
+// 🔗 Dependencies:
+// - IClusterManifest (for metadata and default traits)
+// - IIntentManifest (for signal bindings)
+// - PrismSession (for session binding)
+//
+// 🧩 Emotional Consequence:
+// - Enables narratable trait orchestration across simulation clusters
+// - Supports prefab-safe session binding and transformation routing
+// - Actively used in runtime flows and registry hydration
+//
+// ✦ Maintainer: Jeremy M.
+// ✦ Last Audited: Sprint 5 – 2025-09-07
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 }

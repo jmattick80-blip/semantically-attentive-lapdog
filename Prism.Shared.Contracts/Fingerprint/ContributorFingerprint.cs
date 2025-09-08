@@ -1,6 +1,4 @@
-using Prism.Shared.Contracts;
-
-namespace Prism.Intent.Identity.Fingerprint
+namespace Prism.Shared.Contracts.Fingerprint
 {
     public class ContributorFingerprint
     {

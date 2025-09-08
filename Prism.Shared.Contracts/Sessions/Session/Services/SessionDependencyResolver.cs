@@ -3,7 +3,6 @@ using Prism.Shared.Contracts.Agents;
 using Prism.Shared.Contracts.Interfaces.Routers;
 using Prism.Shared.Contracts.Interfaces.Sessions;
 using Prism.Shared.Contracts.Manifests.Factories;
-using Prism.Shared.Contracts.Sessions.Session.SessionDependencies;
 
 namespace Prism.Shared.Contracts.Sessions.Session.Services
 {

@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Prism.Shared.Contracts.Interfaces.Routers;
-using Prism.Shared.Contracts.Sessions.Session.SessionDependencies;
+using Prism.Shared.Contracts.Interfaces.Sessions;
 
 namespace Prism.Shared.Contracts.Routers
 {

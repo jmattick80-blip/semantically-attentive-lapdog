@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Prism.Shared.Contracts.Base.Prism.Shared.Contracts;
 using Prism.Shared.Contracts.Interfaces.Requests;
 using Prism.Shared.Contracts.Interfaces.Sessions;
+using Prism.Shared.Contracts.Sessions;
 
 namespace Prism.Shared.Contracts
 {

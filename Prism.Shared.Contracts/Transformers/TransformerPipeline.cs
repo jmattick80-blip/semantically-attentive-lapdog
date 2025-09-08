@@ -5,6 +5,8 @@ using Prism.Shared.Contracts.Enums;
 using Prism.Shared.Contracts.Interfaces.MeshLogic;
 using Prism.Shared.Contracts.Interfaces.Sessions;
 using Prism.Shared.Contracts.Interfaces.Traits;
+using Prism.Shared.Contracts.Sessions;
+using Prism.Shared.Contracts.Traits;
 
 namespace Prism.Shared.Contracts.Transformers
 {

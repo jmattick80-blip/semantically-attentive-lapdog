@@ -1,5 +1,4 @@
 using System;
-using Prism.Shared.Contracts.Interfaces;
 using Prism.Shared.Contracts.Interfaces.Requests;
 
 namespace Prism.Shared.Contracts.Base

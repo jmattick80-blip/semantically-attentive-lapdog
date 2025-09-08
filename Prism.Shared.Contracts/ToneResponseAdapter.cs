@@ -1,5 +1,5 @@
-using Prism.Intent.Identity.Fingerprint;
-using Prism.Intent.Identity.Phase;
+using Prism.Shared.Contracts.Fingerprint;
+using Prism.Shared.Contracts.Interfaces.Phase;
 using Prism.Shared.Contracts.Tone;
 
 namespace Prism.Shared.Contracts

@@ -4,10 +4,6 @@ using Prism.Shared.Contracts.Interfaces.Envelopes;
 
 namespace Prism.Shared.Contracts.Envelopes.Base
 {
-    /// <summary>
-    /// Represents a narratable system envelope used for orchestrating runtime state and intent.
-    /// This base class is engine-agnostic and safe for serialization, annotation, and replay.
-    /// </summary>
     public abstract class PrismSystemEnvelopeBase : IEnvelope
     {
         protected string EnvelopeId { get; set; }
@@ -64,4 +60,34 @@ namespace Prism.Shared.Contracts.Envelopes.Base
 
         }
     }
+    #region Summary
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// 🧠 Summary Region: PrismSystemEnvelopeBase
+//
+// Represents a narratable system envelope used to orchestrate runtime state,
+// intent, and phase transitions. Engine-agnostic and prefab-safe, this base
+// class supports serialization, annotation, and replay across simulation flows.
+//
+// ┌─────────────────────────────────────────────────────────────────────────┐
+// │ Responsibilities                                                       │
+// ├─────────────────────────────────────────────────────────────────────────┤
+// │ • Store envelope metadata including ID, hash, timestamp                │
+// │ • Track system type, intent, phase, and state                          │
+// │ • Provide narratable output for logging and contributor feedback       │
+// │ • Initialize envelope with fallback ID/hash generation                 │
+// └─────────────────────────────────────────────────────────────────────────┘
+//
+// 🔗 Dependencies:
+// - IEnvelope (interface contract)
+// - SystemType, SystemIntent, SystemPhase, SystemState (enums)
+//
+// 🧩 Emotional Consequence:
+// - Enables traceable system orchestration across runtime flows
+// - Supports replay, audit logging, and contributor dashboards
+// - Prefab-safe and Unity-compatible
+//
+// ✦ Maintainer: Jeremy M.
+// ✦ Last Audited: Sprint 5 – 2025-09-07
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    #endregion
 }

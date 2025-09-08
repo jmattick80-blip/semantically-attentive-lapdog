@@ -1,4 +1,4 @@
-namespace Prism.Intent.Identity.Phase
+namespace Prism.Shared.Contracts.Interfaces.Phase
 {
     public interface IPhaseContext
     {

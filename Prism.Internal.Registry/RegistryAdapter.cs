@@ -4,6 +4,7 @@ using Prism.Shared.Contracts.Interfaces.Requests;
 using Prism.Shared.Contracts.Interfaces.Sessions;
 using Prism.Shared.Contracts.Logic;
 using Prism.Shared.Contracts.Routing;
+using Prism.Shared.Contracts.Sessions;
 using Prism.Shared.Contracts.Transformers;
 
 namespace Prism.Internal.Registry

@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using Prism.Shared.Contracts.Interfaces.Sessions;
-using Prism.Shared.Contracts.Sessions.Session.SessionDependencies;
 
 namespace Prism.Shared.Contracts.Envelopes.Validators;
 

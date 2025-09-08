@@ -1,7 +1,7 @@
 using System.Reflection;
 using System.Text.Json;
 using Prism.Shared.Contracts;
-using Prism.Shared.Contracts.Providers;
+using Prism.Shared.Contracts.Interfaces.Providers;
 
 namespace Prism.Internals.DataManager.Adapters
 {

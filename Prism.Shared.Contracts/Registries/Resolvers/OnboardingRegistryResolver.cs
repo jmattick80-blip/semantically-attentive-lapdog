@@ -1,6 +1,7 @@
-using GalleryDrivers.Prism.Shared.Registries;
 using Prism.Shared.Contracts.Enums;
 using Prism.Shared.Contracts.Envelopes;
+using Prism.Shared.Contracts.Envelopes.Types;
+using Prism.Shared.Contracts.Interfaces.Manifests;
 using Prism.Shared.Contracts.Interfaces.Registries;
 using Prism.Shared.Contracts.Manifests.Hydrators;
 using Prism.Shared.Contracts.Registries.Resolvers.Base;
@@ -26,13 +27,13 @@ namespace Prism.Shared.Contracts.Registries.Resolvers
             return Resolve<TManifest>(envelope);
         }
 
-        public override GalleryDrivers.Prism.Shared.Interfaces.Manifests.IManifestHydrator<TManifest> ResolveHydrator<TManifest>(IntentEnvelope envelope)
+        public override IManifestHydrator<TManifest> ResolveHydrator<TManifest>(IntentEnvelope envelope)
         {
             return envelope.Intent switch
             {
-                SystemIntent.Emotional => new EmotionalManifestHydrator() as GalleryDrivers.Prism.Shared.Interfaces.Manifests.IManifestHydrator<TManifest>,
-                SystemIntent.Semantic => new SemanticManifestHydrator() as GalleryDrivers.Prism.Shared.Interfaces.Manifests.IManifestHydrator<TManifest>,
-                SystemIntent.Input => new InputManifestHydrator() as GalleryDrivers.Prism.Shared.Interfaces.Manifests.IManifestHydrator<TManifest>,
+                SystemIntent.Emotional => new EmotionalManifestHydrator() as IManifestHydrator<TManifest>,
+                SystemIntent.Semantic => new SemanticManifestHydrator() as IManifestHydrator<TManifest>,
+                SystemIntent.Input => new InputManifestHydrator() as IManifestHydrator<TManifest>,
                 _ => new NullManifestHydrator<TManifest>()
             };
         }

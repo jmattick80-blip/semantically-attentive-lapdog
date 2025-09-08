@@ -1,9 +1,8 @@
-using GalleryDrivers.Prism.Shared.Interfaces.Manifests;
-using Prism.Shared.Contracts.Envelopes;
+using Prism.Shared.Contracts.Envelopes.Types;
 using Prism.Shared.Contracts.Interfaces.Manifests;
 using Prism.Shared.Contracts.Registries.Base;
 
-namespace GalleryDrivers.Prism.Shared.Registries
+namespace Prism.Shared.Contracts.Registries
 {
     /// <summary>
     /// Registry for managing manifests during the onboarding phase.

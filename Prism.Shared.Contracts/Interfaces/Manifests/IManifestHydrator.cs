@@ -1,7 +1,6 @@
-using Prism.Shared.Contracts.Envelopes;
-using Prism.Shared.Contracts.Interfaces.Manifests;
+using Prism.Shared.Contracts.Envelopes.Types;
 
-namespace GalleryDrivers.Prism.Shared.Interfaces.Manifests
+namespace Prism.Shared.Contracts.Interfaces.Manifests
 {
     public interface IManifestHydrator<TManifest> where TManifest : IManifest
     {

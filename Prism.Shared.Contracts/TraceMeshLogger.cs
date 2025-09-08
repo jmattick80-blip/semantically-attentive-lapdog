@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Prism.Intent.Identity.Fingerprint;
 using Prism.Shared.Contracts.Fingerprint;
 
 namespace Prism.Shared.Contracts

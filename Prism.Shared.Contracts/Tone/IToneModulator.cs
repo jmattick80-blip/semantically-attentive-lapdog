@@ -1,4 +1,4 @@
-using Prism.Intent.Identity.Fingerprint;
+using Prism.Shared.Contracts.Fingerprint;
 
 namespace Prism.Shared.Contracts.Tone
 {

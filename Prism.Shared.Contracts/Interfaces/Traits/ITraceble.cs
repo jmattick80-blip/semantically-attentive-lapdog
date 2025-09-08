@@ -1,3 +1,5 @@
+using Prism.Shared.Contracts.Traits;
+
 namespace Prism.Shared.Contracts.Interfaces.Traits
 {
     public interface ITrait

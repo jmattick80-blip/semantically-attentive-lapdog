@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
-using GalleryDrivers.Prism.Shared.Interfaces.Manifests;
 using Prism.Shared.Contracts.Envelopes;
+using Prism.Shared.Contracts.Envelopes.Types;
 using Prism.Shared.Contracts.Interfaces.Manifests;
 using Prism.Shared.Contracts.Interfaces.Registries;
 using Prism.Shared.Contracts.Interfaces.Sessions;

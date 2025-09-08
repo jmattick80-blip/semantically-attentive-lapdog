@@ -1,8 +1,8 @@
 using System.Text.Json;
 using Prism.Shared.Contracts.Config;
-using Prism.Shared.Contracts.Providers;
 using Prism.Internals.DataManager.Adapters;
 using Prism.Shared.Contracts;
+using Prism.Shared.Contracts.Interfaces.Providers;
 
 namespace Prism.Internals.DataManager.Factories;
 

@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Prism.Intent.Identity.Fingerprint;
-using Prism.Intent.Identity.Phase;
+using Prism.Shared.Contracts.Fingerprint;
 using Prism.Shared.Contracts.Interfaces.Manifests;
+using Prism.Shared.Contracts.Interfaces.Phase;
 using Prism.Shared.Contracts.Interfaces.Runtime.Phases;
 using Prism.Shared.Contracts.Interfaces.Traits;
 using Prism.Shared.Contracts.Interfaces.Types;

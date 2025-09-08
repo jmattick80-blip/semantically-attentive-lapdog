@@ -1,4 +1,3 @@
-using GalleryDrivers.Prism.Shared.Interfaces.Manifests;
 using Prism.Shared.Contracts.Manifests.Types;
 
 namespace GalleryDrivers.Prism.Shared.Manifests.Types

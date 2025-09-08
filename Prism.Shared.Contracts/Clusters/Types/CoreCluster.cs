@@ -25,4 +25,31 @@ namespace Prism.Shared.Contracts.Clusters.Types
             return ManifestChildren.OfType<T>();
         }
     }
+    // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// 🧠 Summary Region: CoreCluster
+//
+// Represents a simulation cluster focused on contributor onboarding.
+// Provides access to onboarding-related intent manifests and supports
+// manifest filtering via generic type resolution.
+//
+// ┌─────────────────────────────────────────────────────────────────────────┐
+// │ Responsibilities                                                       │
+// ├─────────────────────────────────────────────────────────────────────────┤
+// │ • Bind to cluster manifest and expose onboarding intents               │
+// │ • Filter child manifests by type                                       │
+// │ • Support contributor-safe bootstrapping flows                         │
+// └─────────────────────────────────────────────────────────────────────────┘
+//
+// 🔗 Dependencies:
+// - IClusterManifest
+// - IntentManifest
+//
+// 🧩 Emotional Consequence:
+// - Enables narratable onboarding flows for contributors
+// - Prefab-safe and ready for registry hydration
+// - Ideal for scenario editors and mesh bootstrapping
+//
+// ✦ Maintainer: Jeremy M.
+// ✦ Last Audited: Sprint 5 – 2025-09-07
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 }

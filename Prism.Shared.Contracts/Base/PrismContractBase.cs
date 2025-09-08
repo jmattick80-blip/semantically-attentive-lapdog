@@ -17,4 +17,31 @@ namespace Prism.Shared.Contracts.Base
             #endregion
         }
     }
+    // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// 🧠 Summary Region: PrismIntentRequest
+//
+// Encapsulates contributor intent for simulation routing.
+// Includes semantic intent, target entity, verb, payload, and session context.
+// Inherits shared metadata from PrismContractBase for traceability and replay.
+//
+// ┌─────────────────────────────────────────────────────────────────────────┐
+// │ Responsibilities                                                       │
+// ├─────────────────────────────────────────────────────────────────────────┤
+// │ • Carry contributor intent and payload                                 │
+// │ • Bind to session context and target entity                            │
+// │ • Support ripple emission and consequence routing                      │
+// └─────────────────────────────────────────────────────────────────────────┘
+//
+// 🔗 Dependencies:
+// - Prism.Shared.Contracts.Base (PrismContractBase)
+// - Prism.Shared.Contracts.Interfaces (IPrismIntentRequest, ISessionContext)
+//
+// 🧩 Emotional Consequence:
+// - Narrates contributor action with context and payload
+// - Used in runtime processor, registry adapter, and mesh router
+// - Prefab-safe and multiplayer-ready
+//
+// ✦ Maintainer: Jeremy M.
+// ✦ Last Audited: Sprint 5 – 2025-09-07
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 }

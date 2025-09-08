@@ -2,15 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using GalleryDrivers.Prism.Shared.Envelopes;
-using GalleryDrivers.Prism.Shared.Envelopes.Types;
 using Prism.Shared.Contracts.Data;
 using Prism.Shared.Contracts.Envelopes.Base;
 using Prism.Shared.Contracts.Envelopes.Types;
 using Prism.Shared.Contracts.Interfaces.Manifests;
 using Prism.Shared.Contracts.Interfaces.Sessions;
 using Prism.Shared.Contracts.Interfaces.Traits;
-using Prism.Shared.Contracts.Sessions;
 using Prism.Shared.Contracts.Sessions.Session.Types;
 
 namespace Prism.Shared.Contracts.Envelopes.Factories
