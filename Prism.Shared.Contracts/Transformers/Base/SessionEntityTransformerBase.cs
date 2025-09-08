@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Prism.Shared.Contracts.Interfaces.MeshLogic;
 using Prism.Shared.Contracts.Interfaces.Sessions;
+using Prism.Shared.Contracts.Interfaces.Transformers;
 
 namespace Prism.Shared.Contracts.Transformers.Base
 {

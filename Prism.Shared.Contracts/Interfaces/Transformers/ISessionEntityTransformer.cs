@@ -1,7 +1,8 @@
 using System.Collections.Generic;
+using Prism.Shared.Contracts.Interfaces.MeshLogic;
 using Prism.Shared.Contracts.Interfaces.Sessions;
 
-namespace Prism.Shared.Contracts.Interfaces.MeshLogic;
+namespace Prism.Shared.Contracts.Interfaces.Transformers;
 
 public interface ISessionEntityTransformer : IEntityTransformer
 {
