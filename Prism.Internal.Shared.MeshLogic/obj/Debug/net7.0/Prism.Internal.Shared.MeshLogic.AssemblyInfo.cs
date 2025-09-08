@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Prism.Internal.Shared.MeshLogic")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+826e8e921be2c872beb0e711e3a79f82c0cf6c02")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5be7454dfe6592ef170b21baf0157cb390387673")]
 [assembly: System.Reflection.AssemblyProductAttribute("Prism.Internal.Shared.MeshLogic")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Prism.Internal.Shared.MeshLogic")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
