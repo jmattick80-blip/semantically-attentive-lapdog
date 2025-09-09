@@ -5,7 +5,7 @@ using Prism.Shared.Contracts.Registries.Base;
 namespace Prism.Shared.Contracts.Registries
 {
     /// <summary>
-    /// Registry for managing manifests during the curation phase.
+    
     /// Hydrates from envelope and supports contributor review and emotional traceability.
     /// </summary>
     public class CurationManifestRegistry<TManifest> : BaseManifestRegistry<TManifest> where TManifest : IManifest
@@ -21,7 +21,7 @@ namespace Prism.Shared.Contracts.Registries
 
     #region CurationManifestRegistry – End Summary (Sprint 5 – September 1, 2025)
     /// <summary>
-    /// CurationManifestRegistry orchestrates emotionally reactive manifests during the review phase.
+    /// CurationManifestRegistry orchestrates emotionally reactive manifests.
     /// It hydrates from an IntentEnvelope using a provided IManifestHydrator<TManifest>,
     /// registers the curated manifest, and supports narration hints for contributor feedback.
     ///

@@ -14,7 +14,7 @@ namespace Prism.Shared.Contracts.Enums
             ContributorFingerprint,  // Semantic imprint of contributor tone and trait history
             Unknown,                 // Fallback type for ambiguous or unclassified entities
             Exhibit,                 // Narratable unit within a gallery or simulation
-            Session                  // Scoped contributor context with traits, mood, and phase
+            Session                  // Scoped contributor context with traits, mood
         }
 
         /// <summary>
@@ -28,7 +28,7 @@ namespace Prism.Shared.Contracts.Enums
             Ambient,         // Passive tone setter—background influence
             Interactive,     // Responds to contributor input—triggers overlays
             Reflective,      // Mirrors contributor state—used in feedback
-            Transformative,  // Alters emotional mesh—used in phase shifts
+            
             Silent,          // Suppresses emotional output—fallback-safe
             Unknown          // Fallback-safe default—undefined source type
         }
@@ -44,8 +44,6 @@ namespace Prism.Shared.Contracts.Enums
             Rhythmic,      // Follows contributor pacing or mesh tempo
             Fading,        // Gradual emotional transitions
             Drifting,      // Wandering emotional states
-            Seasonal,      // Adapts tone based on time or phase
-            PhaseAware,    // Behaves differently across simulation phases
 
             // ─── Spatial & Influence ──────────────────────────────────────────────
             Expanding,     // Broadens emotional influence over time
@@ -85,14 +83,14 @@ namespace Prism.Shared.Contracts.Enums
 
         /// <summary>
         /// Defines the duration or lifespan of an emotional tone or overlay.
-        /// Used to guide narration timing, phase transitions, and contributor experience.
+        /// Used to guide narration timing, and contributor experience.
         /// </summary>
         public enum MoodDuration
         {
             Default,     // Standard duration
             None,        // No duration—instantaneous cue
             Transient,   // Short-lived emotional state
-            Sustained,   // Lasting tone across a phase
+            Sustained,   // Lasting tone across a roles actions
             Persistent,  // Enduring tone across a session
             Custom       // User-defined duration
         }

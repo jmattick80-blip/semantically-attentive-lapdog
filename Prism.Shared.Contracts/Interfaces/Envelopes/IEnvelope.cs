@@ -7,7 +7,6 @@ namespace Prism.Shared.Contracts.Interfaces.Envelopes
         string SystemHash { get; }
         SystemType Type { get; }
         SystemIntent Intent { get; set; }
-        SystemPhase Phase { get; set; }
         SystemState State { get; }
         string UnityId { get; set; }
 

@@ -48,12 +48,6 @@ namespace Prism.Shared.Contracts.Sessions.Session.Types
         /// </summary>
         public string CuratorRole { get; protected set; } = string.Empty;
 
-        /// <summary>
-        /// Current phase of the session (e.g. "Annotation", "LivePlay").
-        /// Used for phase-sensitive routing and emotional mesh propagation.
-        /// </summary>
-        public string Phase { get; protected set; } = string.Empty;
-
         
         protected PrismSession(
             IEnvelopeValidator validator,
@@ -200,7 +194,6 @@ namespace Prism.Shared.Contracts.Sessions.Session.Types
                 SessionId = SessionId,
                 ContributorId = ContributorId,
                 CuratorRole = CuratorRole,
-                Phase = Phase,
                 CreatedAt = Timestamp,
                 GalleryId = ClusterId, // assuming ClusterId maps to GalleryId contextually
                 GallerySeedNumber = 0, // stubbed; replace with actual seed if available

@@ -5,7 +5,6 @@ using Prism.Shared.Contracts.Registries.Base;
 namespace Prism.Shared.Contracts.Registries
 {
     /// <summary>
-    /// Registry for managing manifests during the assembly phase.
     /// Hydrates from envelope and supports orchestration readiness.
     /// </summary>
     public class AssemblyManifestRegistry<TManifest> : BaseManifestRegistry<TManifest> where TManifest : IManifest

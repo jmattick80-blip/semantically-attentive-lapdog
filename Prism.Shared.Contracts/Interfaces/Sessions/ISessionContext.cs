@@ -8,13 +8,11 @@ namespace Prism.Shared.Contracts.Interfaces.Sessions
         string SessionId { get; }
         string GalleryId { get; }
         int GallerySeedNumber { get; }
-        string CuratorPhase { get; }
         string MeshSnapshotId { get; }
         DateTime CreatedAt { get; }
         string Status { get; }
         string CuratorRole { get; }
         string ContributorId { get; }
-        string Phase { get; }
         Dictionary<string, string> TraitTriggerMap { get; }
         string ToSummary();
     }

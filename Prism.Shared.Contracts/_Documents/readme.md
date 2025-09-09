@@ -20,7 +20,6 @@ Prism.Shared.Contracts defines the foundational interfaces, trait scaffolds, ses
 |------|-------------|
 | `Traits` | Modular, narratable traits used for filtering, modulation, and emotional consequence |
 | `Sessions` | Session scaffolds including `PrismSession`, `SessionContext`, and `SessionEntityState` |
-| `Phases` | Runtime phase interfaces and orchestration scaffolds |
 | `Tone` | Contributor tone adapters and authored response manifests |
 | `Intent` | Intent manifests and resolution contracts |
 | `Envelopes` | Payload wrappers for emotional routing and trait propagation |

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Prism.Shared.Contracts")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+007e14ed7057e9e9e8be436d9aa173e86a41aa79")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+79e8dbca854d8fbf0dea9689139d0f0036a3a7e2")]
 [assembly: System.Reflection.AssemblyProductAttribute("Prism.Shared.Contracts")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Prism.Shared.Contracts")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

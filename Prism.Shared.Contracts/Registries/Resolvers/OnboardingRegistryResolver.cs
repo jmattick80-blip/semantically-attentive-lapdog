@@ -9,13 +9,10 @@ using Prism.Shared.Contracts.Registries.Resolvers.Base;
 namespace Prism.Shared.Contracts.Registries.Resolvers
 {
     /// <summary>
-    /// Resolver for manifest registries during the onboarding phase.
     /// Supports envelope-driven hydration and contributor-safe initialization.
     /// </summary>
     public class OnboardingRegistryResolver : RegistryResolverBase
     {
-        public OnboardingRegistryResolver() : base("onboarding") { }
-
         public override IManifestRegistry<TManifest> Resolve<TManifest>(IntentEnvelope envelope)
         {
             var hydrator = ResolveHydrator<TManifest>(envelope);

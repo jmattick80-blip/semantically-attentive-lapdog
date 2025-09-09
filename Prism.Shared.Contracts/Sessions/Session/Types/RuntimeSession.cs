@@ -15,8 +15,7 @@ namespace Prism.Shared.Contracts.Sessions.Session.Types
             ICallbackDispatcher callbackDispatcher,
             string contributorId,
             string role,
-            string curatorRole,
-            string phase)
+            string curatorRole)
             : base(validator, registryResolver, callbackDispatcher, contributorId, role)
         {
             SessionId = Guid.NewGuid().ToString();
@@ -25,7 +24,6 @@ namespace Prism.Shared.Contracts.Sessions.Session.Types
             Description = "Tracks contributor state, scenario tags, and emotional simulation context.";
 
             CuratorRole = curatorRole;
-            Phase = phase;
         }
     }
 }

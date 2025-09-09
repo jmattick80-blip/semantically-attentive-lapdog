@@ -4,5 +4,5 @@ namespace Prism.Shared.Contracts.Interfaces.Manifests;
 
 public interface IManifestRegistryResolverFactory
 {
-    IManifestRegistryResolver Create(string curatorPhase);
+    IManifestRegistryResolver Create();
 }

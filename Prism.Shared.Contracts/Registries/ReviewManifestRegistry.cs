@@ -8,7 +8,6 @@ using Prism.Shared.Contracts.Interfaces.Traits;
 namespace Prism.Shared.Contracts.Registries
 {
     /// <summary>
-    /// Review-phase registry for managing manifests under contributor inspection.
     /// Supports narration hints, trait propagation, and emotional traceability.
     /// </summary>
     public class ReviewManifestRegistry<TManifest> : IManifestRegistry<TManifest> where TManifest : IManifest

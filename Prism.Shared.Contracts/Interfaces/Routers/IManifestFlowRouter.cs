@@ -11,7 +11,7 @@ public interface IManifestFlowRouter
 
 // This interface defines the contract for routing intent envelopes within Prism OS.
 // It accepts any IIntentEnvelope and returns a narratable ManifestRoutingResult.
-// Implementations interpret contributor phase, tone, and context to guide manifest flow.
+// Implementations interpret contributor tone, and context to guide manifest flow.
 // The interface is domain-neutral, emotionally legible, and safe for future editors.
 
 #endregion

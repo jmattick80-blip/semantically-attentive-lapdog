@@ -136,7 +136,6 @@ namespace Prism.Internal.Registry
             {
                 SessionId = session.SessionId,
                 CuratorId = session.ContributorId,
-                Phase = "committed",
                 DraftSnapshotId = $"draft-{sessionId}-{DateTime.UtcNow:yyyyMMddHHmmss}",
                 CommittedSnapshotId = $"commit-{sessionId}-{DateTime.UtcNow:yyyyMMddHHmmss}",
                 LastUpdated = DateTime.UtcNow

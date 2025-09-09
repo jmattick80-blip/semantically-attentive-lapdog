@@ -16,15 +16,12 @@ namespace Prism.Shared.Contracts.Transformers
             // Traits may be curator-sensitive
             if (curatorRole == "Archivist" || curatorRole == "Curator")
                 transformers.Add(new TraitTransformer());
-
-            // Overlays may be optional unless in annotation phase
-            if (entityType == PrismSelectorTypes.EntityType.Exhibit || curatorRole == "Annotator")
-                transformers.Add(new OverlayTransformer());
-
+            
+            
             return transformers;
         }
 
-        // Legacy fallback if phase is not used
+        // Legacy fallback
         public static List<IEntityTransformer> ResolveTransformers(PrismSelectorTypes.EntityType entityType, string curatorRole)
         {
             return ResolveBaseTransformers(entityType, curatorRole);
@@ -35,7 +32,7 @@ namespace Prism.Shared.Contracts.Transformers
     // TransformerRegistry resolves IEntityTransformer instances based on entity type and curator role.
     // ResolveBaseTransformers provides foundational transformer sets for mood, trait, and overlay logic.
     // These transformers support narratable consequence, contributor-safe mutation, and multiplayer-safe flows.
-    // CuratorPhaseRouter may layer phase-specific logic on top of this registry to support session-aware transformation.
+    // ResolveTransformers currently routes to the base set, serving as a legacy fallback.
     // Together, these systems enable legacy-grade emotional mesh routing and curator-sensitive overlays across Prism.
     #endregion
 }

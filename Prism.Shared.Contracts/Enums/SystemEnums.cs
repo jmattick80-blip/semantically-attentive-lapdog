@@ -45,20 +45,6 @@ namespace Prism.Shared.Contracts.Enums
         Semantic,
         Input
     }
-    public enum SystemPhase
-    {
-        None,
-        PreUpdate,
-        Update,
-        PostUpdate,
-        Custom,
-        Active,
-        Curator,
-        Unspecified,
-        Onboarding,
-        Runtime,
-        Review
-    }
 
     public enum SystemState
     {

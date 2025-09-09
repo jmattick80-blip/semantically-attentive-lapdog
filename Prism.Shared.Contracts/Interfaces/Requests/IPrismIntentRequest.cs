@@ -13,7 +13,7 @@ namespace Prism.Shared.Contracts.Interfaces.Requests
         SessionEntity TargetEntity { get; }            // Entity being acted on
         string Verb { get; }                            // Action to perform (e.g. "ApplyDelta", "Commit", "Preview")
         Dictionary<string, object> Payload { get; }     // Optional parameters (e.g. mood deltas, layout edits)
-        SessionContext Session { get; }                 // Session scope, contributor ID, phase, etc.
+        SessionContext Session { get; }                 // Session scope, contributor ID.
         DateTime Timestamp { get; }                     // When the request was created
     }
 }

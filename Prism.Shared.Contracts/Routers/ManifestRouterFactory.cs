@@ -16,26 +16,18 @@ namespace Prism.Shared.Contracts.Routers
                 { "curation", () => new CurationManifestRouter() },
                 { "assembly", () => new AssemblyManifestRouter() },
                 { "onboarding", () => new OnboardingManifestRouter() }
-                // Contributors can register additional phase-aware routers here
             };
         }
 
-        public IManifestFlowRouter Create(string phase)
+        public IManifestFlowRouter Create()
         {
-            if (_routerMap.TryGetValue(phase, out var factory))
-            {
-                return factory();
-            }
-
             // Fallback to a descriptor-driven default router
             var fallbackDescriptor = new ManifestRouterDescriptor
             {
                 StrategyName = "DefaultManifestRouter",
-                Phase = string.IsNullOrWhiteSpace(phase) ? "unspecified" : phase,
                 Tone = "neutral",
                 FallbackNotes = new List<string>
                 {
-                    $"No phase-specific router was registered for '{phase}'.",
                     "Routing via default strategy.",
                     "Consider defining a custom router to enrich contributor flow."
                 }
@@ -45,9 +37,9 @@ namespace Prism.Shared.Contracts.Routers
         }
 
         #region ManifestRouterFactory – End Summary (August 31, 2025)
-
-        // This factory interprets contributor phase and returns a narratable manifest resolver.
-        // Each resolver reflects the tone, structure, and flow expectations of its phase.
+        
+        // This factory creates manifest flow routers based on session context.
+        // It maps strategy names to concrete router implementations.
         // Contributors can safely register new routing strategies without modifying orchestration logic.
         // If no resolver is found, a default resolver is returned with context-aware fallback behavior.
 

@@ -11,7 +11,6 @@ namespace Prism.Shared.Contracts.Routers
             InflateFromDescriptor(new ManifestRouterDescriptor
             {
                 StrategyName = "AssemblyManifestRouter",
-                Phase = "assembly",
                 Tone = "constructive",
                 FallbackNotes = new List<string>
                 {
@@ -31,7 +30,6 @@ namespace Prism.Shared.Contracts.Routers
             var result = new ManifestRoutingResult
             {
                 Target = "ValidationFlow",
-                Strategy = Phase,
                 Tone = Tone,
                 IsFallback = false
             };
@@ -44,8 +42,8 @@ namespace Prism.Shared.Contracts.Routers
 
         #region AssemblyManifestRouter – End Summary (August 31, 2025)
 
-        // This sealed resolver interprets envelopes during the assembly phase.
-        // It inherits tone, phase, and fallback notes from a descriptor.
+        // AssemblyManifestRouter routes intent envelopes using an assembly-focused strategy.
+        // It inherits tone, and fallback notes from a descriptor.
         // Routing decisions guide flow toward validation, orchestration, or build scaffolding.
         // The descriptor ensures narratable fallback behavior even if routing notes are missing.
         // All routing logic is emotionally legible, contributor-safe, and extensible for future editors.

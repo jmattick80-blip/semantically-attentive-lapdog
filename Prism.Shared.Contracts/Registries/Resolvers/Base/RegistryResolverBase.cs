@@ -14,19 +14,17 @@ namespace Prism.Shared.Contracts.Registries.Resolvers.Base
     /// </summary>
     public abstract class RegistryResolverBase : IManifestRegistryResolver
     {
-        protected readonly string Phase;
         protected RegistryResolverDescriptor Descriptor;
 
-        protected RegistryResolverBase(string phase)
+        protected RegistryResolverBase()
         {
-            Phase = phase;
+     
             Descriptor = new RegistryResolverDescriptor
             {
                 StrategyName = GetType().Name,
-                Phase = phase,
+                
                 FallbackNotes = new List<string>
                 {
-                    $"Using registry resolver for phase '{phase}'.",
                     $"Resolver type: {GetType().Name}"
                 }
             };
@@ -34,7 +32,6 @@ namespace Prism.Shared.Contracts.Registries.Resolvers.Base
 
         /// <summary>
         /// Resolves a manifest registry using fallback strategy.
-        /// Override in subclasses for phase-specific orchestration.
         /// </summary>
         public virtual IManifestRegistry<TManifest> Resolve<TManifest>(IntentEnvelope envelope)
             where TManifest : IManifest
@@ -45,7 +42,6 @@ namespace Prism.Shared.Contracts.Registries.Resolvers.Base
         }
 
         /// <summary>
-        /// Resolves a phase-specific registry.
         /// Must be implemented by subclasses.
         /// </summary>
         public abstract IManifestRegistry<TManifest> ResolveRegistry<TManifest>(IntentEnvelope envelope)
@@ -63,7 +59,7 @@ namespace Prism.Shared.Contracts.Registries.Resolvers.Base
     /// <summary>
     /// RegistryResolverBase provides envelope-aware fallback logic for manifest registry resolution.
     /// It supports descriptor-driven narration, hydrator injection, and contributor-safe orchestration.
-    /// Subclasses must implement phase-specific registry and hydrator resolution strategies.
+    
     ///
     /// This base class ensures that even in ambiguous routing scenarios,
     /// contributors receive emotionally legible feedback and prefab-safe hydration.

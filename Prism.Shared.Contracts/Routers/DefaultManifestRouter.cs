@@ -18,7 +18,6 @@ public sealed class DefaultManifestRouter : ManifestRouterBase
         return new ManifestRoutingResult
         {
             Target = "DefaultFlow",
-            Strategy = Phase,
             Tone = Tone,
             IsFallback = true,
             Notes = GetRoutingNotes().ToList()

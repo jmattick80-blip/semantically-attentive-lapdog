@@ -11,12 +11,11 @@ using Prism.Shared.Contracts.Registries.Resolvers.Base;
 namespace Prism.Shared.Contracts.Registries.Resolvers
 {
     /// <summary>
-    /// Resolver used when no phase-specific registry strategy is available.
     /// Provides descriptor-driven fallback behavior and narratable hydration.
     /// </summary>
     public class DefaultRegistryResolver : RegistryResolverBase
     {
-        public DefaultRegistryResolver(RegistryResolverDescriptor descriptor) : base(descriptor.Phase)
+        public DefaultRegistryResolver(RegistryResolverDescriptor descriptor)
         {
             Descriptor = descriptor;
         }
@@ -81,7 +80,6 @@ namespace Prism.Shared.Contracts.Registries.Resolvers
 
     #region DefaultRegistryResolver – End Summary (Sprint 5 – September 1, 2025)
     /// <summary>
-    /// DefaultRegistryResolver provides descriptor-driven fallback logic when no phase-specific resolver is available.
     /// It resolves the appropriate IManifestHydrator<TManifest> based on envelope intent,
     /// constructs a PrismManifestRegistry<TManifest>, and ensures contributor-safe hydration and narration.
     ///

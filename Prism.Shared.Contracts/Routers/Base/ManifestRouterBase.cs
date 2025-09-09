@@ -14,8 +14,7 @@ public abstract class ManifestRouterBase : IManifestFlowRouter
     {
         Descriptor = descriptor ?? new ManifestRouterDescriptor();
     }
-
-    protected string Phase => Descriptor?.Phase ?? "unspecified";
+    
     protected string Tone => Descriptor?.Tone ?? "neutral";
     public string StrategyName => Descriptor?.StrategyName ?? "Unnamed Router";
 
@@ -28,7 +27,6 @@ public abstract class ManifestRouterBase : IManifestFlowRouter
             RoutingNotes.AddRange(Descriptor?.FallbackNotes ?? new List<string>
             {
                 $"Routing via '{StrategyName}' strategy.",
-                $"Phase: {Phase}",
                 $"Tone: {Tone}"
             });
         }

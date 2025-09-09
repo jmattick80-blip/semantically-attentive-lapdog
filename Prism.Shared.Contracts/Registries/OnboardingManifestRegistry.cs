@@ -5,7 +5,7 @@ using Prism.Shared.Contracts.Registries.Base;
 namespace Prism.Shared.Contracts.Registries
 {
     /// <summary>
-    /// Registry for managing manifests during the onboarding phase.
+    /// OnboardingManifestRegistry manages emotionally reactive manifests during contributor onboarding.
     /// Hydrates from envelope and supports contributor initialization and emotional scaffolding.
     /// </summary>
     public class OnboardingManifestRegistry<TManifest> : BaseManifestRegistry<TManifest> where TManifest : IManifest

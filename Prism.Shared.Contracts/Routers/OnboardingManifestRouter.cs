@@ -11,7 +11,6 @@ namespace Prism.Shared.Contracts.Routers
             InflateFromDescriptor(new ManifestRouterDescriptor
             {
                 StrategyName = "OnboardingManifestRouter",
-                Phase = "onboarding",
                 Tone = "gentle",
                 FallbackNotes = new List<string>
                 {
@@ -31,7 +30,6 @@ namespace Prism.Shared.Contracts.Routers
             var result = new ManifestRoutingResult
             {
                 Target = "TutorialStage",
-                Strategy = Phase,
                 Tone = Tone,
                 IsFallback = false
             };
@@ -46,8 +44,8 @@ namespace Prism.Shared.Contracts.Routers
 
 #region OnboardingManifestRouter – End Summary (August 31, 2025)
 
-// This sealed resolver interprets envelopes during the onboarding phase.
-// It inherits tone, phase, and fallback notes from a descriptor.
+// This sealed resolver interprets envelopes during
+// It inherits tone, and fallback notes from a descriptor.
 // Routing decisions guide flow toward tutorials, tone calibration, or default scaffolding.
 // The descriptor ensures narratable fallback behavior even if routing notes are missing.
 // All routing logic is narratable, emotionally legible, and safe for future editors.

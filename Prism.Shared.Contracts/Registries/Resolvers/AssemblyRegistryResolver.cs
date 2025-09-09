@@ -9,13 +9,10 @@ using Prism.Shared.Contracts.Registries.Resolvers.Base;
 namespace Prism.Shared.Contracts.Registries.Resolvers
 {
     /// <summary>
-    /// Resolver for manifest registries during the assembly phase.
     /// Supports envelope-driven hydration and prefab-safe orchestration.
     /// </summary>
     public class AssemblyRegistryResolver : RegistryResolverBase
     {
-        public AssemblyRegistryResolver() : base("assembly") { }
-
         public override IManifestRegistry<TManifest> Resolve<TManifest>(IntentEnvelope envelope)
         {
             var hydrator = ResolveHydrator<TManifest>(envelope);
@@ -42,12 +39,10 @@ namespace Prism.Shared.Contracts.Registries.Resolvers
 
     #region AssemblyRegistryResolver – End Summary (Sprint 5 – September 1, 2025)
     /// <summary>
-    /// AssemblyRegistryResolver orchestrates manifest hydration and registration during the assembly phase.
     /// It resolves the appropriate IManifestHydrator<TManifest> based on envelope intent,
     /// constructs an AssemblyManifestRegistry<TManifest>, and ensures contributor-safe orchestration.
     ///
     /// This resolver supports prefab-safe routing, emotional mesh activation, and fallback narration.
-    /// It is part of Prism OS’s phase-aware registry resolution system.
     ///
     /// Related Components:
     /// - IntentEnvelope

@@ -15,7 +15,7 @@ namespace Prism.Shared.Contracts
         public int Version { get; set; } = 1;                      // Incremented on each update
 
         public Dictionary<string, float> MoodVector { get; set; } = new Dictionary<string, float>(); // Emotional state, resonance, etc.
-        public Dictionary<string, object> Metadata { get; set; } =new Dictionary<string, object>();  // Curator phase, tags, overlays
+        public Dictionary<string, object> Metadata { get; set; } =new Dictionary<string, object>();  // tags, overlays
 
         public bool IsDraft { get; set; }
         public DateTime Timestamp { get; set; } = DateTime.UtcNow;

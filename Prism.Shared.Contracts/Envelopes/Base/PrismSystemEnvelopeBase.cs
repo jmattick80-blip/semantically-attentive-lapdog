@@ -10,19 +10,17 @@ namespace Prism.Shared.Contracts.Envelopes.Base
         public string SystemHash { get; protected set; }
         public SystemType Type { get; protected set; }
         public SystemIntent Intent { get; set; }
-        public SystemPhase Phase { get; set; }
         public SystemState State { get; protected set; }
         public string UnityId { get; set; } = string.Empty;
         protected DateTime Timestamp { get; set; } = DateTime.MinValue;
 
         public virtual string ToNarration() =>
-            $"[{Timestamp:HH:mm:ss}] {Type} → {Intent} → {Phase} → {State} → Envelope: {EnvelopeId}";
+            $"[{Timestamp:HH:mm:ss}] {Type} → {Intent} → {State} → Envelope: {EnvelopeId}";
 
         protected void InitializeEnvelope(
             string envelopeId,
             SystemType type,
             SystemIntent intent,
-            SystemPhase phase,
             SystemState state,
             string unityId,
             DateTime timestamp,
@@ -38,7 +36,6 @@ namespace Prism.Shared.Contracts.Envelopes.Base
 
             Type = type;
             Intent = intent;
-            Phase = phase;
             State = state;
             UnityId = unityId;
             Timestamp = timestamp;
@@ -65,21 +62,21 @@ namespace Prism.Shared.Contracts.Envelopes.Base
 // 🧠 Summary Region: PrismSystemEnvelopeBase
 //
 // Represents a narratable system envelope used to orchestrate runtime state,
-// intent, and phase transitions. Engine-agnostic and prefab-safe, this base
+// intent. Engine-agnostic and prefab-safe, this base
 // class supports serialization, annotation, and replay across simulation flows.
 //
 // ┌─────────────────────────────────────────────────────────────────────────┐
 // │ Responsibilities                                                       │
 // ├─────────────────────────────────────────────────────────────────────────┤
 // │ • Store envelope metadata including ID, hash, timestamp                │
-// │ • Track system type, intent, phase, and state                          │
+// │ • Track system type, intent, and state                          │
 // │ • Provide narratable output for logging and contributor feedback       │
 // │ • Initialize envelope with fallback ID/hash generation                 │
 // └─────────────────────────────────────────────────────────────────────────┘
 //
 // 🔗 Dependencies:
 // - IEnvelope (interface contract)
-// - SystemType, SystemIntent, SystemPhase, SystemState (enums)
+// - SystemType, SystemIntent, SystemState (enums)
 //
 // 🧩 Emotional Consequence:
 // - Enables traceable system orchestration across runtime flows

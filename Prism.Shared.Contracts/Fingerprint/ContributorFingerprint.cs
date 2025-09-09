@@ -18,17 +18,12 @@ namespace Prism.Shared.Contracts.Fingerprint
         /// </summary>
         public FingerprintTone Tone { get; }
 
-        /// <summary>
-        /// Optional session tag or phase marker (e.g. Onboarding, Escalation).
-        /// </summary>
-        public string Phase { get; }
-
-        public ContributorFingerprint(string contributorId, string role, FingerprintTone tone, string phase = null)
+        
+        public ContributorFingerprint(string contributorId, string role, FingerprintTone tone)
         {
             ContributorId = contributorId;
             Role = role;
             Tone = tone;
-            Phase = phase;
         }
 
         /// <summary>
@@ -36,7 +31,7 @@ namespace Prism.Shared.Contracts.Fingerprint
         /// </summary>
         public override string ToString()
         {
-            return $"{ContributorId} ({Role}) - Tone: {Tone}, Phase: {Phase ?? "Unspecified"}";
+            return $"{ContributorId} ({Role}) - Tone: {Tone}";
         }
     }
     #region ContributorFingerprint Summary (August 31, 2025)

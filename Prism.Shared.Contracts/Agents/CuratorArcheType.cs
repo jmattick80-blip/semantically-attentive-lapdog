@@ -23,12 +23,7 @@ namespace Prism.Shared.Contracts.Agents
         /// List of default traits this curator injects into transformation flows.
         /// </summary>
         public List<string> DefaultTraits { get; set; } = new List<string>();
-
-        /// <summary>
-        /// Phase-specific transformer preferences (e.g. overlays in Annotation, mood in LivePlay).
-        /// </summary>
-        public Dictionary<string, List<string>> PhaseTransformerMap { get; set; } = new  Dictionary<string, List<string>>();
-
+        
         /// <summary>
         /// Optional metadata block for contributor tooling or scenario resale.
         /// </summary>

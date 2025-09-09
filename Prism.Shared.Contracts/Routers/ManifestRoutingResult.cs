@@ -10,17 +10,17 @@ namespace Prism.Shared.Contracts.Routers
         public bool IsFallback { get; set; } = false;               // Indicates if default routing was used
         public List<string> Notes { get; set; } = new();                 // Narratable annotations for contributors
 
-        public static ManifestRoutingResult Default(string phase = "unspecified")
+        public static ManifestRoutingResult Default()
         {
             return new ManifestRoutingResult
             {
                 Target = "DefaultFlow",
-                Strategy = phase,
+                Strategy = "DefaultStrategy",
                 Tone = "neutral",
                 IsFallback = true,
                 Notes = new List<string>
                 {
-                    $"No phase-specific resolver found. Routed using default strategy for phase '{phase}'.",
+                    "No custom resolver registered; using default routing.",
                     "Consider defining a custom resolver for richer flow control."
                 }
             };

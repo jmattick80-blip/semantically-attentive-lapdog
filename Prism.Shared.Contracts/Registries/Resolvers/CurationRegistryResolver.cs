@@ -9,13 +9,10 @@ using Prism.Shared.Contracts.Registries.Resolvers.Base;
 namespace Prism.Shared.Contracts.Registries.Resolvers
 {
     /// <summary>
-    /// Resolver for manifest registries during the curation phase.
     /// Supports envelope-driven hydration and contributor-safe review orchestration.
     /// </summary>
     public class CurationRegistryResolver : RegistryResolverBase
     {
-        public CurationRegistryResolver() : base("curation") { }
-
         public override IManifestRegistry<TManifest> Resolve<TManifest>(IntentEnvelope envelope)
         {
             var hydrator = ResolveHydrator<TManifest>(envelope);
@@ -41,7 +38,7 @@ namespace Prism.Shared.Contracts.Registries.Resolvers
 
     #region CurationRegistryResolver – End Summary (Sprint 5 – September 1, 2025)
     /// <summary>
-    /// CurationRegistryResolver orchestrates emotionally reactive manifest hydration during the review phase.
+    /// CurationRegistryResolver orchestrates emotionally reactive manifest hydration.
     /// It resolves the appropriate IManifestHydrator<TManifest> based on envelope intent,
     /// constructs a CurationManifestRegistry<TManifest>, and ensures contributor-safe inspection and feedback.
     ///

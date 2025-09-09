@@ -5,14 +5,15 @@ namespace Prism.Internal.Shared.MeshLogic.Implementations;
 
 public class PrismResistanceProfile : IMeshResistanceProfile
 {
-    public Dictionary<string, float> ApplyResistance(Dictionary<string, float> moodDeltas, string contributorPhase)
+    public Dictionary<string, float> ApplyResistance(Dictionary<string, float> moodDeltas)
     {
-        float resistanceFactor = contributorPhase == "Curator" ? 0.8f : 1.0f;
         var resisted = new Dictionary<string, float>();
-        foreach (var kvp in moodDeltas)
+        foreach (var (key, value) in moodDeltas)
         {
-            resisted[kvp.Key] = kvp.Value * resistanceFactor;
+            // Example resistance logic: reduce impact by 20%
+            resisted[key] = value * 0.8f;
         }
+
         return resisted;
     }
 

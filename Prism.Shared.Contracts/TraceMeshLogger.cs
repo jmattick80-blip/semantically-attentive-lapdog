@@ -14,10 +14,10 @@ namespace Prism.Shared.Contracts
         private readonly List<TraceEntry> _entries = new  List<TraceEntry>();
         
         /// <summary>
-        /// Logs a routed intent with contributor fingerprint and phase context.
+        /// Logs a routed intent with contributor fingerprint and context.
         /// Includes mesh consequence tags and cluster anchors.
         /// </summary>
-        public void LogIntent(string intentName, ContributorFingerprint fingerprint, string phase)
+        public void LogIntent(string intentName, ContributorFingerprint fingerprint)
         {
             _entries.Add(new TraceEntry
             {
@@ -26,12 +26,11 @@ namespace Prism.Shared.Contracts
                 ContributorId = fingerprint.ContributorId,
                 Role = fingerprint.Role,
                 Tone = fingerprint.Tone.Type.ToString(),
-                Phase = phase,
+                
                 Tags = new List<string>
                 {
                     "IntentRouted",
                     $"Tone:{fingerprint.Tone.Type}",
-                    $"PhaseRegistryHint:{phase}",
                     $"MeshConsequence:Pending",
                     "ClusterAnchor"
                 },
@@ -57,7 +56,6 @@ namespace Prism.Shared.Contracts
                 ContributorId = "System",
                 Role = "Responder",
                 Tone = toneUsed,
-                Phase = "Response",
                 Response = responseSummary,
                 Tags = enrichedTags
             });
@@ -70,8 +68,7 @@ namespace Prism.Shared.Contracts
     }
 
     #region TraceMeshLogger Summary (Sprint 4 – August 31, 2025)
-    // TraceMeshLogger captures routed intents and Prism responses with emotional mesh consequence.
-    // Supports fingerprint serialization, cluster anchoring, phase registry hydration, and tone tagging.
-    // Enables replayable trace logs for MeshClusterBuilder and consequence routing in PhaseRegistryHydrator.
+    // TraceMeshLogger captures routed intents and Prism responses with emotional mesh consequences.
+    // Supports fingerprint serialization, cluster anchoring, and registry hydration.
     #endregion
 }

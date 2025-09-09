@@ -11,7 +11,6 @@ namespace Prism.Shared.Contracts.Routers
             InflateFromDescriptor(new ManifestRouterDescriptor
             {
                 StrategyName = "CurationManifestRouter",
-                Phase = "curation",
                 Tone = "reflective",
                 FallbackNotes = new List<string>
                 {
@@ -31,7 +30,6 @@ namespace Prism.Shared.Contracts.Routers
             var result = new ManifestRoutingResult
             {
                 Target = "RefinementLayer",
-                Strategy = Phase,
                 Tone = Tone,
                 IsFallback = false
             };
@@ -43,9 +41,8 @@ namespace Prism.Shared.Contracts.Routers
         }
 
         #region CurationManifestRouter – End Summary (August 31, 2025)
-
-        // This sealed resolver interprets envelopes during the curation phase.
-        // It inherits tone, phase, and fallback notes from a descriptor.
+        
+        // It inherits tone, and fallback notes from a descriptor.
         // Routing decisions guide flow toward refinement, preview, or tone calibration layers.
         // The descriptor ensures narratable fallback behavior even if routing notes are missing.
         // All routing logic is emotionally legible, contributor-safe, and extensible for future editors.

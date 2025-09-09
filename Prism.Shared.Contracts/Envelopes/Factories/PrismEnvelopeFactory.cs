@@ -158,7 +158,6 @@ namespace Prism.Shared.Contracts.Envelopes.Factories
                 metadata.EnvelopeId,
                 metadata.Type,
                 metadata.Intent,
-                metadata.Phase,
                 metadata.State,
                 metadata.UnityId,
                 metadata.Timestamp,

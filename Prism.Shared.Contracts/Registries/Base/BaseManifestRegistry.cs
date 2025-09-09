@@ -13,7 +13,6 @@ namespace Prism.Shared.Contracts.Registries.Base
     /// <summary>
     /// Base class for envelope-aware manifest registries.
     /// Supports prefab-safe hydration, emotional scaffolding, and contributor-safe orchestration.
-    /// Designed to be inherited by phase-specific registries (e.g., Onboarding, Runtime, Review).
     /// </summary>
     public abstract class BaseManifestRegistry<TManifest> : IManifestRegistry<TManifest> where TManifest : IManifest
     {
@@ -101,7 +100,6 @@ namespace Prism.Shared.Contracts.Registries.Base
     /// It interprets the IntentEnvelope using a provided IManifestHydrator<TManifest>,
     /// registers the hydrated manifest, and supports trait propagation and cluster binding.
     ///
-    /// This class is designed to be inherited by phase-specific registries such as:
     /// - OnboardingManifestRegistry
     /// - RuntimeManifestRegistry
     /// - ReviewManifestRegistry

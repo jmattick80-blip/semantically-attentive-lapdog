@@ -20,7 +20,6 @@ public class MeshProfile
     public Dictionary<string, string>? ToneTags { get; set; }
 
     // Optional: for session-based mesh drift analysis
-    public string? Phase { get; set; }
     public string? ClusterId { get; set; }
 
     // Optional: for contributor role or domain tagging

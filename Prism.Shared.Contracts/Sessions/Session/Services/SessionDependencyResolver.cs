@@ -32,12 +32,12 @@ namespace Prism.Shared.Contracts.Sessions.Session.Services
 
         public IManifestFlowRouter ResolveRouter(SessionContext context)
         {
-            return _routerFactory.Create(context.CuratorPhase);
+            return _routerFactory.Create();
         }
         
         public IManifestRegistryResolver ResolveRegistryResolver(SessionContext context)
         {
-            return new ManifestRegistryResolverFactory().Create(context.CuratorPhase);
+            return new ManifestRegistryResolverFactory().Create();
         }
 
 

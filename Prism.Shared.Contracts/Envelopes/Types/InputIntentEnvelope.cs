@@ -15,7 +15,6 @@ namespace Prism.Shared.Contracts.Envelopes.Types
             string unityId,
             SystemType type,
             SystemIntent intent,
-            SystemPhase phase,
             SystemState state,
             string envelopeId = null,
             string systemHash = null,
@@ -30,7 +29,6 @@ namespace Prism.Shared.Contracts.Envelopes.Types
                 envelopeId: envelopeId,
                 type: type,
                 intent: intent,
-                phase: phase,
                 state: state,
                 unityId: unityId,
                 timestamp: timestamp ?? DateTime.UtcNow,
@@ -59,7 +57,7 @@ namespace Prism.Shared.Contracts.Envelopes.Types
 //
 // 🔗 Dependencies:
 // - IntentEnvelope (base class)
-// - SystemType, SystemIntent, SystemPhase, SystemState (enums)
+// - SystemType, SystemIntent, SystemState (enums)
 //
 // 🧩 Emotional Consequence:
 // - Enables contributor-aware simulation routing

@@ -10,7 +10,6 @@ public class EnvelopeMetadata
     public DateTime Timestamp { get; }
     public SystemType Type { get; }
     public SystemIntent Intent { get; }
-    public SystemPhase Phase { get; }
     public SystemState State { get; }
     public string UnityId { get; }
 
@@ -20,7 +19,6 @@ public class EnvelopeMetadata
         DateTime timestamp,
         SystemType type,
         SystemIntent intent,
-        SystemPhase phase,
         SystemState state,
         string unityId)
     {
@@ -29,7 +27,6 @@ public class EnvelopeMetadata
         Timestamp = timestamp;
         Type = type;
         Intent = intent;
-        Phase = phase;
         State = state;
         UnityId = unityId;
     }

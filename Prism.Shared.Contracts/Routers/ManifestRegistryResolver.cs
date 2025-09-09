@@ -14,13 +14,11 @@ using IHydratorContract = Prism.Shared.Contracts.Interfaces.Manifests.IManifestH
 namespace Prism.Shared.Contracts.Routers
 {
     /// <summary>
-    /// Resolves phase-aware manifest registries and intent-specific hydrators.
     /// Supports prefab-safe hydration and emotionally reactive orchestration.
     /// </summary>
     public class ManifestRegistryResolver : IManifestRegistryResolver
     {
         private readonly Dictionary<SystemIntent, object> _hydrators;
-        private readonly Dictionary<SystemPhase, Func<IntentEnvelope, IHydratorContract, object>> _registryFactories;
 
         public ManifestRegistryResolver()
         {
@@ -32,8 +30,7 @@ namespace Prism.Shared.Contracts.Routers
                 { SystemIntent.Input, new InputManifestHydrator() }
             };
         }
-
-
+        
         public IManifestRegistry<TManifest> Resolve<TManifest>(IntentEnvelope envelope)
             where TManifest : IManifest
             => ResolveRegistry<TManifest>(envelope);
@@ -46,16 +43,14 @@ namespace Prism.Shared.Contracts.Routers
 
             var hydrator = ResolveHydrator<TManifest>(envelope);
 
-            IManifestRegistry<TManifest> registry = envelope.Phase switch
+            if (hydrator is IManifestRegistry<TManifest> registry)
             {
-                SystemPhase.Onboarding => new OnboardingManifestRegistry<TManifest>(envelope, hydrator),
-                SystemPhase.Review => new ReviewManifestRegistry<TManifest>(),
-                SystemPhase.Runtime => new RuntimeManifestRegistry<TManifest>(),
-                _ => new NullManifestRegistry<TManifest>()
-            };
+                Console.WriteLine($"✅ Registry resolved for intent: {envelope.Intent}");
+                return registry;
+            }
 
-            Console.WriteLine($"📦 Resolved registry for phase: {envelope.Phase}");
-            return registry;
+            Console.WriteLine($"⚠️ Hydrator for intent '{envelope.Intent}' does not implement IManifestRegistry<{typeof(TManifest).Name}>");
+            return null;
         }
 
         public IManifestHydrator<TManifest> ResolveHydrator<TManifest>(IntentEnvelope envelope)
@@ -71,9 +66,9 @@ namespace Prism.Shared.Contracts.Routers
                 return typedHydrator;
             }
 
-
             Console.WriteLine($"⚠️ No hydrator found for intent: {envelope.Intent}");
             return new NullManifestHydrator<TManifest>();
         }
+
     }
 }

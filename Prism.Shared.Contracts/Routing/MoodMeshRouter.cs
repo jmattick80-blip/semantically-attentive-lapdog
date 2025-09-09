@@ -9,7 +9,6 @@ namespace Prism.Shared.Contracts.Routing
         public static void Emit(
             IPrismIntentResult result,
             string contributorId,
-            string phase,
             Dictionary<string, string>? moodMap)
         {
             if (string.IsNullOrWhiteSpace(contributorId))
@@ -20,12 +19,12 @@ namespace Prism.Shared.Contracts.Routing
             
             if (moodMap == null || moodMap.Count == 0)
             {
-                Log($"🧠 MoodMeshRouter: No mood map provided. Defaulting to 'Neutral' for contributor '{contributorId}' in phase '{phase}'.");
+                Log($"🧠 MoodMeshRouter: No mood map provided. Defaulting to 'Neutral' for contributor '{contributorId}' ");
                 return;
             }
 
             var moodSignal = InferMood(result.Message, moodMap);
-            Log($"🧠 MoodMeshRouter: Contributor '{contributorId}' in phase '{phase}' → Mood: {moodSignal}");
+            Log($"🧠 MoodMeshRouter: Contributor '{contributorId}' → Mood: {moodSignal}");
         }
 
         private static string InferMood(string message, Dictionary<string, string>? moodMap)
