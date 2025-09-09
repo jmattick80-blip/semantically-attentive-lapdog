@@ -63,12 +63,6 @@ namespace Prism.Shared.Contracts.Interfaces.Registries
         void AddSystemCluster(Cluster cluster);
 
         /// <summary>
-        /// Propagates a trait bundle to all registered clusters.
-        /// </summary>
-        /// <param name="traits">The traits to propagate.</param>
-        void PropagateTraitBundle(IEnumerable<ITrait> traits);
-
-        /// <summary>
         /// Clears all registered clusters from the registry.
         /// </summary>
         void ClearSystemClusters();

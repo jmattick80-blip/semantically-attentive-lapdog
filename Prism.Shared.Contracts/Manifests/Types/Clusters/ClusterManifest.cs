@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Prism.Shared.Contracts.Clusters.Base;
@@ -25,13 +26,10 @@ namespace Prism.Shared.Contracts.Manifests.Types.Clusters
 
         #endregion
 
-        #region Traits & Bindings
+        #region Traits & Signals
 
-        public List<ITrait> DefaultTraits { get; set; } = new  List<ITrait>();
-        public List<string> SignalBindings { get; set; } =new List<string>();
-
-        IReadOnlyList<ITrait> ITraitBindable.DefaultTraits => DefaultTraits;
-        IReadOnlyList<string> ITraitBindable.SignalBindings => SignalBindings;
+        public IEnumerable<ITrait> DefaultTraits { get; set; } = new List<ITrait>();
+        public IEnumerable<string> SignalBindings { get; set; } = new List<string>();
 
         #endregion
 
@@ -45,8 +43,8 @@ namespace Prism.Shared.Contracts.Manifests.Types.Clusters
 
         public void PropagateTraitBundle(IEnumerable<ITrait> traits)
         {
-            var enumerable = traits.ToList();
-            DefaultTraits = enumerable.ToList(); // Apply to self
+            DefaultTraits = traits.ToList();
+            Console.WriteLine($"📦 Trait bundle propagated to ClusterManifest '{ManifestId}' with {DefaultTraits.Count()} traits.");
         }
 
         #endregion

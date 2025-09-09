@@ -4,7 +4,6 @@ using System.Linq;
 using Prism.Shared.Contracts.Clusters.Base;
 using Prism.Shared.Contracts.Interfaces.Manifests;
 using Prism.Shared.Contracts.Interfaces.Registries;
-using Prism.Shared.Contracts.Interfaces.Traits;
 
 namespace Prism.Shared.Contracts.Registries
 {
@@ -40,20 +39,6 @@ namespace Prism.Shared.Contracts.Registries
             _registeredClusters[cluster.Manifest.DisplayName] = cluster.Manifest;
         }
 
-        public void PropagateTraitBundle(IEnumerable<ITrait> traits)
-        {
-            var enumerable = traits.ToList();
-            if (enumerable.Any()) return;
-
-            foreach (var manifest in _registeredClusters.Values)
-            {
-                if (manifest is ITraitBindable bindable)
-                {
-                    bindable.PropagateTraitBundle(enumerable);
-                }
-            }
-        }
-        
         public void ClearSystemClusters()
         {
             _registeredClusters.Clear();

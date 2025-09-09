@@ -5,103 +5,92 @@ using System.Threading.Tasks;
 using Prism.Shared.Contracts.Agents;
 using Prism.Shared.Contracts.Envelopes;
 using Prism.Shared.Contracts.Envelopes.Types;
+using Prism.Shared.Contracts.Events;
 using Prism.Shared.Contracts.Interfaces.Manifests;
+using Prism.Shared.Contracts.Interfaces.Routers;
 using Prism.Shared.Contracts.Interfaces.Sessions;
 using Prism.Shared.Contracts.Interfaces.Traits;
-using Prism.Shared.Contracts.Traits;
+using Prism.Shared.Contracts.Routing;
 
 namespace Prism.Shared.Contracts.Sessions.Session.Types
 {
-    public abstract class PrismSession : IPrismSession, ITraceable, IClusterBindable, ISessionRegisterable
+    public abstract class PrismSession : IPrismSession
     {
         protected readonly IEnvelopeValidator Validator;
         protected readonly IManifestRegistryResolver RegistryResolver;
         protected readonly ICallbackDispatcher CallbackDispatcher;
+        protected readonly ITraitRouter TraitRouter;
 
+        // Core session metadata
         public string SessionId { get; protected set; }
         public string SessionToken { get; protected set; }
         public DateTime Timestamp { get; protected set; }
         public string ContributorId { get; protected set; }
         public string Role { get; protected set; }
-        public List<NpcDefinition> NpcDefinitions { get; protected set; }
-        public string TraceId { get; protected set; }
-        public IEnumerable<string> Breadcrumbs => _breadcrumbs;
-        private readonly List<string> _breadcrumbs = new List<string>();
-
         public string ClusterId { get; protected set; }
+        public string TraceId { get; protected set; }
         public bool IsRegistered { get; protected set; }
 
-        // Trait interface backing
+        // Contributor context
+        public string CuratorRole { get; protected set; } = string.Empty;
+        public List<NpcDefinition> NpcDefinitions { get; protected set; } = new();
+
+        // Trait interface
         public string TraitId { get; protected set; }
         public string TraitName { get; protected set; }
         public string Description { get; protected set; }
         public bool IsActive { get; protected set; }
-        
-        /// <summary>
-        /// Trait-trigger mappings hydrated from external agent definitions.
-        /// Used for emotional mesh routing, scenario consequence, and transformation logic.
-        /// </summary>
-        public Dictionary<string, List<string>> TraitTriggerMap { get; set; } = new();
 
-        /// <summary>
-        /// Contributor-assigned curator role (e.g. "Archivist", "Designer").
-        /// Used for transformer resolution and scenario consequence.
-        /// </summary>
-        public string CuratorRole { get; protected set; } = string.Empty;
+        // Emotional mesh context
+        public string MoodVector { get; protected set; } = "neutral";
+        public Dictionary<string, float>? LayerWeights { get; protected set; }
+        public Dictionary<string, string>? ToneTags { get; protected set; }
+        public List<string>? Tags { get; protected set; }
+        public List<RippleEvent>? RippleHistory { get; set; }
 
-        
-        protected PrismSession(IEnvelopeValidator validator,
+        // Breadcrumbs
+        private readonly List<string> _breadcrumbs = new();
+        public IEnumerable<string> Breadcrumbs => _breadcrumbs;
+
+        protected PrismSession(
+            IEnvelopeValidator validator,
             IManifestRegistryResolver registryResolver,
-            ICallbackDispatcher callbackDispatcher, string contributorId, string role,
+            ICallbackDispatcher callbackDispatcher,
+            ITraitRouter traitRouter,
+            string contributorId,
+            string role,
             List<NpcDefinition> npcDefinitions)
         {
             Validator = validator;
             RegistryResolver = registryResolver;
             CallbackDispatcher = callbackDispatcher;
+            TraitRouter = traitRouter;
             ContributorId = contributorId;
             Role = role;
-            NpcDefinitions = npcDefinitions ?? [];
+            NpcDefinitions = npcDefinitions ?? new();
         }
 
-        // 🔄 Async Lifecycle
-        public virtual Task StartSessionAsync()
+        // 🔄 Session Lifecycle
+        public virtual async Task StartSessionAsync()
         {
             Activate();
             Timestamp = DateTime.UtcNow;
             SessionToken = GenerateSessionToken();
             Register();
-            
-            TraitTriggerMap = NpcDefinitions
-                .SelectMany(npc => npc.TraitTriggerMap.Triggers)
-                .GroupBy(trigger => trigger.TraitName)
-                .ToDictionary(
-                    g => g.Key,
-                    g => g.Select(t => $"{t.TriggerKey}:{t.TriggerValue}").Distinct().ToList()
-                );
-
-
 
             _breadcrumbs.Add($"🧠 Session started at {Timestamp:O} with token {SessionToken}");
-            _breadcrumbs.Add($"🧬 TraitTriggerMap initialized with {TraitTriggerMap.Count} traits.");
+            _breadcrumbs.Add($"📦 NPCs loaded: {NpcDefinitions.Count}");
 
-            foreach (var kvp in TraitTriggerMap)
-            {
-                _breadcrumbs.Add($"🔗 Trait '{kvp.Key}' triggers: {string.Join(", ", kvp.Value)}");
-            }
-
-            return Task.CompletedTask;
+            await Task.CompletedTask;
         }
 
-
-        public virtual Task EndSessionAsync()
+        public virtual async Task EndSessionAsync()
         {
             Deactivate();
             Unregister();
-
             _breadcrumbs.Add($"🛑 Session ended at {DateTime.UtcNow:O}");
-            return Task.CompletedTask;
+            await Task.CompletedTask;
         }
-
 
         // 🔗 Cluster Binding
         public virtual void BindToCluster(string clusterId)
@@ -110,7 +99,7 @@ namespace Prism.Shared.Contracts.Sessions.Session.Types
             _breadcrumbs.Add($"🔗 Bound to cluster {clusterId} at {DateTime.UtcNow:O}");
         }
 
-        // 📝 Registration Lifecycle
+        // 📝 Registration
         public virtual void Register()
         {
             IsRegistered = true;
@@ -131,6 +120,7 @@ namespace Prism.Shared.Contracts.Sessions.Session.Types
                 Console.WriteLine("⚠️ Envelope is null during emotional routing.");
                 return;
             }
+
             Console.WriteLine($"📨 Envelope received with IntentId: {envelope.IntentId}");
             Console.WriteLine($"🧬 Trait count: {envelope.Traits?.Count() ?? 0}");
 
@@ -156,14 +146,15 @@ namespace Prism.Shared.Contracts.Sessions.Session.Types
                 return;
             }
 
-            if (envelope.Traits != null && envelope.Traits.Any())
+            // 🧠 Route traits through centralized TraitRouter
+            if (envelope.Traits?.Any() == true)
             {
-                manifest.PropagateTraitBundle(envelope.Traits);
-                Console.WriteLine($"🧬 Traits propagated to manifest: {manifest.DisplayName}");
+                TraitRouter.Route(envelope.Traits, manifest, BuildMeshProfile(envelope.Traits));
+                Console.WriteLine($"🧬 Traits routed via TraitRouter to manifest: {manifest.DisplayName}");
             }
             else
             {
-                Console.WriteLine("⚠️ No traits found to propagate.");
+                Console.WriteLine("⚠️ No traits found to route.");
             }
 
             var narration = manifest.GetNarrationHint(envelope.IntentId);
@@ -172,19 +163,17 @@ namespace Prism.Shared.Contracts.Sessions.Session.Types
                 envelope.Traits,
                 manifest,
                 GetSessionContext(),
-                envelope.PayloadPackage // or null if not available
+                envelope.PayloadPackage
             );
-
 
             CallbackDispatcher?.Dispatch(result);
             _breadcrumbs.Add($"📨 Envelope processed: {envelope.DisplayName} → {manifest.DisplayName}");
         }
 
-
         // 🧬 Trait Interface
         public void Activate() => IsActive = true;
         public void Deactivate() => IsActive = false;
-        
+
         public void Modulate(TraitModulationContext traitModulationContext)
         {
             throw new NotImplementedException();
@@ -196,28 +185,44 @@ namespace Prism.Shared.Contracts.Sessions.Session.Types
             var guidFragment = Guid.NewGuid().ToString("N").Substring(0, 8);
             var timeHash = Timestamp.ToString("yyyyMMddHHmmss");
             return $"{guidFragment}-{timeHash}";
-
         }
-        
+
+        // 🧾 Session Context Builder
         protected virtual ISessionContext GetSessionContext()
         {
-            var flattenedMap = TraitTriggerMap.ToDictionary(
-                kvp => kvp.Key,
-                kvp => string.Join(", ", kvp.Value)
-            );
-
-            
             return new SessionContext
             {
                 SessionId = SessionId,
                 ContributorId = ContributorId,
                 CuratorRole = CuratorRole,
                 CreatedAt = Timestamp,
-                GalleryId = ClusterId, // assuming ClusterId maps to GalleryId contextually
-                GallerySeedNumber = 0, // stubbed; replace with actual seed if available
-                MeshSnapshotId = string.Empty, // stubbed; populate if mesh tracking is active
+                GalleryId = ClusterId,
+                GallerySeedNumber = 0,
+                MeshSnapshotId = string.Empty,
                 Status = IsActive ? "Active" : "Inactive",
-                TraitTriggerMap = flattenedMap
+                TraitTriggerMap = new Dictionary<string, string>()
+            };
+        }
+
+        // 🧬 MeshProfile Builder for Trait Routing
+        protected virtual MeshProfile BuildMeshProfile(IEnumerable<ITrait> traits)
+        {
+            var concreteTraits = traits
+                .OfType<PrismTrait>()
+                .ToList();
+
+            return new MeshProfile
+            {
+                ContributorId = ContributorId,
+                IntentType = Role,
+                MoodVector = MoodVector ?? "neutral",
+                Timestamp = DateTime.UtcNow,
+                ClusterId = ClusterId ?? "unclustered",
+                Tags = Tags ?? new List<string>(),
+                ToneTags = ToneTags ?? new Dictionary<string, string>(),
+                LayerWeights = LayerWeights ?? new Dictionary<string, float>(),
+                RippleHistory = RippleHistory ?? new List<RippleEvent>(),
+                Traits = concreteTraits
             };
         }
     }

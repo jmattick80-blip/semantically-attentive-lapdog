@@ -5,5 +5,5 @@ namespace Prism.Shared.Contracts.Interfaces.Sessions;
 
 public interface INpcFactory
 {
-    List<NpcDefinition> BuildFromSeed(int gallerySeedNumber);
+    List<NpcDefinition> BuildFromSeed(int seed, SessionContext context);
 }

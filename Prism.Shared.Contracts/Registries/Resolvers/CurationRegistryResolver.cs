@@ -1,8 +1,10 @@
+using System;
 using Prism.Shared.Contracts.Enums;
 using Prism.Shared.Contracts.Envelopes;
 using Prism.Shared.Contracts.Envelopes.Types;
 using Prism.Shared.Contracts.Interfaces.Manifests;
 using Prism.Shared.Contracts.Interfaces.Registries;
+using Prism.Shared.Contracts.Interfaces.Routers;
 using Prism.Shared.Contracts.Manifests.Hydrators;
 using Prism.Shared.Contracts.Registries.Resolvers.Base;
 
@@ -13,6 +15,13 @@ namespace Prism.Shared.Contracts.Registries.Resolvers
     /// </summary>
     public class CurationRegistryResolver : RegistryResolverBase
     {
+        private readonly ITraitRouter _traitRouter;
+
+        public CurationRegistryResolver(ITraitRouter traitRouter)
+        {
+            _traitRouter = traitRouter ?? throw new ArgumentNullException(nameof(traitRouter));
+        }
+
         public override IManifestRegistry<TManifest> Resolve<TManifest>(IntentEnvelope envelope)
         {
             var hydrator = ResolveHydrator<TManifest>(envelope);
@@ -26,11 +35,14 @@ namespace Prism.Shared.Contracts.Registries.Resolvers
 
         public override IManifestHydrator<TManifest> ResolveHydrator<TManifest>(IntentEnvelope envelope)
         {
+            if (envelope == null)
+                throw new ArgumentNullException(nameof(envelope));
+
             return envelope.Intent switch
             {
                 SystemIntent.Emotional => new EmotionalManifestHydrator() as IManifestHydrator<TManifest>,
-                SystemIntent.Semantic => new SemanticManifestHydrator() as IManifestHydrator<TManifest>,
-                SystemIntent.Input => new InputManifestHydrator() as IManifestHydrator<TManifest>,
+                SystemIntent.Semantic  => new SemanticManifestHydrator(_traitRouter)  as IManifestHydrator<TManifest>,
+                SystemIntent.Input     => new InputManifestHydrator()     as IManifestHydrator<TManifest>,
                 _ => new NullManifestHydrator<TManifest>()
             };
         }

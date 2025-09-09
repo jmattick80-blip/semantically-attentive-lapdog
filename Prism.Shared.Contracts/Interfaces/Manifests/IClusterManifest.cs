@@ -1,8 +1,9 @@
+using System.Collections.Generic;
 using Prism.Shared.Contracts.Interfaces.Traits;
 
 namespace Prism.Shared.Contracts.Interfaces.Manifests
 {
-    public interface IClusterManifest : IManifest, ITraitBindable
+    public interface IClusterManifest : IManifest
     {
         /// <summary>
         /// Provides a narration hint for this cluster, optionally based on signal context.
@@ -10,5 +11,8 @@ namespace Prism.Shared.Contracts.Interfaces.Manifests
         /// <param name="signalId">The signal triggering the narration.</param>
         /// <returns>A contributor-safe narration string.</returns>
         string GetNarrationHint(string signalId);
+        IEnumerable<ITrait> DefaultTraits { get; }
+        IEnumerable<string> SignalBindings { get; }
+
     }
 }

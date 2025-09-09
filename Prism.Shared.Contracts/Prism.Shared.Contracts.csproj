@@ -10,6 +10,8 @@
       <Folder Include="Manifests\" />
       <Folder Include="MoodProfiles\Templates\" />
       <Folder Include="Runtime\" />
+      <Folder Include="Runtime\Imports\" />
+      <Folder Include="Traits\Base\" />
     </ItemGroup>
 
 </Project>

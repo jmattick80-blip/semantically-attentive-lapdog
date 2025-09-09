@@ -1,5 +1,5 @@
 using Prism.Shared.Contracts;
-
+using Prism.Shared.Contracts.Interfaces.MeshLogic;
 using Prism.Shared.Contracts.Interfaces.Requests;
 using Prism.Shared.Contracts.Interfaces.Sessions;
 using Prism.Shared.Contracts.Logic;
@@ -13,73 +13,77 @@ namespace Prism.Internal.Registry
     {
         private static readonly Dictionary<string, SessionEntity> SessionEntityStore = new();
 
-        public static IPrismIntentResult UpdateEntityState(IPrismIntentRequest request)
+public static IPrismIntentResult UpdateEntityState(IPrismIntentRequest request, IEnumerable<IEntityTransformer> transformers)
+{
+    var entityId = request.TargetEntity.EntityId;
+    var sessionId = request.Session.SessionId;
+    var isDraft = request.TargetEntity.IsDraft;
+
+    var current = GetEntityState(entityId, sessionId, isDraft);
+    if (current == null)
+    {
+        return new PrismIntentResult
         {
-            var entityId = request.TargetEntity.EntityId;
-            var sessionId = request.Session.SessionId;
-            var isDraft = request.TargetEntity.IsDraft;
-            
-            var current = GetEntityState(entityId, sessionId, isDraft);
-            if (current == null)
-            {
-                return new PrismIntentResult
-                {
-                    Request = request,
-                    Success = false,
-                    ResultCode = "EntityNotFound",
-                    Message = $"Entity '{entityId}' not found in session '{sessionId}'.",
-                    Slug = new string(request.Slug.Reverse().ToArray()),
-                    Timestamp = DateTime.UtcNow,
-                    Consequence = new()
-                };
-            }
+            Request = request,
+            Success = false,
+            ResultCode = "EntityNotFound",
+            Message = $"Entity '{entityId}' not found in session '{sessionId}'.",
+            Slug = new string(request.Slug.Reverse().ToArray()),
+            Timestamp = DateTime.UtcNow,
+            Consequence = new()
+        };
+    }
 
-            var transformers = TransformerRegistry.ResolveTransformers(request.TargetEntity.EntityType, request.Session.CuratorRole);
-            foreach (var transformer in transformers)
-            {
-                if (!TransformerValidator.ValidatePayload(transformer, request.Payload, out var error))
-                {
-                    return new PrismIntentResult
-                    {
-                        Request = request,
-                        Success = false,
-                        ResultCode = "MissingPayload",
-                        Message = error,
-                        Slug = new string(request.Slug.Reverse().ToArray()),
-                        Timestamp = DateTime.UtcNow,
-                        Consequence = new()
-                    };
-                }
-            }
+    var updated = current;
 
-            var pipeline = new TransformerPipeline(transformers);
-            var updated = pipeline.ApplyAll(current, request.Payload);
-
-            var scenarioImpact = ScenarioTriggerEngine.Evaluate(updated, request.Session.TraitTriggerMap);
-
-            var consequence = new Dictionary<string, object>
-            {
-                { "RegistryRefs", new List<string> { entityId } }
-            };
-
-            if (scenarioImpact.Count > 0)
-            {
-                consequence["ScenarioImpact"] = scenarioImpact;
-            }
-
-            SaveEntityState(updated, isDraft);
-
+    foreach (var transformer in transformers)
+    {
+        if (!TransformerValidator.ValidatePayload(transformer, request.Payload, out var error))
+        {
             return new PrismIntentResult
             {
                 Request = request,
-                Success = true,
-                ResultCode = "EntityUpdated",
-                Message = $"Transformers applied to entity '{entityId}'.",
+                Success = false,
+                ResultCode = "MissingPayload",
+                Message = error,
                 Slug = new string(request.Slug.Reverse().ToArray()),
                 Timestamp = DateTime.UtcNow,
-                Consequence = consequence
+                Consequence = new()
             };
         }
+
+        var result = transformer.Transform(updated, request.Payload);
+        if (result is SessionEntity transformed)
+        {
+            updated = transformed;
+        }
+    }
+
+    var scenarioImpact = ScenarioTriggerEngine.Evaluate(updated, request.Session.TraitTriggerMap);
+
+    var consequence = new Dictionary<string, object>
+    {
+        { "RegistryRefs", new List<string> { entityId } }
+    };
+
+    if (scenarioImpact.Count > 0)
+    {
+        consequence["ScenarioImpact"] = scenarioImpact;
+    }
+
+    SaveEntityState(updated, isDraft);
+
+    return new PrismIntentResult
+    {
+        Request = request,
+        Success = true,
+        ResultCode = "EntityUpdated",
+        Message = $"Transformers applied to entity '{entityId}'.",
+        Slug = new string(request.Slug.Reverse().ToArray()),
+        Timestamp = DateTime.UtcNow,
+        Consequence = consequence
+    };
+}
 
         public static void SaveEntityState(SessionEntity  entity, bool isDraft = true)
         {

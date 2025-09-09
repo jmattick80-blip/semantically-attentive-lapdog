@@ -12,17 +12,20 @@ namespace Prism.Shared.Contracts.Sessions.Session.Services
         private readonly IManifestRouterFactory _routerFactory;
         private readonly ICallbackDispatcherPool _dispatcherPool;
         private readonly INpcFactory _npcFactory;
+        private readonly ITraitRouter _traitRouter;
 
         public SessionDependencyResolver(
             IEnvelopeValidatorRegistry validatorRegistry,
             IManifestRouterFactory routerFactory,
             ICallbackDispatcherPool dispatcherPool,
+            ITraitRouter traitRouter,
             INpcFactory npcFactory)
         {
             _validatorRegistry = validatorRegistry;
             _routerFactory = routerFactory;
             _dispatcherPool = dispatcherPool;
             _npcFactory = npcFactory;
+            _traitRouter = traitRouter;
         }
 
         public IEnvelopeValidator ResolveValidator(SessionContext context)
@@ -37,8 +40,10 @@ namespace Prism.Shared.Contracts.Sessions.Session.Services
         
         public IManifestRegistryResolver ResolveRegistryResolver(SessionContext context)
         {
-            return new ManifestRegistryResolverFactory().Create();
+            var factory = new ManifestRegistryResolverFactory(_traitRouter);
+            return factory.Create("assembly");
         }
+
 
 
         public ICallbackDispatcher ResolveDispatcher(SessionContext context)
@@ -48,7 +53,12 @@ namespace Prism.Shared.Contracts.Sessions.Session.Services
 
         public List<NpcDefinition> ResolveNpcDefinitions(SessionContext context)
         {
-            return _npcFactory.BuildFromSeed(context.GallerySeedNumber);
+            return _npcFactory.BuildFromSeed(context.GallerySeedNumber, context);
+        }
+
+        public ITraitRouter ResolveTraitRouter(SessionContext context)
+        {
+            return _traitRouter;
         }
     }
 }

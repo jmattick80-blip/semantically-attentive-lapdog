@@ -3,6 +3,7 @@ using System.Linq;
 using Prism.Shared.Contracts.Interfaces.Manifests;
 using Prism.Shared.Contracts.Interfaces.Traits;
 using Prism.Shared.Contracts.Sessions.Session.Types;
+using Prism.Shared.Contracts.SignalBindings;
 
 namespace Prism.Shared.Contracts.Clusters.Base
 {
@@ -30,8 +31,8 @@ namespace Prism.Shared.Contracts.Clusters.Base
         public IEnumerable<string> GetSupportedInterfaces()
         {
             return Children
-                .OfType<IIntentManifest>()
-                .SelectMany(m => m.SignalBindings)
+                .OfType<ISignalBindable>()
+                .SelectMany(bindable => bindable.GetSignalBindings())
                 .Distinct();
         }
 

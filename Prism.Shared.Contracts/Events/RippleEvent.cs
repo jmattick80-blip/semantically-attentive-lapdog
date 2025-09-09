@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using Prism.Shared.Contracts.Interfaces.Traits;
 
 namespace Prism.Shared.Contracts.Events
 {
@@ -7,6 +9,7 @@ namespace Prism.Shared.Contracts.Events
         public string SourceContributorId { get; set; }
         public string RippleType { get; set; }
         public DateTime EmittedAt { get; set; }
+        public List<PrismTrait> Traits { get; set; }
     }
 
     #region RippleEvent Summary

@@ -4,6 +4,7 @@ using Prism.Shared.Contracts.Envelopes;
 using Prism.Shared.Contracts.Envelopes.Types;
 using Prism.Shared.Contracts.Interfaces.Manifests;
 using Prism.Shared.Contracts.Interfaces.Registries;
+using Prism.Shared.Contracts.Interfaces.Routers;
 using Prism.Shared.Contracts.Manifests.Hydrators;
 using Prism.Shared.Contracts.Manifests.Types;
 using Prism.Shared.Contracts.Registries.Resolvers.Base;
@@ -15,9 +16,12 @@ namespace Prism.Shared.Contracts.Registries.Resolvers
     /// </summary>
     public class DefaultRegistryResolver : RegistryResolverBase
     {
-        public DefaultRegistryResolver(RegistryResolverDescriptor descriptor)
+        private readonly ITraitRouter _traitRouter;
+
+        public DefaultRegistryResolver(RegistryResolverDescriptor descriptor, ITraitRouter traitRouter)
         {
-            Descriptor = descriptor;
+            Descriptor = descriptor ?? throw new ArgumentNullException(nameof(descriptor));
+            _traitRouter = traitRouter ?? throw new ArgumentNullException(nameof(traitRouter));
         }
 
         public override IManifestRegistry<TManifest> Resolve<TManifest>(IntentEnvelope envelope)
@@ -39,18 +43,16 @@ namespace Prism.Shared.Contracts.Registries.Resolvers
             var manifestType = typeof(TManifest);
             var intent = envelope.Intent;
 
-            // 🧠 Zone 1: Diagnostic Trace
             Console.WriteLine($"🧠 Hydrator resolution started");
             Console.WriteLine($"🔍 Intent: {intent}, IntentId: '{envelope.IntentId}'");
             Console.WriteLine($"📦 Manifest type requested: {manifestType.Name}");
 
-            // 🧩 Zone 2: Intent-Type Matching
             if (typeof(TManifest) == typeof(IIntentManifest))
             {
                 var typedHydrator = ResolveIntentManifestHydrator(envelope);
                 return (IManifestHydrator<TManifest>)(object)typedHydrator;
             }
-            
+
             if (intent == SystemIntent.Emotional && manifestType == typeof(IEmotionallyReactiveManifest))
                 return new EmotionalManifestHydrator() as IManifestHydrator<TManifest>;
 
@@ -63,36 +65,16 @@ namespace Prism.Shared.Contracts.Registries.Resolvers
                 Console.WriteLine($"🛡️ Returning NullManifestHydrator to preserve fallback safety.");
                 return new NullManifestHydrator<TManifest>();
             }
-            
-            // 🛑 Zone 3: Fallback Narration
+
             Console.WriteLine($"⚠️ No hydrator match for intent '{intent}' and manifest type '{manifestType.Name}'");
             Console.WriteLine($"↪️ Returning NullManifestHydrator for fallback safety");
             return new NullManifestHydrator<TManifest>();
         }
-        
+
         private IManifestHydrator<IIntentManifest> ResolveIntentManifestHydrator(IntentEnvelope envelope)
         {
             Console.WriteLine($"🧬 Resolved hydrator: {nameof(SemanticManifestHydrator)} for intent '{envelope.IntentId}'");
-            return new SemanticManifestHydrator();
+            return new SemanticManifestHydrator(_traitRouter);
         }
-
     }
-
-    #region DefaultRegistryResolver – End Summary (Sprint 5 – September 1, 2025)
-    /// <summary>
-    /// It resolves the appropriate IManifestHydrator<TManifest> based on envelope intent,
-    /// constructs a PrismManifestRegistry<TManifest>, and ensures contributor-safe hydration and narration.
-    ///
-    /// This resolver is used in ambiguous, legacy, or recovery scenarios where emotional traceability
-    /// and prefab-safe fallback behavior are essential.
-    ///
-    /// Related Components:
-    /// - IntentEnvelope
-    /// - RegistryResolverDescriptor
-    /// - IManifestRegistry<TManifest>
-    /// - IManifestHydrator<TManifest>
-    /// - PrismManifestRegistry<TManifest>
-    /// - RegistryResolverBase
-    /// </summary>
-    #endregion
 }
