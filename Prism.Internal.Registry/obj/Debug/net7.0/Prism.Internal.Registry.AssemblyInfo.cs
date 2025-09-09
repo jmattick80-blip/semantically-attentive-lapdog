@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Prism.Internal.Registry")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+79e8dbca854d8fbf0dea9689139d0f0036a3a7e2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ead724d854f730c69f2bd8a60bcea20aadd46bd4")]
 [assembly: System.Reflection.AssemblyProductAttribute("Prism.Internal.Registry")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Prism.Internal.Registry")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

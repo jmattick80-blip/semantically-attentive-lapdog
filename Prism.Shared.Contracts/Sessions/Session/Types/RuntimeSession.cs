@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Prism.Shared.Contracts.Agents;
 using Prism.Shared.Contracts.Interfaces.MeshLogic;
 using Prism.Shared.Contracts.Interfaces.Sessions;
 
@@ -15,8 +16,9 @@ namespace Prism.Shared.Contracts.Sessions.Session.Types
             ICallbackDispatcher callbackDispatcher,
             string contributorId,
             string role,
-            string curatorRole)
-            : base(validator, registryResolver, callbackDispatcher, contributorId, role)
+            string curatorRole,
+            List<NpcDefinition> npcDefinitions = null)
+            : base(validator, registryResolver, callbackDispatcher, contributorId, role, npcDefinitions)
         {
             SessionId = Guid.NewGuid().ToString();
             TraitId = "trait.session.runtime";

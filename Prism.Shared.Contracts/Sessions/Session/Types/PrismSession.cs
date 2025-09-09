@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Prism.Shared.Contracts.Agents;
 using Prism.Shared.Contracts.Envelopes;
 using Prism.Shared.Contracts.Envelopes.Types;
 using Prism.Shared.Contracts.Interfaces.Manifests;
@@ -22,7 +23,7 @@ namespace Prism.Shared.Contracts.Sessions.Session.Types
         public DateTime Timestamp { get; protected set; }
         public string ContributorId { get; protected set; }
         public string Role { get; protected set; }
-
+        public List<NpcDefinition> NpcDefinitions { get; protected set; }
         public string TraceId { get; protected set; }
         public IEnumerable<string> Breadcrumbs => _breadcrumbs;
         private readonly List<string> _breadcrumbs = new List<string>();
@@ -49,16 +50,17 @@ namespace Prism.Shared.Contracts.Sessions.Session.Types
         public string CuratorRole { get; protected set; } = string.Empty;
 
         
-        protected PrismSession(
-            IEnvelopeValidator validator,
+        protected PrismSession(IEnvelopeValidator validator,
             IManifestRegistryResolver registryResolver,
-            ICallbackDispatcher callbackDispatcher, string contributorId, string role)
+            ICallbackDispatcher callbackDispatcher, string contributorId, string role,
+            List<NpcDefinition> npcDefinitions)
         {
             Validator = validator;
             RegistryResolver = registryResolver;
             CallbackDispatcher = callbackDispatcher;
             ContributorId = contributorId;
             Role = role;
+            NpcDefinitions = npcDefinitions ?? [];
         }
 
         // 🔄 Async Lifecycle
@@ -68,9 +70,25 @@ namespace Prism.Shared.Contracts.Sessions.Session.Types
             Timestamp = DateTime.UtcNow;
             SessionToken = GenerateSessionToken();
             Register();
+            
+            TraitTriggerMap = NpcDefinitions
+                .SelectMany(npc => npc.TraitTriggerMap.Triggers)
+                .GroupBy(trigger => trigger.TraitName)
+                .ToDictionary(
+                    g => g.Key,
+                    g => g.Select(t => $"{t.TriggerKey}:{t.TriggerValue}").Distinct().ToList()
+                );
+
+
 
             _breadcrumbs.Add($"🧠 Session started at {Timestamp:O} with token {SessionToken}");
-            _breadcrumbs.Add($"🧬 TraitTriggerMap initialized with {TraitTriggerMap.Count} entries.");
+            _breadcrumbs.Add($"🧬 TraitTriggerMap initialized with {TraitTriggerMap.Count} traits.");
+
+            foreach (var kvp in TraitTriggerMap)
+            {
+                _breadcrumbs.Add($"🔗 Trait '{kvp.Key}' triggers: {string.Join(", ", kvp.Value)}");
+            }
+
             return Task.CompletedTask;
         }
 
