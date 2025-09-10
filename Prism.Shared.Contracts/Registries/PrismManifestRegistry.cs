@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using Prism.Shared.Contracts.Envelopes;
 using Prism.Shared.Contracts.Envelopes.Types;
 using Prism.Shared.Contracts.Events;
 using Prism.Shared.Contracts.Interfaces.Manifests;
@@ -19,12 +18,10 @@ namespace Prism.Shared.Contracts.Registries
         private readonly Dictionary<string, string> _toneTags;
         private readonly Dictionary<string, double> _layerWeights;
         private readonly List<RippleEvent> _rippleHistory;
-        private readonly IntentEnvelope _intentEnvelope;
-        public IntentEnvelope Envelope => _intentEnvelope;
 
         public PrismManifestRegistry(
             RegistryResolverDescriptor descriptor,
-            IntentEnvelope envelope,
+            SemanticIntentEnvelope envelope,
             IManifestHydrator<TManifest> hydrator,
             Dictionary<string, string> toneTags = null,
             Dictionary<string, double> layerWeights = null,
@@ -35,7 +32,6 @@ namespace Prism.Shared.Contracts.Registries
             _toneTags = toneTags ?? new();
             _layerWeights = layerWeights ?? new();
             _rippleHistory = rippleHistory ?? new();
-            _intentEnvelope = envelope ?? throw new ArgumentNullException(nameof(envelope));
         }
 
         public override string GetNarrationHint(string manifestId)
@@ -49,37 +45,32 @@ namespace Prism.Shared.Contracts.Registries
 
             return $"{baseHint} Emotional weight: {emotionalWeight:F2}, Tone tags: {toneSummary}.";
         }
-        
+
         public string GetRippleSummary()
         {
             if (_rippleHistory != null && _rippleHistory.Count > 0)
             {
-                RippleEvent lastRipple = _rippleHistory[_rippleHistory.Count - 1];
-                return "Ripple count: " + _rippleHistory.Count +
-                       ", Last ripple: " + lastRipple.RippleType +
-                       " at " + lastRipple.EmittedAt.ToString("HH:mm:ss");
+                RippleEvent lastRipple = _rippleHistory[_rippleHistory.Count - 1]; // classic indexing
+                return $"Ripple count: {_rippleHistory.Count}, Last ripple: {lastRipple.RippleType} at {lastRipple.EmittedAt:HH:mm:ss}";
             }
 
             return "No ripple events recorded.";
         }
-
     }
 
-    #region PrismManifestRegistry – End Summary (Sprint 5 – September 9, 2025)
+    #region PrismManifestRegistry – Refactored September 10, 2025
     /// <summary>
     /// PrismManifestRegistry provides a descriptor-driven fallback for manifest hydration and narratable hints.
     /// It hydrates the manifest using a provided IManifestHydrator<TManifest> and registers it for contributor-safe access.
     /// Emotional context (toneTags, layerWeights, rippleHistory) is preserved for traceability and inspection.
     ///
-    /// This registry is used in ambiguous or legacy routing scenarios, ensuring emotional traceability and narratable feedback.
+    /// Refactor Notes:
+    /// • Accepts SemanticIntentEnvelope to preserve emotional context
+    /// • Removes redundant envelope field—uses inherited property
+    /// • Ensures fallback registry narrates hydration with emotional clarity
     ///
-    /// Related Interfaces:
-    /// - IManifest
-    /// - IManifestHydrator<TManifest>
-    /// - IntentEnvelope
-    /// - RegistryResolverDescriptor
-    /// - BaseManifestRegistry<TManifest>
-    /// - RippleEvent
+    /// ✦ Maintainer: Jeremy M.
+    /// ✦ Last Audited: Sprint 5 – 2025-09-10
     /// </summary>
     #endregion
 }

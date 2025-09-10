@@ -83,5 +83,10 @@ namespace Prism.Shared.Contracts.Registries
             _clusters.Clear();
             Console.WriteLine("🧼 Cleared all runtime clusters.");
         }
+
+        public IEnumerable<TManifest> GetAllManifests()
+        {
+            return _manifests.Values;
+        }
     }
 }

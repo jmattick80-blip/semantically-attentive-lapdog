@@ -66,5 +66,8 @@ namespace Prism.Shared.Contracts.Interfaces.Registries
         /// Clears all registered clusters from the registry.
         /// </summary>
         void ClearSystemClusters();
+
+        IEnumerable<TManifest> GetAllManifests();
+        
     }
 }

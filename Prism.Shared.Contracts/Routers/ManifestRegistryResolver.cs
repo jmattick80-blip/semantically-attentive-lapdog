@@ -34,11 +34,11 @@ namespace Prism.Shared.Contracts.Routers
             };
         }
 
-        public IManifestRegistry<TManifest> Resolve<TManifest>(IntentEnvelope envelope)
+        public IManifestRegistry<TManifest> Resolve<TManifest>(SemanticIntentEnvelope envelope)
             where TManifest : IManifest
             => ResolveRegistry<TManifest>(envelope);
 
-        public IManifestRegistry<TManifest> ResolveRegistry<TManifest>(IntentEnvelope envelope)
+        public IManifestRegistry<TManifest> ResolveRegistry<TManifest>(SemanticIntentEnvelope envelope)
             where TManifest : IManifest
         {
             if (envelope == null)

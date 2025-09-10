@@ -17,7 +17,15 @@ namespace Prism.Internals.Orchestration.Registries
 
             foreach (var layer in configMeshLayers)
             {
-                RegisterLayer(layer.Name, layer.IsActive, layer.Weight, layer.Threshold);
+                var name = layer.EffectiveName;
+
+                if (string.IsNullOrWhiteSpace(name))
+                {
+                    Console.WriteLine("⚠️ MeshLayerRegistry: Skipping layer with missing LayerId and Name.");
+                    continue;
+                }
+
+                RegisterLayer(name, layer.IsActive, layer.Weight, layer.Threshold);
             }
 
             Console.WriteLine($"✅ MeshLayerRegistry: Hydrated {_layers.Count} layers.");
@@ -39,7 +47,8 @@ namespace Prism.Internals.Orchestration.Registries
                 Threshold = threshold
             };
 
-            Console.WriteLine($"🔗 Layer registered: {name} | Active: {active} | Weight: {weight} | Threshold: {threshold}");
+            Console.WriteLine(
+                $"🔗 Layer registered: {name} | Active: {active} | Weight: {weight} | Threshold: {threshold}");
         }
 
         public bool IsActive(string name) =>
@@ -58,32 +67,24 @@ namespace Prism.Internals.Orchestration.Registries
             return new MeshLayerRegistry(configMeshLayers);
         }
     }
-    // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    // 🧠 Summary Region: MeshLayerRegistry
+}
+
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    // 🧠 Summary Region: MeshLayerRegistry (Refactored – September 10, 2025)
     //
     // Registers and manages mesh layers for emotional consequence routing.
-    // Hydrates layer states from config, applies resistance metadata, and exposes
-    // query methods for activation, weight, and threshold.
+    // Hydrates layer states from config using fallback logic for missing names.
+    // Applies activation flags, weights, and thresholds for ripple scoring.
     //
     // ┌─────────────────────────────────────────────────────────────────────────┐
     // │ Responsibilities                                                       │
     // ├─────────────────────────────────────────────────────────────────────────┤
     // │ • Hydrate mesh layers from config using CreateFromConfig()             │
-    // │ • Register layers with name, activation state, weight, and threshold   │
-    // │ • Query layer state for consequence routing and ripple scoring         │
-    // │ • Expose all registered layers for orchestration and audit tools       │
+    // │ • Fallback to LayerId if Name is missing during hydration              │
+    // │ • Register layers with activation state, weight, and threshold         │
+    // │ • Query layer state for consequence routing and audit tooling          │
     // └─────────────────────────────────────────────────────────────────────────┘
     //
     // 🔗 Dependencies:
     // - Prism.Shared.Contracts.Config (MeshLayerConfig)
-    // - Prism.Shared.Contracts.Orchestration (IPrismRegistry)
-    //
-    // 🧩 Emotional Consequence:
-    // - Layer activation and weight influence ripple propagation
-    // - Thresholds guide trait activation and consequence sensitivity
-    // - Registry enables narratable orchestration across mesh layers
-    //
-    // ✦ Maintainer: Jeremy M.
-    // ✦ Last Audited: Sprint 5 – 2025-09-07
-    // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-}
+    // - Prism.Shared.Contracts.Orchestration (I

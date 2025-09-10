@@ -18,6 +18,8 @@ namespace Prism.Shared.Contracts.Interfaces.Traits
 
     public class PrismTrait : ITrait
     {
+        
+        
         public string TraitId { get; set; } = Guid.NewGuid().ToString();
         public string TraitName { get; set; }
         public string Tone { get; set; } = "Neutral";
@@ -26,6 +28,17 @@ namespace Prism.Shared.Contracts.Interfaces.Traits
         public string Description { get; set; } = "No description provided.";
         public bool IsActive { get; private set; } = false;
 
+        public PrismTrait(string traitName, string tone = "Neutral", string source = "Unknown", string scenarioTag = "Unspecified", string description = "No description provided.")
+        {
+            TraitId = Guid.NewGuid().ToString();
+            TraitName = traitName;
+            Tone = tone;
+            Source = source;
+            ScenarioTag = scenarioTag;
+            Description = description;
+            IsActive = false;
+        }
+        
         public void Activate()
         {
             IsActive = true;

@@ -43,7 +43,12 @@ namespace Prism.Shared.Contracts.Registries
         {
             _registeredClusters.Clear();
         }
-        
+
+        public IEnumerable<IClusterManifest> GetAllManifests()
+        {
+            return _registeredClusters.Values;
+        }
+
         public void RemoveManifest(string manifestId)
         {
             _registeredClusters.Remove(manifestId);

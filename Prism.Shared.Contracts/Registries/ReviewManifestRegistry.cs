@@ -82,5 +82,10 @@ namespace Prism.Shared.Contracts.Registries
             _clusters.Clear();
             Console.WriteLine("🧼 Cleared all review clusters.");
         }
+
+        public IEnumerable<TManifest> GetAllManifests()
+        {
+            return _manifests.Values;
+        }
     }
 }

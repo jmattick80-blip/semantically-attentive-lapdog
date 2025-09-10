@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Prism.Shared.Contracts.Interfaces.Manifests;
 
-namespace GalleryDrivers.Prism.Shared.Manifests.Types
+namespace Prism.Shared.Contracts.Manifests.Types
 {
     /// <summary>
     /// Represents a manifest that carries semantic meaning and contributor-facing tags.

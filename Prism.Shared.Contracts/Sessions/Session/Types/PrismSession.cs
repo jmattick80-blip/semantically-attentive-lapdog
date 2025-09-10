@@ -50,8 +50,8 @@ namespace Prism.Shared.Contracts.Sessions.Session.Types
 
         // Breadcrumbs
         private readonly List<string> _breadcrumbs = new();
-        public IEnumerable<string> Breadcrumbs => _breadcrumbs;
-
+        public IReadOnlyList<string> Breadcrumbs => _breadcrumbs;
+        
         protected PrismSession(
             IEnvelopeValidator validator,
             IManifestRegistryResolver registryResolver,
@@ -113,7 +113,7 @@ namespace Prism.Shared.Contracts.Sessions.Session.Types
         }
 
         // 📦 Envelope Handling
-        public void OnIntentEnvelopeCreated(IntentEnvelope envelope)
+        public void OnIntentEnvelopeCreated(SemanticIntentEnvelope envelope)
         {
             if (envelope == null)
             {
@@ -225,5 +225,15 @@ namespace Prism.Shared.Contracts.Sessions.Session.Types
                 Traits = concreteTraits
             };
         }
+        protected void AddBreadcrumb(string entry)
+        {
+            if (!string.IsNullOrWhiteSpace(entry))
+                _breadcrumbs.Add(entry);
+        }
+        public void InjectBreadcrumb(string entry)
+        {
+            AddBreadcrumb(entry);
+        }
+
     }
 }

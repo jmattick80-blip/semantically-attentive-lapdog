@@ -138,5 +138,10 @@ namespace Prism.Shared.Contracts.Registries
         public void ClearSystemClusters()
         {
         }
+
+        public IEnumerable<IIntentManifest> GetAllManifests()
+        {
+            return _registeredIntents.Values;
+        }
     }
 }

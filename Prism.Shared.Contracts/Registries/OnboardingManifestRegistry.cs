@@ -10,7 +10,7 @@ namespace Prism.Shared.Contracts.Registries
     /// </summary>
     public class OnboardingManifestRegistry<TManifest> : BaseManifestRegistry<TManifest> where TManifest : IManifest
     {
-        public OnboardingManifestRegistry(IntentEnvelope envelope, IManifestHydrator<TManifest> hydrator)
+        public OnboardingManifestRegistry(SemanticIntentEnvelope envelope, IManifestHydrator<TManifest> hydrator)
             : base(envelope, hydrator) { }
 
         public override string GetNarrationHint(string manifestId) =>

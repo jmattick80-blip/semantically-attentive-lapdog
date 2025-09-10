@@ -10,6 +10,7 @@ namespace Prism.Shared.Contracts.Events
         public string RippleType { get; set; }
         public DateTime EmittedAt { get; set; }
         public List<PrismTrait> Traits { get; set; }
+        public object EventId { get; set; }
     }
 
     #region RippleEvent Summary

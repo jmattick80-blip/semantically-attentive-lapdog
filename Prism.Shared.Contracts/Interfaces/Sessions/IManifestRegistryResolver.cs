@@ -18,7 +18,7 @@ namespace Prism.Shared.Contracts.Interfaces.Sessions
         /// <typeparam name="TManifest">The manifest type to resolve.</typeparam>
         /// <param name="envelope">The intent envelope to route.</param>
         /// <returns>A manifest registry capable of managing the manifest.</returns>
-        IManifestRegistry<TManifest> ResolveRegistry<TManifest>(IntentEnvelope envelope)
+        IManifestRegistry<TManifest> ResolveRegistry<TManifest>(SemanticIntentEnvelope envelope)
             where TManifest : IManifest;
 
         /// <summary>
@@ -30,7 +30,7 @@ namespace Prism.Shared.Contracts.Interfaces.Sessions
         /// <returns>A hydrator capable of producing a manifest from the envelope.</returns>
         IManifestHydrator<TManifest> ResolveHydrator<TManifest>(IntentEnvelope envelope)
             where TManifest : IManifest;
-        
+
         /// <summary>
         /// Resolves the manifest registry using envelope context.
         /// This is a compatibility alias for ResolveRegistry.
@@ -38,7 +38,7 @@ namespace Prism.Shared.Contracts.Interfaces.Sessions
         /// <typeparam name="TManifest">The manifest type to resolve.</typeparam>
         /// <param name="envelope">The intent envelope to route.</param>
         /// <returns>A manifest registry capable of managing the manifest.</returns>
-        IManifestRegistry<TManifest> Resolve<TManifest>(IntentEnvelope envelope)
+        IManifestRegistry<TManifest> Resolve<TManifest>(SemanticIntentEnvelope envelope)
             where TManifest : IManifest;
 
     }

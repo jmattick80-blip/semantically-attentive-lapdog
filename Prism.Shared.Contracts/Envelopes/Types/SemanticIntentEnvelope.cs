@@ -1,8 +1,22 @@
+using System;
+using Prism.Shared.Contracts.Enums;
+using Prism.Shared.Contracts.Sessions.Session.Types;
+
 namespace Prism.Shared.Contracts.Envelopes.Types
 {
     public class SemanticIntentEnvelope : IntentEnvelope
     {
         public SemanticIntentEnvelope() { }
+        
+        public SemanticIntentEnvelope(string intentId, PrismSession session)
+        {
+            IntentId = intentId;
+            Intent = SystemIntent.Semantic;
+            Session = session;
+            DisplayName = intentId;
+            RoleContext = session?.CuratorRole ?? "Unknown";
+            Tags = session?.Tags?.ToArray() ?? Array.Empty<string>();
+        }
     }    
     #region Summary
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

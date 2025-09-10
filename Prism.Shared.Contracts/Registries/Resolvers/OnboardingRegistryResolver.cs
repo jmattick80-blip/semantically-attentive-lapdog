@@ -22,13 +22,13 @@ namespace Prism.Shared.Contracts.Registries.Resolvers
             _traitRouter = traitRouter ?? throw new ArgumentNullException(nameof(traitRouter));
         }
 
-        public override IManifestRegistry<TManifest> Resolve<TManifest>(IntentEnvelope envelope)
+        public override IManifestRegistry<TManifest> Resolve<TManifest>(SemanticIntentEnvelope envelope)
         {
             var hydrator = ResolveHydrator<TManifest>(envelope);
             return new OnboardingManifestRegistry<TManifest>(envelope, hydrator);
         }
 
-        public override IManifestRegistry<TManifest> ResolveRegistry<TManifest>(IntentEnvelope envelope)
+        public override IManifestRegistry<TManifest> ResolveRegistry<TManifest>(SemanticIntentEnvelope envelope)
         {
             return Resolve<TManifest>(envelope);
         }

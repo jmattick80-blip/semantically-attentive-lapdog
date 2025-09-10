@@ -33,7 +33,7 @@ namespace Prism.Shared.Contracts.Registries.Resolvers.Base
         /// <summary>
         /// Resolves a manifest registry using fallback strategy.
         /// </summary>
-        public virtual IManifestRegistry<TManifest> Resolve<TManifest>(IntentEnvelope envelope)
+        public virtual IManifestRegistry<TManifest> Resolve<TManifest>(SemanticIntentEnvelope envelope)
             where TManifest : IManifest
         {
             var hydrator = ResolveHydrator<TManifest>(envelope);
@@ -44,7 +44,7 @@ namespace Prism.Shared.Contracts.Registries.Resolvers.Base
         /// <summary>
         /// Must be implemented by subclasses.
         /// </summary>
-        public abstract IManifestRegistry<TManifest> ResolveRegistry<TManifest>(IntentEnvelope envelope)
+        public abstract IManifestRegistry<TManifest> ResolveRegistry<TManifest>(SemanticIntentEnvelope envelope)
             where TManifest : IManifest;
 
         /// <summary>

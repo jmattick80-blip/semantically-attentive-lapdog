@@ -14,12 +14,12 @@ namespace Prism.Shared.Contracts.Envelopes.Factories
 {
     public class PrismEnvelopeFactory
     {
-        public T Create<T>(
-            Action<T> initializer,
+        public SemanticIntentEnvelope Create<T>(
+            Action<SemanticIntentEnvelope> initializer,
             EnvelopeMetadata metadata,
             PrismSession session = null) where T : IntentEnvelope, new()
         {
-            var envelope = new T();
+            var envelope = new SemanticIntentEnvelope();
             initializer?.Invoke(envelope);
 
             InvokeEnvelopeInitializer(envelope, metadata);
@@ -35,7 +35,9 @@ namespace Prism.Shared.Contracts.Envelopes.Factories
             string intentHash,
             string rawIntentData,
             EnvelopeMetadata metadata,
-            PrismSession session)
+            PrismSession session,
+            Dictionary<string, object> payload) // Add this parameter
+                                               // )
         {
             return Create<SemanticIntentEnvelope>(
                 envelope =>
@@ -44,18 +46,28 @@ namespace Prism.Shared.Contracts.Envelopes.Factories
 
                     Console.WriteLine($"🧾 Set IntentId directly: {intentId}");
 
-                    if (envelope.Traits == null)
+                    // Extract traits from payload
+                    if (payload.TryGetValue("Traits", out var traitsObj) && traitsObj is IEnumerable<object> traitList)
                     {
-                        envelope.Traits = new List<ITrait>();
-                        Console.WriteLine("🧬 Initialized empty trait bundle on envelope.");
+                        envelope.Traits = traitList
+                            .Select(t => new PrismTrait(t.ToString()))
+                            .Cast<ITrait>()
+                            .ToList();
+                        Console.WriteLine($"🧬 Bound traits: {string.Join(", ", envelope.Traits.Select(t => t.TraitName))}");
                     }
 
+                    // Build PayloadPackage from full payload
                     envelope.PayloadPackage = new PayloadPackage
                     {
                         Traits = envelope.Traits.Select(t => t.TraitName).ToList(),
-                        Overlays = new List<string> { "startup" },
-                        MoodVector = new Dictionary<string, float> { { "curiosity", 0.9f } }
+                        Overlays = payload.TryGetValue("Overlays", out var overlaysObj) && overlaysObj is IEnumerable<object> overlays
+                            ? overlays.Select(o => o.ToString()).ToList()
+                            : new List<string>(),
+                        MoodVector = payload.TryGetValue("MoodVector", out var moodObj) && moodObj is Dictionary<string, object> moodDict
+                            ? moodDict.ToDictionary(kvp => kvp.Key, kvp => Convert.ToSingle(kvp.Value))
+                            : new Dictionary<string, float>()
                     };
+
                 },
                 metadata,
                 session
@@ -63,76 +75,7 @@ namespace Prism.Shared.Contracts.Envelopes.Factories
         }
 
 
-        public InputIntentEnvelope CreateInputIntentEnvelope(
-            string displayName,
-            string roleContext,
-            string[] tags,
-            EnvelopeMetadata metadata,
-            PrismSession session = null)
-        {
-            return Create<InputIntentEnvelope>(
-                envelope =>
-                {
-                    SetPrivateProperty(envelope, "DisplayName", displayName);
-                    SetPrivateProperty(envelope, "RoleContext", roleContext);
-                    SetPrivateProperty(envelope, "Tags", tags);
-                },
-                metadata,
-                session
-            );
-        }
-
-        public EmotionalIntentEnvelope CreateEmotionalIntentEnvelope(
-            string emotionalTag,
-            int strength,
-            float range,
-            float decayRate,
-            string traitAffected,
-            string emitterId,
-            string displayName,
-            string roleContext,
-            string[] tags,
-            EnvelopeMetadata metadata,
-            PrismSession session = null)
-        {
-            return Create<EmotionalIntentEnvelope>(
-                envelope =>
-                {
-                    envelope.EmotionalTag = emotionalTag;
-                    envelope.Strength = strength;
-                    envelope.Range = range;
-                    envelope.DecayRate = decayRate;
-                    envelope.TraitAffected = traitAffected;
-                    envelope.EmitterId = emitterId;
-                    envelope.DisplayName = displayName;
-                    envelope.RoleContext = roleContext;
-                    envelope.Tags = tags;
-                },
-                metadata,
-                session
-            );
-        }
-
-        public ResultsEnvelope CreateSuccess(
-            string narration,
-            IEnumerable<ITrait> traits,
-            IManifest manifest,
-            ISessionContext session,
-            object payload = null)
-        {
-            return ResultsEnvelope.Success(narration, traits, manifest, session, payload);
-        }
-
-        public ResultsEnvelope CreateFailure(string narration, params string[] errors)
-        {
-            return ResultsEnvelope.Failure(narration, errors);
-        }
-
-        public ResultsEnvelope CreateFailureWithTraits(string narration, IEnumerable<ITrait> traits,
-            IEnumerable<string> errors)
-        {
-            return ResultsEnvelope.FailureWithTraits(narration, traits, errors);
-        }
+        
 
         private void InvokeEnvelopeInitializer(
             PrismSystemEnvelopeBase envelope,

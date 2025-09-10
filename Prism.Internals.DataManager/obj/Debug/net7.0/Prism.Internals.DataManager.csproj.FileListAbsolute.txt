@@ -1,3 +1,5 @@
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internals.DataManager\bin\Debug\net7.0\Assets\meshProfiles.json
+C:\Users\jmatt\RiderProjects\Prism\Prism.Internals.DataManager\bin\Debug\net7.0\MeshConfig\meshConfig.json
 C:\Users\jmatt\RiderProjects\Prism\Prism.Internals.DataManager\bin\Debug\net7.0\Prism.Internals.DataManager.deps.json
 C:\Users\jmatt\RiderProjects\Prism\Prism.Internals.DataManager\bin\Debug\net7.0\Prism.Internals.DataManager.dll
 C:\Users\jmatt\RiderProjects\Prism\Prism.Internals.DataManager\bin\Debug\net7.0\Prism.Internals.DataManager.pdb
@@ -16,5 +18,3 @@ C:\Users\jmatt\RiderProjects\Prism\Prism.Internals.DataManager\obj\Debug\net7.0\
 C:\Users\jmatt\RiderProjects\Prism\Prism.Internals.DataManager\obj\Debug\net7.0\refint\Prism.Internals.DataManager.dll
 C:\Users\jmatt\RiderProjects\Prism\Prism.Internals.DataManager\obj\Debug\net7.0\Prism.Internals.DataManager.pdb
 C:\Users\jmatt\RiderProjects\Prism\Prism.Internals.DataManager\obj\Debug\net7.0\ref\Prism.Internals.DataManager.dll
-C:\Users\jmatt\RiderProjects\Prism\Prism.Internals.DataManager\bin\Debug\net7.0\MeshConfig\meshConfig.json
-C:\Users\jmatt\RiderProjects\Prism\Prism.Internals.DataManager\bin\Debug\net7.0\Assets\meshProfiles.json

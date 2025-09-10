@@ -64,5 +64,10 @@ namespace Prism.Shared.Contracts.Registries
         {
             Console.WriteLine("🚫 Cannot clear clusters—no active registry.");
         }
+
+        public IEnumerable<TManifest> GetAllManifests()
+        {
+            return Array.Empty<TManifest>();
+        }
     }
 }
